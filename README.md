@@ -22,7 +22,7 @@
     - [Code Block](#code-block)   
     - [Table](#table)
   
-## 🔨Text Style2🔨
+## 📌Text Style2📌
 
 >인용문   
 <details><summary>Usecase
