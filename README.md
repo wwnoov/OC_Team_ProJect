@@ -5,8 +5,8 @@
 
 ## 🙋‍♀️Team_Member🙋‍♀️
 #### [👉박석은](Addrees/README.md)
-#### [👉남원우](Addrees/README.md)
-#### [👉이무현](Addrees/README.md)
+#### [👉남원우](https://github.com/wwnoov)
+#### [👉이무현](https://github.com/LMH9999)
 #### [👉최경락](Addrees/README.md)
 
 ## 🛠 목차   
