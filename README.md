@@ -4,7 +4,7 @@
 ```
 
 ## 🙋‍♀️Team_Member🙋‍♀️
-#### [👉박석은](Addrees/README.md)
+#### [👉박석은](https://github.com/seokeunpark)
 #### [👉남원우](https://github.com/wwnoov)
 #### [👉이무현](https://github.com/LMH9999)
 #### [👉최경락](https://github.com/raknrak)
