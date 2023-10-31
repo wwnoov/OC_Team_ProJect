@@ -25,7 +25,13 @@
 ## 🔨Text Style2🔨
 
 >인용문   
-<details><summary>접고 펴는 기능
+<details><summary>Usecase
+</summary></details>
+<details><summary>ERD
+</summary></details>
+<details><summary>Class
+</summary></details>
+<details><summary>시퀀스
 </summary></details>
 
 ### ❓Code block❓
