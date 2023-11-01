@@ -23,7 +23,7 @@
     - [Code Block](#code-block)   
     - [Table](#table)
   
-## 📌Text Style2📌
+## 📌요구명세서📌
 
 >인용문   
 <details><summary>Usecase
@@ -35,7 +35,7 @@
 <details><summary>시퀀스
 </summary></details>
 
-### ❓Code block❓
+### ❓핵심코드❓
 ```js
 function makeDeveloper(name, language) {
   if (name === 'ONE:A' && language === 'JavaScript') {
