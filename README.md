@@ -50,7 +50,7 @@ makeDeveloper('ONE:A', 'JavaScript');
    
 
 
-⚙️사용기술⚙️
+### ⚙️사용기술⚙️
 <a href="Java_Mybatis_Project/boards.sql"><img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/></a>
 
 
