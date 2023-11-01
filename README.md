@@ -8,10 +8,10 @@ CRUD를 활용하여 전자책을 구매 / 후기 작성
 ```
 
 ## 🙋‍♀️Team_Member🙋‍♀️
-#### [👉박석은](https://github.com/seokeunpark)
-#### [👉남원우](https://github.com/wwnoov)
-#### [👉이무현](https://github.com/LMH9999)
-#### [👉최경락](https://github.com/raknrak)
+#### [박석은 GitHub👉](https://github.com/seokeunpark)
+#### [남원우 GitHub👉](https://github.com/wwnoov)
+#### [이무현 GitHub👉](https://github.com/LMH9999)
+#### [최경락 GitHub👉](https://github.com/raknrak)
 
 ## 🛠 목차   
 
