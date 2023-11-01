@@ -38,7 +38,7 @@ CRUD를 활용하여 전자책을 구매 / 후기 작성
 <details><summary>시퀀스
 </summary></details>
 
-### ❓핵심코드❓
+## ❓핵심코드❓
 ```js
 function makeDeveloper(name, language) {
   if (name === 'ONE:A' && language === 'JavaScript') {
