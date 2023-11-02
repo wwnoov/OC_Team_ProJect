@@ -2,9 +2,9 @@
 ```bash
 프로젝트 기간 2023년 10월 20일 ~ 2023년 11월 10일
 ```
-## 📖 E-BOOKSTORE 전자서점 프로젝트📖
+## 📖 BOOKSTORE 프로젝트📖
 ```bash프로젝트 소개
-알라딘, yes24와 같은 온라인 서점 마켓을 벤치마킹하여 온라인 서점 기능을 구현한 콘솔 프로그래밍
+yes24와 같은 온라인 서점 마켓을 벤치마킹하여 온라인 서점 기능을 구현한 콘솔 프로그래밍
 ```
 
 ## 🙋‍♀️Team_Member🙋‍♀️
@@ -17,9 +17,10 @@
 
 1. [❓ EASYME.md가 뭐예요?  ](#-easymemd가-뭐예요)
 2. [🙋‍♀️ 좀 더 구체적으로 가르쳐주세요!](#-좀-더-구체적으로-가르쳐주세요)
-3. [🛠 기능 엿보기](#-기능-엿보기)
     - [Header](#header)   
-    - [Text Style1](#text-style1)   
+    - [Text Style1](#text-style1)  
+3. [🛠 기능 엿보기](#-기능-엿보기)
+    
     - [Text Stlye2](#text-style2)   
     - [List](#list)      
     - [Link](#link)   
@@ -39,13 +40,8 @@
 </summary></details>
 
 ## ❓핵심코드❓
-```js
-function makeDeveloper(name, language) {
-  if (name === 'ONE:A' && language === 'JavaScript') {
-    return 'perfect!';
-  }
-
-  return false;
+```
+JDBC MySQL
 }
 
 makeDeveloper('ONE:A', 'JavaScript');
