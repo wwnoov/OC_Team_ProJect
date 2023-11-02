@@ -1,0 +1,41 @@
+                
+CREATE TABLE book (
+    book_id DOUBLE PRIMARY KEY auto_increment,
+    book_name VARCHAR(50),
+    author varchar(50),
+    price DECIMAL(10,2),
+    grade varchar(20),
+    quantity DOUBLE
+);			
+
+CREATE TABLE member (
+    id VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(50),
+    cash DECIMAL(10,2)
+);	
+
+ALTER table book
+ADD CONSTRAINT manager2 CHECK (quantity>=0);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('해법수학','최용준',15000,'중등',100);
+INSERT INTO book(book_name, author,price, grade, quantity)
+VALUES('해법과학','최용준', 15000,"중등",100);
+INSERT INTO book(book_name, author,price, grade, quantity)
+VALUES('초등수학','최용준', 15000,"초등",100);
+INSERT INTO book(book_name, author,price, grade, quantity)
+VALUES('초등과학','최용준', 15000,"초등",100);
+INSERT INTO book(book_name, author,price, grade, quantity)
+VALUES('고등체육','최용준', 15000,"고등",100);
+INSERT INTO book(book_name, author,price, grade, quantity)
+VALUES('초등영어','최용준', 15000,"초등",100);
+INSERT INTO book(book_name, author,price, grade, quantity)
+VALUES('고등문학','최용준', 15000,"고등",100);
+CREATE TABLE admin (
+    id VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id)
+);
+INSERT INTO admin (id, password) VALUES ('admin', '12345');
+ALTER table membermembers
+ADD CONSTRAINT manager CHECK (cash>=0);               
