@@ -39,13 +39,8 @@
 </summary></details>
 
 ## ❓핵심코드❓
-```js
-function makeDeveloper(name, language) {
-  if (name === 'ONE:A' && language === 'JavaScript') {
-    return 'perfect!';
-  }
-
-  return false;
+```
+JDBC MySQL
 }
 
 makeDeveloper('ONE:A', 'JavaScript');
