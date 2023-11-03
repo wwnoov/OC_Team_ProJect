@@ -40,6 +40,11 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 <details><summary>시퀀스
 </summary></details>
 
+## ❓시연연상❓
+
+![bs](https://github.com/wwnoov/wwnoov/assets/145524959/3626e6a7-56a9-4d7b-9a40-5cb5972748fe)
+
+
 ## ❓핵심코드❓
 ```
 JDBC MySQL
