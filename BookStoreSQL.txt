@@ -1,3 +1,5 @@
+SQL Query
+
                 
 CREATE TABLE book (
     book_id DOUBLE PRIMARY KEY auto_increment,
