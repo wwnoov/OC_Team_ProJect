@@ -152,6 +152,7 @@ public class BookStore extends DBConnector {
         try {
             String sql = "" +
                     "SELECT bno, btitle, bcontent, bwriter, bdate " +
+//                    "SELECT bno, btitle, bcontent, bdate " +
                     "FROM boards " +
                     "ORDER BY bno DESC";
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -162,6 +163,7 @@ public class BookStore extends DBConnector {
                 board.setBtitle(rs.getString("btitle"));
                 board.setBcontent(rs.getString("bcontent"));
                 board.setBwriter(rs.getString("bwriter"));
+//                board.setBwriter(loginId);
                 board.setBdate(rs.getDate("bdate"));
                 System.out.printf("%-6s%-12s%-12s%-40s\n",
                         board.getBno(),
@@ -205,8 +207,9 @@ public class BookStore extends DBConnector {
         board.setBtitle(scanner.nextLine());
         System.out.print("내용: ");
         board.setBcontent(scanner.nextLine());
-        System.out.print("글쓴이: ");
-        board.setBwriter(scanner.nextLine());
+//        System.out.print("글쓴이: ");
+//        board.setBwriter(scanner.nextLine());
+        board.setBwriter(loginId);
 
         // 게시판 보조메뉴 출력
         System.out.println("==========================================");
@@ -240,7 +243,9 @@ public class BookStore extends DBConnector {
         System.out.println("[게시물 읽기]");
         System.out.print("bno: ");
         int bno = Integer.parseInt(scanner.nextLine());
-
+        if(loginId.equals("admin")){
+            System.out.println("123");
+        }
         //boards 테이블에서 해당 게시물을 가져와 출력
         try {
             String sql = "" +
@@ -265,15 +270,38 @@ public class BookStore extends DBConnector {
                 System.out.println("날짜: " + board.getBdate());
                 //보조메뉴 출력
                 System.out.println("==========================================");
-                System.out.println("보조메뉴: 1.수정 | 2.삭제 | 0.이전메뉴");
+                System.out.println("보조메뉴: 1.수정 | 2. 삭제 | 0.이전메뉴");
                 System.out.print("메뉴선택: ");
                 String menuNo = scanner.nextLine();
                 System.out.println();
 
+//                if (menuNo.equals("1")) {
+//                    update(board);
+//                } else if (menuNo.equals("2")) {
+//                    delete(board);
+//                }
                 if (menuNo.equals("1")) {
-                    update(board);
+                    if ( loginId.equals(board.getBwriter())) {
+                        update(board);
+                    }else {
+                        System.out.println("작성자 본인만 수정 가능합니다.");
+                        try {
+                            Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 } else if (menuNo.equals("2")) {
-                    delete(board);
+                    if ( loginId.equals(board.getBwriter())|| loginId.equals("admin")) {
+                        delete(board);
+                    }else {
+                        System.out.println("작성자 본인만 삭제 가능합니다.");
+                        try {
+                            Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
             }
             rs.close();
@@ -294,8 +322,8 @@ public class BookStore extends DBConnector {
         board.setBtitle(scanner.nextLine());
         System.out.print("내용: ");
         board.setBcontent(scanner.nextLine());
-        System.out.print("글쓴이: ");
-        board.setBwriter(scanner.nextLine());
+//        System.out.print("글쓴이: ");
+//        board.setBwriter(scanner.nextLine());
 
         //보조메뉴 출력
         System.out.println("==========================================");
@@ -306,13 +334,15 @@ public class BookStore extends DBConnector {
             //boards 테이블에서 게시물 정보 수정
             try {
                 String sql = "" +
-                        "UPDATE boards SET btitle=?, bcontent=?, bwriter=? " +
+//                        "UPDATE boards SET btitle=?, bcontent=?, bwriter=? " +
+                        "UPDATE boards SET btitle=?, bcontent=? " +
                         "WHERE bno=?";
                 PreparedStatement pstmt = connection.prepareStatement(sql);
                 pstmt.setString(1, board.getBtitle());
                 pstmt.setString(2, board.getBcontent());
-                pstmt.setString(3, board.getBwriter());
-                pstmt.setInt(4, board.getBno());
+//                pstmt.setString(3, board.getBwriter());
+//                pstmt.setInt(4, board.getBno());
+                pstmt.setInt(3, board.getBno());
                 pstmt.executeUpdate();
                 pstmt.close();
             } catch (Exception e) {
@@ -364,6 +394,7 @@ public class BookStore extends DBConnector {
     }
     public void boardAdminMenu(){
         System.out.println();
+        loginId = "admin";
         System.out.println("==========================================");
         System.out.println("메인메뉴: 1.읽기 | 2.삭제 | 0.홈 메뉴");
         System.out.print("메뉴선택: ");
@@ -798,8 +829,17 @@ public class BookStore extends DBConnector {
     
     private void register() {
     	Member member = new Member();
-        System.out.print("사용할 아이디를 입력하세요: ");
-        member.id = scanner.nextLine();
+        while (true){
+            System.out.print("사용할 아이디를 입력하세요: ");
+            member.id = scanner.nextLine();
+            if (member.id.equals("admin")){
+                System.out.println("'admin' 이라는 아이디는 사용할 수 없습니다.");
+            }else {
+                break;
+            }
+
+        }
+
         System.out.print("사용할 비밀번호를 입력하세요: ");
         member.password = scanner.nextLine();
 
