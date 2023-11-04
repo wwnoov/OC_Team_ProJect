@@ -271,38 +271,45 @@ public class BookStore extends DBConnector {
                 System.out.println("내용: " + board.getBcontent());
                 System.out.println("쓴이: " + board.getBwriter());
                 System.out.println("날짜: " + board.getBdate());
-                //보조메뉴 출력
-                System.out.println("==========================================");
-                System.out.println("보조메뉴: 1.수정 | 2. 삭제 | 0.이전메뉴");
-                System.out.print("메뉴선택: ");
-                String menuNo = scanner.nextLine();
-                System.out.println();
+                if (loginId.equals("admin")){
+                    System.out.println("==========================================");
+                    System.out.println("보조메뉴: 1.삭제 | 0.이전메뉴");
+                    System.out.print("메뉴선택: ");
+                    String menuNo = scanner.nextLine();
+                    System.out.println();
 
-//                if (menuNo.equals("1")) {
-//                    update(board);
-//                } else if (menuNo.equals("2")) {
-//                    delete(board);
-//                }
-                if (menuNo.equals("1")) {
-                    if ( loginId.equals(board.getBwriter())) {
-                        update(board);
-                    }else {
-                        System.out.println("작성자 본인만 수정 가능합니다.");
-                        try {
-                            Thread.sleep(2000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                } else if (menuNo.equals("2")) {
-                    if ( loginId.equals(board.getBwriter())|| loginId.equals("admin")) {
+                    if(menuNo.equals("1")){
                         delete(board);
-                    }else {
-                        System.out.println("작성자 본인만 삭제 가능합니다.");
-                        try {
-                            Thread.sleep(2000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
+                    }
+                }else {
+                    //보조메뉴 출력
+                    System.out.println("==========================================");
+                    System.out.println("보조메뉴: 1.수정 | 2. 삭제 | 0.이전메뉴");
+                    System.out.print("메뉴선택: ");
+                    String menuNo = scanner.nextLine();
+                    System.out.println();
+
+                    if (menuNo.equals("1")) {
+                        if (loginId.equals(board.getBwriter())) {
+                            update(board);
+                        } else {
+                            System.out.println("작성자 본인만 수정 가능합니다.");
+                            try {
+                                Thread.sleep(2000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    } else if (menuNo.equals("2")) {
+                        if (loginId.equals(board.getBwriter()) || loginId.equals("admin")) {
+                            delete(board);
+                        } else {
+                            System.out.println("작성자 본인만 삭제 가능합니다.");
+                            try {
+                                Thread.sleep(2000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
                 }
