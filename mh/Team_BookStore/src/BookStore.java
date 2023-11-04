@@ -243,7 +243,9 @@ public class BookStore extends DBConnector {
         System.out.println("[게시물 읽기]");
         System.out.print("bno: ");
         int bno = Integer.parseInt(scanner.nextLine());
-
+        if(loginId.equals("admin")){
+            System.out.println("123");
+        }
         //boards 테이블에서 해당 게시물을 가져와 출력
         try {
             String sql = "" +
@@ -290,7 +292,7 @@ public class BookStore extends DBConnector {
                         }
                     }
                 } else if (menuNo.equals("2")) {
-                    if ( loginId.equals(board.getBwriter())) {
+                    if ( loginId.equals(board.getBwriter())|| loginId.equals("admin")) {
                         delete(board);
                     }else {
                         System.out.println("작성자 본인만 삭제 가능합니다.");
@@ -392,6 +394,7 @@ public class BookStore extends DBConnector {
     }
     public void boardAdminMenu(){
         System.out.println();
+        loginId = "admin";
         System.out.println("==========================================");
         System.out.println("메인메뉴: 1.읽기 | 2.삭제 | 0.홈 메뉴");
         System.out.print("메뉴선택: ");
