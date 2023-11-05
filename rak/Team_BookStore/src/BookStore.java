@@ -731,7 +731,7 @@ public class BookStore extends DBConnector {
             String bookName = scanner.nextLine();
 
 
-            if (bookName.matches("^[가-힣\\s]*$")) { // 공백 및 한글만 입력에 반응하기
+            if (bookName.matches("^[가-힣\\s]*$")) { // 공백 및 한글 입력에만 반응하기
                 System.out.print("구매 수량을 입력하세요: ");
 
                 if (scanner.hasNextInt()) {
