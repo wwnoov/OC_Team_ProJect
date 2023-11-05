@@ -6,6 +6,7 @@ public class DBConnector {
     Connection connection;
     private PreparedStatement statement;
 
+	//DB 연결 설정
     public DBConnector() {
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
@@ -29,8 +30,8 @@ public class DBConnector {
 	}
 
 
-    
-    public void exit() {		//라이브러리에 존재하는 close() 메서드들과 혼동할 여지가 있으므로 exit() 메서드로 이름을 바꿀 것을 제안
+    //종료를 확실히 하기 위한 exit
+    public void exit() {
         try {
             if (statement != null) {
                 statement.close();
