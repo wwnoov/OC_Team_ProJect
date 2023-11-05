@@ -71,3 +71,48 @@ VALUES('바로완성 중등내신','이무현',20000,'중등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('바로완성 중등수학경시대회','이무현',25000,'중등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등문학','남원우',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등수학','남원우',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등영어','남원우',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등과학','남원우',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등사회','남원우',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등영단어','남원우',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등독해','남원우',15000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등한자','남원우',15000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등내신','남원우',15000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등수학경시대회','남원우',25000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 국어영역','남원우',18000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 수학영역','남원우',18000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 영어영역','남원우',18000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 과학탐구영역','남원우',18000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 사회탐구영역','남원우',18000,'고등',100);
