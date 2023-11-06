@@ -644,16 +644,16 @@ public class BookStore extends DBConnector {
 
         switch (choice) {
             case 1:
-                BestElementaryBooks();
+                ElementaryBooks();
                 break;
             case 2:
-                BestMiddleBooks();
+                MiddleBooks();
                 break;
             case 3:
-                BestHighBooks();
+                HighBooks();
                 break;
             case 4:
-                BestTextbooks();
+                Textbooks();
                 break;
             case 0:
                 showMenu();
