@@ -13,7 +13,7 @@ public class DBConnector {
 			
 			//연결하기
 			connection = DriverManager.getConnection(
-					"jdbc:mariadb://127.0.0.1:3306/tp_test",
+					"jdbc:mariadb://127.0.0.1:3306/bookstore",
 					"root",
 					"12345"
 					);
