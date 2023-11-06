@@ -16,7 +16,7 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 
 ## 🛠 목차   
 
-1. [❓ EASYME.md가 뭐예요?  ](#-easymemd가-뭐예요)
+1. [❓ 프로젝트소개  ](#-BOOKSTORE가-뭐예요)
 2. [🙋‍♀️ 좀 더 구체적으로 가르쳐주세요!](#-좀-더-구체적으로-가르쳐주세요)
     - [Header](#header)   
     - [Text Style1](#text-style1)  
@@ -40,7 +40,7 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 <details><summary>시퀀스
 </summary></details>
 
-## 👑시연연상👑
+## 👑구동연상👑
 <details><summary>일반회원</summary>
     
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
