@@ -13,106 +13,151 @@ ALTER table book
 ADD CONSTRAINT manager2 CHECK (quantity>=0);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('초등국어','최경락',15000,'초등',100);
+VALUES('해법 초등국어','천재교육 편집부',15000,'초등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('초등수학','최경락',15000,'초등',100);
+VALUES('해법 초등수학','천재교육 편집부',15000,'초등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('초등영어','최경락',15000,'초등',100);
+VALUES('해법 초등영어','천재교육 편집부',15000,'초등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('초등과학','최경락',15000,'초등',100);
+VALUES('해법 초등과학','천재교육 편집부',15000,'초등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('초등사회','최경락',15000,'초등',100);
+VALUES('해법 초등사회','천재교육 편집부',15000,'초등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('똑똑 초등영단어','최경락',19000,'초등',10);
+VALUES('똑똑 초등영단어','천재교육 편집부',19000,'초등',10);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('똑똑 초등독해','최경락',12000,'초등',50);
+VALUES('똑똑 초등독해','천재교육 편집부',12000,'초등',50);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('똑똑 초등한자','최경락',16000,'초등',70);
+VALUES('똑똑 초등한자','천재교육 편집부',16000,'초등',70);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('똑똑 초등내신','최경락',17000,'초등',30);
+VALUES('똑똑 초등내신','천재교육 편집부',17000,'초등',30);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('똑똑 초등수학경시대회','최경락',25000,'초등',13);
+VALUES('똑똑 초등수학경시대회','천재교육 편집부',25000,'초등',13);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('일등전략 중학국어','이무현',16000,'중등',100);
+VALUES('일등전략 중학국어','천재교육 편집부',16000,'중등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('일등전략 중등수학','이무현',16000,'중등',100);
+VALUES('일등전략 중등수학','천재교육 편집부',16000,'중등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('일등전략 중등영어','이무현',16000,'중등',100);
+VALUES('일등전략 중등영어','천재교육 편집부',16000,'중등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('일등전략 중등과학','이무현',16000,'중등',100);
+VALUES('일등전략 중등과학','천재교육 편집부',16000,'중등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('일등전략 중등사회','이무현',16000,'중등',100);
+VALUES('일등전략 중등사회','천재교육 편집부',16000,'중등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('바로완성 중등영단어','이무현',18000,'중등',100);
+VALUES('바로완성 중등영단어','천재교육 편집부',18000,'중등',25);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('바로완성 중등독해','이무현',20000,'중등',100);
+VALUES('바로완성 중등독해','천재교육 편집부',20000,'중등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('바로완성 중등한자','이무현',20000,'중등',100);
+VALUES('바로완성 중등한자','천재교육 편집부',20000,'중등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('바로완성 중등내신','이무현',20000,'중등',100);
+VALUES('바로완성 중등내신','천재교육 편집부',20000,'중등',50);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('바로완성 중등수학경시대회','이무현',25000,'중등',100);
+VALUES('바로완성 중등수학경시대회','천재교육 편집부',25000,'중등',5);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등문학','남원우',17000,'고등',100);
+VALUES('셀파 고등문학','천재교육 편집부',17000,'고등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등수학','남원우',17000,'고등',100);
+VALUES('셀파 고등수학','천재교육 편집부',17000,'고등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등영어','남원우',17000,'고등',100);
+VALUES('셀파 고등영어','천재교육 편집부',17000,'고등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등과학','남원우',17000,'고등',100);
+VALUES('셀파 고등과학','천재교육 편집부',17000,'고등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등사회','남원우',17000,'고등',100);
+VALUES('셀파 고등사회','천재교육 편집부',17000,'고등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등영단어','남원우',17000,'고등',100);
+VALUES('셀파 고등영단어','천재교육 편집부',17000,'고등',1);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등독해','남원우',15000,'고등',100);
+VALUES('셀파 고등독해','천재교육 편집부',15000,'고등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등한자','남원우',15000,'고등',100);
+VALUES('셀파 고등한자','천재교육 편집부',15000,'고등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등내신','남원우',15000,'고등',100);
+VALUES('셀파 고등내신','천재교육 편집부',15000,'고등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등수학경시대회','남원우',25000,'고등',100);
+VALUES('셀파 고등수학경시대회','천재교육 편집부',25000,'고등',0);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('수능전략 국어영역','남원우',18000,'고등',100);
+VALUES('수능전략 국어영역','천재교육 편집부',18000,'고등',11);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('수능전략 수학영역','남원우',18000,'고등',100);
+VALUES('수능전략 수학영역','천재교육 편집부',18000,'고등',10);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('수능전략 영어영역','남원우',18000,'고등',100);
+VALUES('수능전략 영어영역','천재교육 편집부',18000,'고등',13);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('수능전략 과학탐구영역','남원우',18000,'고등',100);
+VALUES('수능전략 과학탐구영역','천재교육 편집부',18000,'고등',15);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('수능전략 사회탐구영역','남원우',18000,'고등',100);
+VALUES('수능전략 사회탐구영역','천재교육 편집부',18000,'고등',20);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등문학','천재교육 편집부',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등수학','천재교육 편집부',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등영어','천재교육 편집부',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등과학','천재교육 편집부',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등사회','천재교육 편집부',17000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등영단어','천재교육 편집부',17000,'고등',1);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등독해','천재교육 편집부',15000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등한자','천재교육 편집부',15000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등내신','천재교육 편집부',15000,'고등',100);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등수학경시대회','천재교육 편집부',25000,'고등',0);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 국어영역','천재교육 편집부',18000,'고등',11);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 수학영역','천재교육 편집부',18000,'고등',10);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 영어영역','천재교육 편집부',18000,'고등',13);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 과학탐구영역','천재교육 편집부',18000,'고등',15);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 사회탐구영역','천재교육 편집부',18000,'고등',20);
