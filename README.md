@@ -45,13 +45,36 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 ![bs](https://github.com/wwnoov/wwnoov/assets/145524959/4c33474b-139c-40da-b5d5-1ee12f6aa516)
 
 
-## ❓핵심코드❓
-```
-JDBC MySQL
-}
+## ❓기능설명❓
 
-makeDeveloper('ONE:A', 'JavaScript');
-```
+<details><summary>1. 회원관리
+</summary>
+회원 가입시 중복 아이디 체크<br/>
+관리자 아이디 가입 불가<br/>
+로그인시 비밀번호 오류 3회 시 로그인 불가<br/>
+
+</details>
+
+2. 도서 관리<br/>
+도서 조회·구매·구매 <br/>
+도서 구매 시 재고 감소<br/>
+추천 도서 <br/>
+<details><summary>회원관리
+</summary></details>
+3. 후기 게시판
+후기 게시글 등록
+후기 게시글 수정
+후기 게시글 삭제
+<details><summary>후기 게시판
+</summary></details>
+4. 관리자 모드
+공지사항 조회
+<details><summary>회원관리
+</summary></details>
+3. 마이페이지
+개인 정보 조회 및 수정
+도서 주문 내역 조회
+
    
 
 
