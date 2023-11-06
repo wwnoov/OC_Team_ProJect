@@ -46,7 +46,7 @@ INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('일등전략 중등수학','천재교육 편집부',16000,'중등',100);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('일등전략 중등영어','천재교육 편집부',16000,'중등',100);
+VALUES('일등전략 중등영어','천재교육 편집부',16000,'중등',10);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('일등전략 중등과학','천재교육 편집부',16000,'중등',100);
