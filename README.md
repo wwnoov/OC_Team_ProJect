@@ -55,7 +55,7 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 
 </details>
 
-<details><summary>2. 회원관리
+<details><summary>회원관리
 </summary>
 도서 조회·구매·구매 <br/>
 도서 구매 시 재고 감소<br/>
