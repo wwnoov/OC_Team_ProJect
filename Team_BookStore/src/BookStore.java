@@ -1336,7 +1336,127 @@ public class BookStore extends DBConnector {
     }
     // ------------------------------------------ 로그인 체크 ------------------------------------- //
 
-    // ------------------------------------------ 종료 ------------------------------------------- //
+    // ------------------------------------------ 이달의 도서 메뉴 ------------------------------------- //
+	 public void monthBook() {
+        try {
+            String query = "" +
+                    "SELECT *" +
+                    "FROM monthbook";
+            PreparedStatement statement = connection.prepareStatement(query);
+            ResultSet resultSet = statement.executeQuery();
+            System.out.println("==============================[이달의 도서]================================");
+            while (resultSet.next()) {
+                MonthBook mBook = new MonthBook();
+
+                mBook.setMonth_book_name(resultSet.getString("month_book_name"));
+                mBook.setMonth_author(resultSet.getString("month_author"));
+                mBook.setMonth_price(resultSet.getInt("month_price"));
+                mBook.setMonth_grade(resultSet.getString("month_grade"));
+                PrintStream printf = System.out.printf("도서 이름: %s | 저자:%s | 가격: %d | 카테고리 :%s | \n",
+                        mBook.getMonth_book_name(),
+                        mBook.getMonth_author(),
+                        mBook.getMonth_price(),
+                        mBook.getMonth_grade()
+                );
+                System.out.println("=========================================================================");
+            }
+
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("문제가 발생하였습니다. 관리자에게 문의해주세요.");
+        }
+//        if (loginId.equals("admin")) {
+            System.out.println();
+            System.out.println("=====================================================================");
+            System.out.println("     │  1. 등록하기   │    │  2. 삭제하기   │    │  0. 돌아가기   │");
+            System.out.println("=====================================================================\n");
+            System.out.print("메뉴 선택: ");
+            int choice2 = scanner.nextInt();
+            scanner.nextLine();
+            switch (choice2) {
+                case 1:
+                    createMonthBook();
+                    break;
+                case 2:
+                    deleteMonthBook();
+                    break;
+                default:
+                    System.out.println("잘못된 번호입니다.");
+//            }
+        }
+    }
+    // ------------------------------------------ 이달의 도서 메뉴 ------------------------------------- //
+
+    // ------------------------------------------ 이달의 도서 등록 ------------------------------------- //
+  private void createMonthBook() {
+        MonthBook mBook = new MonthBook();
+        System.out.print("이달의 도서로 등록할 책 : ");
+        mBook.setMonth_book_name(scanner.nextLine());
+        System.out.println(mBook.getMonth_book_name());
+        try {
+            String query = ""
+                    + "SELECT * FROM book"
+                    + " WHERE book_name= ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, mBook.getMonth_book_name());
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                mBook.setMonth_book_name(rs.getString("book.book_name"));
+                mBook.setMonth_author(rs.getString("book.author"));
+                mBook.setMonth_price(rs.getInt("book.price"));
+                mBook.setMonth_grade(rs.getString("book.grade"));
+            }
+            try {
+               String sql = "" +
+                    "INSERT INTO monthbook (month_book_name, month_author, month_price, month_grade)" +
+                    "values (?, ?, ?, ?)";
+                PreparedStatement pstmt = connection.prepareStatement(sql);
+                pstmt.setString(1, mBook.getMonth_book_name());
+                pstmt.setString(2, mBook.getMonth_author());
+                pstmt.setInt(3, mBook.getMonth_price());
+                pstmt.setString(4, mBook.getMonth_grade());
+                pstmt.executeUpdate();
+                pstmt.close();
+            } catch (Exception e) {
+            e.printStackTrace();
+            exit();
+            }
+            rs.close();
+            statement.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            exit();
+            start();
+        }
+        monthBook();
+    }
+    // ------------------------------------------ 이달의 도서 등록 ------------------------------------- //
+
+    // ------------------------------------------ 이달의 도서 삭제 ------------------------------------- //
+
+	private void deleteMonthBook() {
+        System.out.println("==============================[이달의 도서 삭제하기]==============================");
+        System.out.print("이달의 도서에서 삭제할 책 : ");
+        String deleteBook = scanner.nextLine();
+        System.out.println("=======================================================================");
+        try {
+            String sql = "DELETE FROM monthbook WHERE month_book_name=?" ;
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            pstmt.setString(1,deleteBook);
+            pstmt.executeUpdate();
+            pstmt.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            exit();
+        }
+        System.out.println("이달의 도서에서 '"+deleteBook+"' 책이 삭제되었습니다.");
+
+        monthBook();
+    }
+    // ------------------------------------------ 이달의 도서 삭제 ------------------------------------- //
+	
+    // ------------------------------------------ 종료 ---------------------------------------------- //
     public void exit() {
         if(connection != null) {
             try {
