@@ -713,136 +713,144 @@ public class BookStore extends DBConnector {
             System.out.println("문제가 발생하였습니다. 관리자에게 문의해주세요.");
         }
     }
-    
-    
+
+
 
     public void purchaseBook() {
-        // Display all book information
         int totalPrice = 0;
-
- 		List<String> bookNames = new ArrayList<>();
- 		List<Integer> quantities = new ArrayList<>();
-
+        List<String> bookNames = new ArrayList<>();
+        List<Integer> quantities = new ArrayList<>();
         gradeBooks();
         System.out.println("======================================================================");
-        boolean validInput = false;
-        while (!validInput) {
-            System.out.print("구매할 도서 이름을 입력하세요: ");
-            String bookName = scanner.nextLine();
-
-
-            if (bookName.matches("^[가-힣\\s]*$")) { // 공백 및 한글 입력에만 반응하기
-                System.out.print("구매 수량을 입력하세요: ");
-
-                if (scanner.hasNextInt()) {
-                    int quantity = scanner.nextInt();
-                    scanner.nextLine(); // 버퍼 비우기
-
-                    bookNames.add(bookName);
-                    quantities.add(quantity);
-                    validInput = true;
-                } else {
-                    System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-                    scanner.nextLine(); // 버퍼 비우기
-                }
-            } else {
-                System.out.println("도서 이름에 한글 이외의 문자가 포함되었습니다. 다시 입력하세요.");
-            }
-        }
-
-
 
         try {
- 		    connection.setAutoCommit(false);
+            connection.setAutoCommit(false);
 
- 		    String query1 = "SELECT price, quantity "
- 		            + "FROM book "
- 		            + "WHERE book_name = ?";
- 		    PreparedStatement statement1 = connection.prepareStatement(query1);
+            String query1 = "SELECT price, quantity "
+                    + "FROM book "
+                    + "WHERE book_name = ?";
+            PreparedStatement statement1 = connection.prepareStatement(query1);
 
- 		    String query2 = "UPDATE book SET quantity = quantity - ? WHERE book_name = ?";
-
- 		    PreparedStatement statement2 = connection.prepareStatement(query2);
+            String query2 = "UPDATE book SET quantity = quantity - ? WHERE book_name = ?";
+            PreparedStatement statement2 = connection.prepareStatement(query2);
 
             String query3 = "UPDATE member "
                     + "SET cash = cash - ? "
                     + "WHERE id = ?";
             PreparedStatement statement3 = connection.prepareStatement(query3);
 
+            boolean validInput = false;
+            while (!validInput) {
+                System.out.print("구매할 도서 이름을 입력하세요: ");
+                String bookName = scanner.nextLine();
+
+                statement1.setString(1, bookName);
+                ResultSet resultSet = statement1.executeQuery();
+
+                if (resultSet.next()) {
+                    int availableQuantity = resultSet.getInt("quantity");
+                    System.out.print("구매 수량을 입력하세요: ");
+                    int quantity = scanner.nextInt();
+                    scanner.nextLine(); 
+                    // 입력한 책 이름이나, 재고와 입력한 수량이 맞지 않으면 바로 다시 입력하기.
+                    if (availableQuantity < quantity) {
+                        System.out.println("입력하신 수량이 재고보다 많습니다. 다시 입력하세요.");
+                        continue;
+                    }
+
+                    bookNames.add(bookName);
+                    quantities.add(quantity);
+                    int price = resultSet.getInt("price");
+                    totalPrice += (price * quantity);
+                    validInput = true;
+                } else {
+                    System.out.println("입력한 도서를 찾을 수 없습니다. 다시 입력하세요.");
+                }
+            }
+            statement3.setDouble(1, totalPrice);
+            statement3.setString(2, loginId);
+            int rows3 = statement3.executeUpdate();
+            if (rows3 == 0) {
+                System.out.println("잔액이 부족합니다.");
+                System.out.println("캐시 잔액 : " + (int)getUserCash() + "원");
+                purchaseBook(); // Prompt to re-enter the quantity
+                return; // Return without continuing to generate the receipt
+            }
 
 
-
+            //구매한 책에 대한 영수증
             System.out.println("\n===============================[영수증]===============================");
- 		    for (int i = 0; i < bookNames.size(); i++) {
+            for (int i = 0; i < bookNames.size(); i++) {
                 String bookName = bookNames.get(i);
                 Integer quantity = quantities.get(i);
 
- 		        statement1.setString(1, bookName);
- 		        ResultSet resultSet = statement1.executeQuery();
+                statement1.setString(1, bookName);
+                ResultSet resultSet = statement1.executeQuery();
 
- 		        if (resultSet.next()) {
- 		            int price = resultSet.getInt("price");
- 		            int availableQuantity = resultSet.getInt("quantity");
+                if (resultSet.next()) {
+                    int price = resultSet.getInt("price");
+                    int availableQuantity = resultSet.getInt("quantity");
 
- 		            if (availableQuantity < quantity) {
- 		                throw new Exception("수량이 맞지 않습니다. 재고를 확인해주세요.");
- 		            }
+                    if (availableQuantity < quantity) {
+                        throw new Exception("수량이 맞지 않습니다. 재고를 확인해주세요.");
+                    }
 
- 		            totalPrice += (price * quantity);
+                    totalPrice += (price * quantity);
 
- 		            // 현재 시간을 얻기 위한 날짜 포맷 지정
- 		            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
- 		            String currentTime = dateFormat.format(new Date());
+                    // 현재 시간을 얻기 위한 날짜 포맷 지정
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    String currentTime = dateFormat.format(new Date());
 
- 		            System.out.println("구매 도서 이름: " + bookName);
- 		            System.out.println("구매 수량: " + quantity);
- 		            System.out.println("총 가격: " + (price * quantity)+"원");
- 		            System.out.println("구매 시간: " + currentTime);
- 		            System.out.println("=====================================================================");
+                    System.out.println("구매 도서 이름: " + bookName);
+                    System.out.println("구매 수량: " + quantity);
+                    System.out.println("총 가격: " + (price * quantity)+"원");
+                    System.out.println("구매 시간: " + currentTime);
+                    System.out.println("=====================================================================");
 
                     try {
                         Thread.sleep(2000);
+                        connection.commit();
                     }catch (Exception e){
                         e.printStackTrace();
                     }
 
- 		            statement2.setInt(1, quantity);
- 		            statement2.setString(2, bookName);
- 		            statement2.executeUpdate();
- 		        } else {
- 		            throw new Exception("도서를 찾을 수 없습니다.");
+                    statement2.setInt(1, quantity);
+                    statement2.setString(2, bookName);
+                    statement2.executeUpdate();
+                } else {
+                    throw new Exception("도서를 찾을 수 없습니다.");
                 }
- 		    }
+            }
 
- 		    statement3.setDouble(1, totalPrice);
- 		    statement3.setString(2, loginId);
- 		    int rows3 = statement3.executeUpdate();
- 		    if (rows3 == 0) {
- 		        throw new Exception("잔액이 부족합니다.");
- 		    }
+            int userCash = (int)getUserCash();
+            if (userCash < totalPrice) {
+                System.out.println("잔액이 부족합니다. 다시 수량을 입력해주세요.");
+                validInput = false;
+            }
 
- 		    connection.commit();
- 		}catch (Exception e) {
- 			e.printStackTrace();
- 			try {
- 				connection.rollback();
- 			}catch (SQLException e1) {
- 				System.out.println("구매하기에 실패하셨습니다. 원하시는 도서의 재고를 확인해주세요.");
- 			}
- 		}finally {
- 			if(connection != null) {
- 				try {
- 					connection.setAutoCommit(true);
- 				} catch (SQLException e2) {}
- 			}
+        } catch (Exception e) {
+            e.printStackTrace();
+            try {
+                connection.rollback();
+            }catch (SQLException e1) {
+                System.out.println("구매하기에 실패하셨습니다. 원하시는 도서의 재고를 확인해주세요.");
+            }
+        }finally {
+            if(connection != null) {
+                try {
+                    connection.setAutoCommit(true);
+                } catch (SQLException e2) {}
+            }
             System.out.println("캐시 잔액 : " + (int)getUserCash() + "원");
- 			showMenu();
- 		}
+            showMenu();
+        }
     }
-    
-    
-    
-    
+
+
+
+
+
+
     public void rechargeCash() {
         System.out.println("================================[캐시 충전]================================");
         System.out.println("보유 캐시: " + (int)getUserCash() + "원");
@@ -895,10 +903,10 @@ public class BookStore extends DBConnector {
         }
         return false;
     }
-    
-    
-    
-    
+
+
+
+
     private void register() {
     	Member member = new Member();
         while (true){
@@ -926,7 +934,7 @@ public class BookStore extends DBConnector {
                 statement.setString(2, member.getPassword());
                 statement.setInt(3, 0); // 초기 보유 현금은 0으로 설정
                 statement.executeUpdate();
-                statement.close();    
+                statement.close();
                 System.out.println("회원가입에 성공했습니다.");
            }catch (SQLException e) {
                e.printStackTrace();
@@ -939,7 +947,7 @@ public class BookStore extends DBConnector {
         System.out.println();
         start();
     }
-    
+
     private boolean isIdAvailable(String id) {
         try {
         	String query = "" +
@@ -957,11 +965,11 @@ public class BookStore extends DBConnector {
         return false;
     }
 
-    
+
     private void adminMode() {
     	loginAttempt = 0; // 로그인 시도 횟수
         boolean loggedIn = false;
-    	
+
         while(!loggedIn && loginAttempt < 3) {
         	Admin admin = new Admin();
             System.out.println("============================[관리자 로그인]============================");
@@ -994,8 +1002,8 @@ public class BookStore extends DBConnector {
                 } else {
                     System.out.println("아이디가 존재하지 않습니다.");
                 }
-				
-				
+
+
 			} catch (SQLException e) {
 				e.printStackTrace();
 				System.out.println("관리자 시스템에 문제가 발생하여 관리자 모드를 종료합니다.");
@@ -1004,7 +1012,7 @@ public class BookStore extends DBConnector {
             System.out.println("=====================================================================");
             loginAttempt++; // 로그인 시도 횟수 증가
         }
-        
+
     	if (!loggedIn) {
             start(); // 3번 연속 실패시 start() 메서드 호출
         }
@@ -1076,6 +1084,6 @@ public class BookStore extends DBConnector {
             e.printStackTrace();
         }
     }
-    
-    
+
+
 }
