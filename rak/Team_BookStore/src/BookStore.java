@@ -428,7 +428,7 @@ public class BookStore extends DBConnector {
         System.out.println();
         System.out.println("   │  1. 초등학교   │     │  2. 중학교   │     │  3. 고등학교   │");
         System.out.println();
-        System.out.println("             │  4. 교과서   │       │  0. 돌아가기   │  ");
+        System.out.println("   │  4. 교과서     │                         │  0. 돌아가기   │  ");
         System.out.println();
         System.out.println("======================================================================");
         System.out.println();
@@ -635,7 +635,7 @@ public class BookStore extends DBConnector {
         System.out.println("\n=========================[책 추천]=========================");
         System.out.println();
         System.out.println("   │  1. 초등학교   │     │  2. 중학교   │     │  3. 고등학교   │");
-        System.out.println("             │  4. 교과서   │       │  0. 돌아가기   │  ");
+        System.out.println("   │  4. 교과서     │                         │  0. 돌아가기   │  ");
         System.out.println("====================================================================");
         System.out.println();
         System.out.print("카테고리 선택: ");
@@ -670,7 +670,7 @@ public class BookStore extends DBConnector {
             String query = "" +
                     "SELECT book_name, author, price, grade, quantity " +
                     "FROM book " +
-                    "WHERE grade = '초등' AND 0< quantity AND quantity< 30 " +
+                    "WHERE grade = '초등' AND 0< quantity AND quantity< 30 " + // 재고가 1권 이상 30권 미만인 책 추천
                     "ORDER BY quantity DESC";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
@@ -1031,7 +1031,7 @@ public class BookStore extends DBConnector {
         System.out.println();
         System.out.println("          │  1. 새 책 추가하기   │       │  2. 책 삭제하기   │");
         System.out.println();
-        System.out.println("          │  3. 책 재고 채우기   │        │  0. 돌아가기   │  ");
+        System.out.println("          │  3. 책 재고 채우기   │       │  0. 돌아가기      │  ");
         System.out.println();
         System.out.println("=====================================================================");
         System.out.print("메뉴 선택: ");
