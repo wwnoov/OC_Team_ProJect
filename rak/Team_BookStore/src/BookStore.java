@@ -56,10 +56,10 @@ public class BookStore extends DBConnector {
 
     // ------------------------------------------- 로그인 ---------------------------------------- //
     public void login() {
-        loginAttempt = 0; // 로그인 시도 횟수
+        loginAttempt = 0;
         boolean loggedIn = false; // 로그인 여부
 
-        while (!loggedIn && loginAttempt < 3) {
+        while (!loggedIn && loginAttempt < 3) { // 로그인 시도 횟수
             Member member = new Member(); // 멤버 객체 생성 후 로그인 정보 저장
             System.out.println("===============================[로그인]================================");
             System.out.print("아이디: ");
