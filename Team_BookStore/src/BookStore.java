@@ -231,12 +231,7 @@ public class BookStore extends DBConnector {
         board.setBtitle(scanner.nextLine());
         System.out.print("내용: ");
         board.setBcontent(scanner.nextLine());
-<<<<<<< HEAD
         System.out.println("========================================================================");
-=======
-//        System.out.print("글쓴이: ");
-//        board.setBwriter(scanner.nextLine());
->>>>>>> d887fcd96168896b2f9c71c59878875664061347
         board.setBwriter(loginId);
 
         // 게시판 보조메뉴 출력
@@ -275,16 +270,10 @@ public class BookStore extends DBConnector {
         System.out.println("==============================[게시물 읽기]==============================");
         System.out.print("글 번호 : ");
         int bno = Integer.parseInt(scanner.nextLine());
-<<<<<<< HEAD
         System.out.println();
         System.out.println("========================================================================");
 
 
-=======
-        if(loginId.equals("admin")){
-            System.out.println("123");
-        }
->>>>>>> d887fcd96168896b2f9c71c59878875664061347
         //boards 테이블에서 해당 게시물을 가져와 출력
         try {
             String sql = "" +
@@ -306,7 +295,6 @@ public class BookStore extends DBConnector {
                 System.out.println("내용: " + board.getBcontent());
                 System.out.println("쓴이: " + board.getBwriter());
                 System.out.println("날짜: " + board.getBdate());
-<<<<<<< HEAD
                 if (loginId.equals("admin")){
                     System.out.println("========================================================================");
                     System.out.println("               │  1. 삭제하기   │        │  0. 취소   │");
@@ -352,40 +340,6 @@ public class BookStore extends DBConnector {
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-=======
-                //보조메뉴 출력
-                System.out.println("==========================================");
-                System.out.println("보조메뉴: 1.수정 | 2. 삭제 | 0.이전메뉴");
-                System.out.print("메뉴선택: ");
-                String menuNo = scanner.nextLine();
-                System.out.println();
-
-//                if (menuNo.equals("1")) {
-//                    update(board);
-//                } else if (menuNo.equals("2")) {
-//                    delete(board);
-//                }
-                if (menuNo.equals("1")) {
-                    if ( loginId.equals(board.getBwriter())) {
-                        update(board);
-                    }else {
-                        System.out.println("작성자 본인만 수정 가능합니다.");
-                        try {
-                            Thread.sleep(2000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                } else if (menuNo.equals("2")) {
-                    if ( loginId.equals(board.getBwriter())|| loginId.equals("admin")) {
-                        delete(board);
-                    }else {
-                        System.out.println("작성자 본인만 삭제 가능합니다.");
-                        try {
-                            Thread.sleep(2000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
->>>>>>> d887fcd96168896b2f9c71c59878875664061347
                         }
                     }
                 }
@@ -414,12 +368,7 @@ public class BookStore extends DBConnector {
         board.setBtitle(scanner.nextLine());
         System.out.print("내용 : ");
         board.setBcontent(scanner.nextLine());
-<<<<<<< HEAD
         System.out.println("==========================================================================");
-=======
-//        System.out.print("글쓴이: ");
-//        board.setBwriter(scanner.nextLine());
->>>>>>> d887fcd96168896b2f9c71c59878875664061347
 
         //보조메뉴 출력
         System.out.println("               │  1. 수정하기   │        │  0. 취소   │");
@@ -432,20 +381,11 @@ public class BookStore extends DBConnector {
             //boards 테이블에서 게시물 정보 수정
             try {
                 String sql = "" +
-<<<<<<< HEAD
-=======
-//                        "UPDATE boards SET btitle=?, bcontent=?, bwriter=? " +
->>>>>>> d887fcd96168896b2f9c71c59878875664061347
                         "UPDATE boards SET btitle=?, bcontent=? " +
                         "WHERE bno=?";
                 PreparedStatement pstmt = connection.prepareStatement(sql);
                 pstmt.setString(1, board.getBtitle());
                 pstmt.setString(2, board.getBcontent());
-<<<<<<< HEAD
-=======
-//                pstmt.setString(3, board.getBwriter());
-//                pstmt.setInt(4, board.getBno());
->>>>>>> d887fcd96168896b2f9c71c59878875664061347
                 pstmt.setInt(3, board.getBno());
                 pstmt.executeUpdate();
                 pstmt.close();
@@ -1091,19 +1031,12 @@ public class BookStore extends DBConnector {
     public void boardAdminMenu(){
         System.out.println();
         loginId = "admin";
-<<<<<<< HEAD
         System.out.println("======================================================================");
         System.out.println("     │  1. 읽기   │     │  2. 삭제하기   │     │  0. 돌아가기   │");
         System.out.println("======================================================================");
         System.out.println();
         System.out.print("메뉴선택: ");
         int menuNo = Integer.parseInt(scanner.nextLine());
-=======
-        System.out.println("==========================================");
-        System.out.println("메인메뉴: 1.읽기 | 2.삭제 | 0.홈 메뉴");
-        System.out.print("메뉴선택: ");
-        String menuNo = scanner.nextLine();
->>>>>>> d887fcd96168896b2f9c71c59878875664061347
         System.out.println();
         switch (menuNo) {
             case 1:
@@ -1181,10 +1114,7 @@ public class BookStore extends DBConnector {
     private void register() {
     	Member member = new Member();
         while (true){
-<<<<<<< HEAD
             System.out.println("==============================[회원 가입]==============================");
-=======
->>>>>>> d887fcd96168896b2f9c71c59878875664061347
             System.out.print("사용할 아이디를 입력하세요: ");
             member.id = scanner.nextLine();
             if (member.id.equals("admin")){
