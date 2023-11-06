@@ -1,3 +1,5 @@
+SQL Query
+
                 
 CREATE TABLE book (
     book_id DOUBLE PRIMARY KEY auto_increment,
@@ -37,5 +39,13 @@ CREATE TABLE admin (
     PRIMARY KEY (id)
 );
 INSERT INTO admin (id, password) VALUES ('admin', '12345');
-ALTER table membermembers
-ADD CONSTRAINT manager CHECK (cash>=0);               
+ALTER table member
+ADD CONSTRAINT manager CHECK (cash>=0);       
+
+create table boards (
+    bno             int             primary key auto_increment,
+    btitle          varchar(100)    not null,
+    bcontent        longtext        not null,
+    bwriter         varchar(50)     not null,
+    bdate           datetime        default now()
+);        

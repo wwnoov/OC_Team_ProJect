@@ -4,11 +4,12 @@
 ```
 ## 📖 BOOKSTORE 프로젝트📖
 ```bash프로젝트 소개
-yes24와 같은 온라인 서점 마켓을 벤치마킹하여 온라인 서점 기능을 구현한 콘솔 프로그래밍
+yes24와 같은 온라인 서점 마켓을 벤치마킹하여
+온라인 서점 마켓 기능을 구현한 콘솔 프로그래밍
 ```
 
 ## 🙋‍♀️Team_Member🙋‍♀️
-#### [🫁 박석은 👉 GitHub](https://github.com/seokeunpark)
+#### [🎵 박석은 👉 GitHub](https://github.com/seokeunpark)
 #### [🌱 남원우 👉 GitHub](https://github.com/wwnoov)
 #### [🧟 이무현 👉 GitHub](https://github.com/LMH9999)
 #### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
@@ -39,18 +40,50 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여 온라인 서점 �
 <details><summary>시퀀스
 </summary></details>
 
-## ❓핵심코드❓
-```
-JDBC MySQL
-}
+## 👑시연연상👑
 
-makeDeveloper('ONE:A', 'JavaScript');
-```
+![bs](https://github.com/wwnoov/wwnoov/assets/145524959/4c33474b-139c-40da-b5d5-1ee12f6aa516)
+
+
+## ❓기능설명❓
+
+<details><summary>1. 회원관리
+</summary>
+회원 가입시 중복 아이디 체크<br/>
+관리자 아이디 가입 불가<br/>
+로그인시 비밀번호 오류 3회 시 로그인 불가<br/>
+</details>
+
+<details><summary>2. 도서관리
+</summary>
+도서 조회·구매·구매 <br/>
+도서 구매 시 재고 감소<br/>
+추천 도서 <br/>
+</details>
+
+<details><summary>3. 후기 게시판
+</summary>
+후기 게시글 등록
+후기 게시글 수정
+후기 게시글 삭제</details>
+
+<details><summary>4. 캐시 충전
+</summary>
+캐시충전
+</details>
+
+<details><summary>5. 관리자 모드
+</summary>
+관리자모드
+</details>
    
 
 
 ### ⚙️사용기술⚙️
-<a href="Java_Mybatis_Project/boards.sql"><img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/></a>
-
+<div>
+<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Conda-Forge&logoColor=white" />
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
+<img src="https://img.shields.io/badge/MariaDB-003545?style=flat&logo=MariaDB&logoColor=white" />
+</div>
 
 
