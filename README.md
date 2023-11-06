@@ -52,10 +52,9 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 회원 가입시 중복 아이디 체크<br/>
 관리자 아이디 가입 불가<br/>
 로그인시 비밀번호 오류 3회 시 로그인 불가<br/>
-
 </details>
 
-<details><summary>회원관리
+<details><summary>2. 도서관리
 </summary>
 도서 조회·구매·구매 <br/>
 도서 구매 시 재고 감소<br/>
@@ -75,7 +74,7 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 
 <details><summary>5. 관리자 모드
 </summary>
-관리자모드드
+관리자모드
 </details>
    
 
