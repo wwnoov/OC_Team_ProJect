@@ -41,8 +41,10 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 </summary></details>
 
 ## 👑시연연상👑
-
-![bs](https://github.com/wwnoov/wwnoov/assets/145524959/4c33474b-139c-40da-b5d5-1ee12f6aa516)
+일반회원
+![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
+관리자
+![관리자](https://github.com/wwnoov/Team_ProJect/assets/145524959/e6c1562f-5b48-454f-a033-6312a0112a1f)
 
 
 ## ❓기능설명❓
