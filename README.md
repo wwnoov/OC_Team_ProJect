@@ -55,26 +55,28 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 
 </details>
 
-2. 도서 관리<br/>
+<details><summary>2. 회원관리
+</summary>
 도서 조회·구매·구매 <br/>
 도서 구매 시 재고 감소<br/>
 추천 도서 <br/>
-<details><summary>회원관리
-</summary></details>
-3. 후기 게시판
+</details>
+
+<details><summary>3. 후기 게시판
+</summary>
 후기 게시글 등록
 후기 게시글 수정
-후기 게시글 삭제
-<details><summary>후기 게시판
-</summary></details>
-4. 관리자 모드
-공지사항 조회
-<details><summary>회원관리
-</summary></details>
-3. 마이페이지
-개인 정보 조회 및 수정
-도서 주문 내역 조회
+후기 게시글 삭제</details>
 
+<details><summary>4. 캐시 충전
+</summary>
+캐시충전
+</details>
+
+<details><summary>5. 관리자 모드
+</summary>
+관리자모드드
+</details>
    
 
 
