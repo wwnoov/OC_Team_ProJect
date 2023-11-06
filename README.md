@@ -9,7 +9,7 @@ yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 ```
 
 ## 🙋‍♀️Team_Member🙋‍♀️
-#### [🫁 박석은 👉 GitHub](https://github.com/seokeunpark)
+#### [🎵 박석은 👉 GitHub](https://github.com/seokeunpark)
 #### [🌱 남원우 👉 GitHub](https://github.com/wwnoov)
 #### [🧟 이무현 👉 GitHub](https://github.com/LMH9999)
 #### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
