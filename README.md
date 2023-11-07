@@ -32,7 +32,9 @@
 
 >인용문   
 <details><summary>Usecase
-</summary></details>
+</summary>
+https://github.com/wwnoov/Team_ProJect/blob/d24e5d8bad7128deffdaba0858ee6838748486a4/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A4.png
+</details>
 <details><summary>ERD
 </summary></details>
 <details><summary>Class
