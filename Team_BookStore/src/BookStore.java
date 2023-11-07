@@ -10,46 +10,116 @@ import java.util.Scanner;
 
 
 public class BookStore extends DBConnector {
-	private Scanner scanner;				//BookStore() 생산자에서 필드전역 선언으로 이동
+
+    // GLI 글씨색 설정
+    static final String ANSI_RED = "\u001B[31m";
+    static final String ANSI_BLUE = "\u001B[34m";
+    static final String ANSI_RESET = "\u001B[0m";
+    private Scanner scanner;				//BookStore() 생산자에서 필드전역 선언으로 이동
     private int loginAttempt; // 로그인 횟수 추적
     private String loginId = null; //로그인 값을 저장하는 문자열
 
-    
+
     public BookStore() {
-    	scanner = new Scanner(System.in); // Scanner 초기화
+        scanner = new Scanner(System.in); // Scanner 초기화
         loginAttempt = 0; // 로그인 추적 0으로 초기화
     }
-// ------------------------------------------- 홈화면 ---------------------------------------- //
+    // ------------------------------------------- 홈화면 ---------------------------------------- //
     public void start() {
-        System.out.println("================================ [홈] ================================");
-        System.out.println();
-        System.out.println("   │  1.  로 그 인   │    │  2. 회 원 가 입   │   │   0. 종 료    │ ");
-        System.out.println();
-        System.out.println("======================================================================");
-        System.out.println();
-        System.out.print("메뉴를 선택 :  ");
+        int choice;
 
-        int choice = scanner.nextInt(); // 사용자 선택 읽기
-        scanner.nextLine(); // 버퍼 비우기
-        System.out.println();
-
-        switch (choice) {
-        case 1:
-            login();
-            break;
-        case 2:
-            register();
-            break;
-        case 3:
-        	adminMode(); // 관리자모드, 메뉴에서는 안보이게
-        	break;
-        case 0:
-            System.out.println("프로그램을 종료합니다.");
-            System.exit(0);
-            break;
-        default:
-            System.out.println("잘못된 메뉴 선택입니다."); // 잘못 선택 하면 반복
-            start();
+        // 비회원 상태 메인 메뉴
+        if (loginId==null) {
+            System.out.println("\n=============================== [메인 메뉴]================================");
+            System.out.println("                                                         ["+ANSI_RED + "비회원 상태" + ANSI_RESET+"]");
+            System.out.println();
+            System.out.println("   │  "+ANSI_RED+"1. 도서 구매"+ANSI_RESET+"     │    │  2. 추천 도서   │     │  "+ANSI_RED+"3. 캐시 충전"+ANSI_RESET+"   │");
+            System.out.println();
+            System.out.println("   │  4. 후기 게시판   │    │   5. 로그인     │     │  "+ANSI_BLUE+"6. 회원 가입"+ANSI_RESET+"   │");
+            System.out.println();
+            System.out.println("=========================================================================");
+            System.out.println();
+            System.out.print("메뉴 선택: ");
+            choice = scanner.nextInt();
+            scanner.nextLine(); // 버퍼 비우기
+            switch (choice) {
+                case 1:
+                    System.out.println("비회원은 도서 구매 기능을 사용할 수 없습니다.");
+                    try {
+                        Thread.sleep(1500); // 1.5초 지연
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    start();
+                case 2:
+                    BestBooks();
+                    break;
+                case 3:
+                    System.out.println("비회원은 캐시 충전 기능을 사용할 수 없습니다.");
+                    try {
+                        Thread.sleep(1500); // 1.5초 지연
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    start();
+                case 4:
+                    boardlist();
+                case 5:
+                    login();
+                    break;
+                case 6:
+                    register();
+                    break;
+                case 99:
+                    adminMode(); // 관리자모드, 메뉴에서는 안보이게
+                    break;
+                case 0:
+                    System.out.println("프로그램을 종료합니다.");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("잘못된 메뉴 선택입니다."); // 잘못 선택 하면 반복
+                    start();
+            }
+        }else {
+            System.out.println("\n=============================== [메인 메뉴]================================");
+            System.out.println("                                                         ["+ANSI_BLUE + loginId + ANSI_RESET+"]");
+            System.out.println();
+            System.out.println("   │  1. 도서 구매    │     │  2. 추천 도서   │     │  3. 캐시 충전   │");
+            System.out.println();
+            System.out.println("   │  4. 후기 게시판  │     │   "+ANSI_RED+"5. 로그아웃"+ANSI_RESET+"   │     │   0.  종료      │");
+            System.out.println();
+            System.out.println("                          보유 잔액: " + (int)getUserCash() + "원");
+            System.out.println();
+            System.out.println("=========================================================================");
+            System.out.println();
+            System.out.print("메뉴 선택: ");
+            choice = scanner.nextInt();
+            scanner.nextLine(); // 버퍼 비우기
+            switch (choice) {
+                case 1:
+                    purchaseBook();
+                    break;
+                case 2:
+                    BestBooks();
+                    break;
+                case 3:
+                    rechargeCash();
+                    break;
+                case 4:
+                    boardlist();
+                case 5:
+                    loginId = null;
+                    start();
+                    break;
+                case 0:
+                    System.out.println("프로그램을 종료합니다.");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("잘못된 메뉴 선택입니다."); // 잘못 선택 하면 반복
+                    start();
+            }
         }
     }
     // ------------------------------------------- 홈화면 ---------------------------------------- //
@@ -71,8 +141,8 @@ public class BookStore extends DBConnector {
             try {
                 // 아이디 비밀번호를 DB에서 조회
                 String query = ""
-                		+ "SELECT password FROM member"
-                		+ " WHERE id= ?";
+                        + "SELECT password FROM member"
+                        + " WHERE id= ?";
                 PreparedStatement statement = connection.prepareStatement(query);
                 statement.setString(1, member.getId());
                 ResultSet rs = statement.executeQuery();
@@ -95,67 +165,25 @@ public class BookStore extends DBConnector {
                 exit();
                 start();
             } finally {
-            	if(loginId != null) {
-            	System.out.println("              어서오세요, "+loginId+"님. 무엇을 도와드릴까요?");		//loginId 값 부여 확인용
-            	}
+                if(loginId != null) {
+                    System.out.println("              어서오세요, "+loginId+"님. 무엇을 도와드릴까요?");		//loginId 값 부여 확인용
+                }
             }
 
             loginAttempt++; // 로그인 시도 횟수 증가
-        }
-
-        if (!loggedIn) {
-            start(); // 3번 연속 실패시 start() 메서드 호출
-        }
-        showMenu();
-    }
-    // ------------------------------------------- 로그인 ---------------------------------------- //
-
-    // ------------------------------------------- 메뉴 화면 -------------------------------------- //
-    public void showMenu() { // 메뉴출력
-        System.out.println("\n=============================== [메인 메뉴]================================");
-        System.out.println();
-        System.out.println("   │  1. 도서 구매   │     │  2. 추천 도서   │     │  3. 캐시 충전   │");
-        System.out.println();
-        System.out.println("             │  4. 후기 게시판   │       │  0. 종료   │  ");
-        System.out.println();
-        System.out.println("                          보유 잔액: " + (int)getUserCash() + "원");
-        System.out.println();
-        System.out.println("=========================================================================");
-        System.out.println();
-        System.out.print("메뉴 선택: ");
-        int choice = scanner.nextInt();
-        scanner.nextLine(); // 버퍼 비우기
-	
-        switch (choice) {
-            case 1:
-                purchaseBook();
-                break;
-            case 2:
-                BestBooks();
+            if(loginAttempt==3){
+                System.out.println();
+                System.out.println("로그인 시도 3번 실패로 홈으로 돌아갑니다.");
                 try {
-                    Thread.sleep(2000); // 2초 지연
+                    Thread.sleep(1500); // 1.5초 지연
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                showMenu();
-                break;
-            case 3:
-                rechargeCash();
-                break;
-            case 4:
-                boardlist();
-                break;
-            case 0:
-                System.out.println("로그아웃 되었습니다.");
-                System.out.println("프로그램을 종료합니다.");
-                exit();
-            default:
-                System.out.println("잘못된 메뉴 선택입니다.");
-
-    	}
+            }
+        }
+        start();
     }
-
-    // ------------------------------------------- 메뉴 화면 -------------------------------------- //
+    // ------------------------------------------- 로그인 ---------------------------------------- //
 
     // ------------------------------------------- 게시판 화면 ------------------------------------- //
     public void boardlist(){
@@ -169,7 +197,6 @@ public class BookStore extends DBConnector {
         try {
             String sql = "" +
                     "SELECT bno, btitle, bcontent, bwriter, bdate " +
-//                    "SELECT bno, btitle, bcontent, bdate " +
                     "FROM boards " +
                     "ORDER BY bno DESC";
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -180,14 +207,12 @@ public class BookStore extends DBConnector {
                 board.setBtitle(rs.getString("btitle"));
                 board.setBcontent(rs.getString("bcontent"));
                 board.setBwriter(rs.getString("bwriter"));
-//                board.setBwriter(loginId);
                 board.setBdate(rs.getDate("bdate"));
                 System.out.printf("%-6s%-12s%-12s%-40s\n",
                         board.getBno(),
                         board.getBtitle(),
                         board.getBwriter(),
                         board.getBdate());
-
             }
             rs.close();
             pstmt.close();
@@ -203,9 +228,16 @@ public class BookStore extends DBConnector {
 
     // ------------------------------------------- 게시물 메뉴 ------------------------------------- //
     public void boardMenu() {
-        System.out.println("=====================================================================");
-        System.out.println("     │  1. 작성하기   │     │  2. 읽 기   │     │  0. 돌아가기   │");
-        System.out.println("=====================================================================");
+        if (loginId==null){
+            System.out.println("=====================================================================");
+            System.out.println("     │  "+ANSI_RED+"1. 작성하기"+ANSI_RESET+"   │     │  2. 읽 기   │     │  0. 돌아가기   │");
+            System.out.println("=====================================================================");
+        }else {
+            System.out.println("=====================================================================");
+            System.out.println("     │  1. 작성하기   │     │  2. 읽 기   │     │  0. 돌아가기   │");
+            System.out.println("=====================================================================");
+        }
+
         System.out.println();
         System.out.print("메뉴 선택: ");
         String menuNo = scanner.nextLine();
@@ -213,11 +245,20 @@ public class BookStore extends DBConnector {
 
         switch (menuNo) {
             case "1":
+                if(loginId==null){
+                    System.out.println("비회원은 글을 작성할 수 없습니다.");
+                    try {
+                        Thread.sleep(1500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    boardlist();
+                }
                 create();
             case "2":
                 read();
             case "0":
-                showMenu();
+                start();
         }
     }
     // ------------------------------------------- 게시물 메뉴 ------------------------------------- //
@@ -272,8 +313,6 @@ public class BookStore extends DBConnector {
         int bno = Integer.parseInt(scanner.nextLine());
         System.out.println();
         System.out.println("========================================================================");
-
-
         //boards 테이블에서 해당 게시물을 가져와 출력
         try {
             String sql = "" +
@@ -290,57 +329,87 @@ public class BookStore extends DBConnector {
                 board.setBcontent(rs.getString("bcontent"));
                 board.setBwriter(rs.getString("bwriter"));
                 board.setBdate(rs.getDate("bdate"));
-                System.out.println("번호: " + board.getBno());
-                System.out.println("제목: " + board.getBtitle());
-                System.out.println("내용: " + board.getBcontent());
-                System.out.println("쓴이: " + board.getBwriter());
-                System.out.println("날짜: " + board.getBdate());
-                if (loginId.equals("admin")){
-                    System.out.println("========================================================================");
-                    System.out.println("               │  1. 삭제하기   │        │  0. 취소   │");
-                    System.out.println("========================================================================");
-                    System.out.println();
-                    System.out.print("메뉴선택: ");
-                    String menuNo = scanner.nextLine();
-                    System.out.println();
-
-                    if(menuNo.equals("1")){
-                        delete(board);
-                    }
-                }else {
-                    //보조메뉴 출력
-                    System.out.println("========================================================================");
-                    System.out.println("     │  1. 수정하기   │     │  2. 삭제하기   │     │  0. 돌아가기   │");
-                    System.out.println("========================================================================");
-                    System.out.println();
-                    System.out.print("메뉴선택: ");
-                    String menuNo = scanner.nextLine();
-                    System.out.println();
-
-                    if (menuNo.equals("1")) {
-                        //작성자 ID와 로그인 ID가 일치하지 않으면 권한이 없음
-                        if (loginId.equals(board.getBwriter())) {
-                            update(board);
-                        } else {
-                            System.out.println("작성자 본인만 수정 가능합니다.");
+                while (true){
+                    System.out.println("번호: " + board.getBno());
+                    System.out.println("제목: " + board.getBtitle());
+                    System.out.println("내용: " + board.getBcontent());
+                    System.out.println("쓴이: " + board.getBwriter());
+                    System.out.println("날짜: " + board.getBdate());
+                    if (loginId==null){
+                        System.out.println("========================================================================");
+                        System.out.println("     │  "+ANSI_RED+"1. 수정하기"+ANSI_RESET+"   │     │  "+ANSI_RED+"2. 삭제하기"+ANSI_RESET+"   │     │  0. 돌아가기   │");
+                        System.out.println("========================================================================");
+                        System.out.println();
+                        System.out.print("메뉴선택: ");
+                        String menuNo = scanner.nextLine();
+                        System.out.println();
+                        if (menuNo.equals("1")){
+                            System.out.println("본인이 아니면 글을 수정할 수 없습니다.\n");
                             try {
-                                Thread.sleep(2000);
+                                Thread.sleep(1500);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
+                        } else if (menuNo.equals("2")) {
+                            System.out.println("본인이 아니면 글을 삭제할 수 없습니다.\n");
+                            try {
+                                Thread.sleep(1500);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }else {
+                            boardlist();
                         }
-                    } else if (menuNo.equals("2")) {
-                        //관리자이거나 작성자 ID와 로그인 ID가 일치하지 않으면 권한이 없음
-                        if (loginId.equals(board.getBwriter()) || loginId.equals("admin")) {
+                    } else if (loginId.equals("admin")){
+                        System.out.println("========================================================================");
+                        System.out.println("               │  1. 삭제하기   │        │  0. 취소   │");
+                        System.out.println("========================================================================");
+                        System.out.println();
+                        System.out.print("메뉴선택: ");
+                        String menuNo = scanner.nextLine();
+                        System.out.println();
+
+                        if(menuNo.equals("1")){
                             delete(board);
-                        } else {
-                            System.out.println("작성자 본인만 삭제 가능합니다.");
-                            try {
-                                Thread.sleep(2000);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
+                        }
+                        break;
+                    } else {
+
+                        System.out.println("========================================================================");
+                        System.out.println("     │  1. 수정하기   │     │  2. 삭제하기   │     │  0. 돌아가기   │");
+                        System.out.println("========================================================================");
+
+                        System.out.println();
+                        System.out.print("메뉴선택: ");
+                        String menuNo = scanner.nextLine();
+                        System.out.println();
+
+                        if (menuNo.equals("1")) {
+                            //작성자 ID와 로그인 ID가 일치하지 않으면 권한이 없음
+                            if (loginId.equals(board.getBwriter())) {
+                                update(board);
+                            } else {
+                                System.out.println("작성자 본인만 수정 가능합니다.");
+                                try {
+                                    Thread.sleep(2000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        } else if (menuNo.equals("2")) {
+                            //관리자이거나 작성자 ID와 로그인 ID가 일치하지 않으면 권한이 없음
+                            if (loginId.equals(board.getBwriter()) || loginId.equals("admin")) {
+                                delete(board);
+                            } else {
+                                System.out.println("작성자 본인만 삭제 가능합니다.");
+                                try {
+                                    Thread.sleep(2000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
+                        break;
                     }
                 }
             }
@@ -394,7 +463,6 @@ public class BookStore extends DBConnector {
                 exit();
             }
         }
-
         //게시물 목록 출력
         boardlist();
     }
@@ -428,7 +496,7 @@ public class BookStore extends DBConnector {
         System.out.println();
         System.out.println("   │  1. 초등학교   │     │  2. 중학교   │     │  3. 고등학교   │");
         System.out.println();
-        System.out.println("             │  4. 교과서   │       │  0. 돌아가기   │  ");
+        System.out.println("   │  4. 교과서     │     │  5. 전 체   │     │  0. 돌아가기   │ ");
         System.out.println();
         System.out.println("======================================================================");
         System.out.println();
@@ -449,8 +517,11 @@ public class BookStore extends DBConnector {
             case "4":
                 Textbooks();
                 break;
+            case "5":
+                TotalBooks();
+                break;
             case "0":
-                showMenu();
+                start();
                 break;
         }
     }
@@ -596,19 +667,19 @@ public class BookStore extends DBConnector {
     }
     // ------------------------------------------- 교과서 ----------------------------------------- //
 
-    // ------------------------------------------- 도서 목록 --------------------------------------- //
-    public void displayBooks() {
+    // ------------------------------------------- 전체 도서 --------------------------------------- //
+    public void TotalBooks() {
         try {
-			String query = ""+
-					"SELECT book_id, book_name,author, price, grade, quantity " +
-					"FROM book "+
-					"ORDER BY book_id ASC";
-			PreparedStatement statement = connection.prepareStatement(query);
-			ResultSet resultSet = statement.executeQuery();
-			while (resultSet.next()) {
+            String query = ""+
+                    "SELECT book_id, book_name,author, price, grade, quantity " +
+                    "FROM book "+
+                    "ORDER BY book_id ASC";
+            PreparedStatement statement = connection.prepareStatement(query);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
                 System.out.println("======================================================================");
-				Book book = new Book();
-				book.setBook_id(resultSet.getInt("book_id"));
+                Book book = new Book();
+                book.setBook_id(resultSet.getInt("book_id"));
                 book.setBook_name(resultSet.getString("book_name"));
                 book.setAuthor(resultSet.getString("author"));
                 book.setPrice(resultSet.getInt("price"));
@@ -622,10 +693,44 @@ public class BookStore extends DBConnector {
                         book.getQuantity()
                 );
             }
-			resultSet.close();
+            resultSet.close();
         }catch(SQLException e) {
-        	e.printStackTrace();
-        	System.out.println("문제가 발생하였습니다. 관리자에게 문의해주세요.");
+            e.printStackTrace();
+            System.out.println("문제가 발생하였습니다. 관리자에게 문의해주세요.");
+        }
+    }
+    // ------------------------------------------- 전체 도서 -----------------------------------
+
+    // ------------------------------------------- 도서 목록 --------------------------------------- //
+    public void displayBooks() {
+        try {
+            String query = ""+
+                    "SELECT book_id, book_name,author, price, grade, quantity " +
+                    "FROM book "+
+                    "ORDER BY book_id ASC";
+            PreparedStatement statement = connection.prepareStatement(query);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                System.out.println("======================================================================");
+                Book book = new Book();
+                book.setBook_id(resultSet.getInt("book_id"));
+                book.setBook_name(resultSet.getString("book_name"));
+                book.setAuthor(resultSet.getString("author"));
+                book.setPrice(resultSet.getInt("price"));
+                book.setGrade(resultSet.getString("grade"));
+                book.setQuantity(resultSet.getInt("quantity"));
+                PrintStream printf = System.out.printf("도서 이름: %s | 저자:%s | 가격: %d | 카테고리 :%s | 재고: %d | \n",
+                        book.getBook_name(),
+                        book.getAuthor(),
+                        book.getPrice(),
+                        book.getGrade(),
+                        book.getQuantity()
+                );
+            }
+            resultSet.close();
+        }catch(SQLException e) {
+            e.printStackTrace();
+            System.out.println("문제가 발생하였습니다. 관리자에게 문의해주세요.");
         }
     }
     // ------------------------------------------- 도서 목록 --------------------------------------- //
@@ -635,7 +740,7 @@ public class BookStore extends DBConnector {
         System.out.println("\n=========================[책 추천]=========================");
         System.out.println();
         System.out.println("   │  1. 초등학교   │     │  2. 중학교   │     │  3. 고등학교   │");
-        System.out.println("             │  4. 교과서   │       │  0. 돌아가기   │  ");
+        System.out.println("   │  4. 교과서     │    │ 5. 이달의도서 │     │  0. 돌아가기   │  ");
         System.out.println("====================================================================");
         System.out.println();
         System.out.print("카테고리 선택: ");
@@ -655,8 +760,11 @@ public class BookStore extends DBConnector {
             case 4:
                 BestTextbooks();
                 break;
+            case 5:
+                monthBook();
+                break;
             case 0:
-                showMenu();
+                start();
                 break;
             default:
                 System.out.println("잘못된 선택입니다.");
@@ -777,9 +885,7 @@ public class BookStore extends DBConnector {
             String query2 = "UPDATE book SET quantity = quantity - ? WHERE book_name = ?";
             PreparedStatement statement2 = connection.prepareStatement(query2);
 
-            String query3 = "UPDATE member "
-                    + "SET cash = cash - ? "
-                    + "WHERE id = ?";
+            String query3 = "UPDATE member SET cash = cash - ? WHERE id = ?";
             PreparedStatement statement3 = connection.prepareStatement(query3);
 
             boolean validInput = false; // 유효성 검증
@@ -794,7 +900,7 @@ public class BookStore extends DBConnector {
                     int availableQuantity = resultSet.getInt("quantity");
                     System.out.print("구매 수량을 입력하세요: ");
                     int quantity = scanner.nextInt();
-                    scanner.nextLine(); 
+                    scanner.nextLine();
                     // 입력한 책 이름이나, 재고와 입력한 수량이 맞지 않으면 바로 다시 입력하기.
                     if (availableQuantity < quantity) {
                         System.out.println("입력하신 수량이 재고보다 많습니다. 다시 입력하세요.");
@@ -811,16 +917,14 @@ public class BookStore extends DBConnector {
                     purchaseBook();
                 }
             }
+            if(totalPrice>getUserCash()){
+                System.out.println("잔액이 부족합니다.");
+                connection.rollback();
+                purchaseBook();
+            }
             statement3.setDouble(1, totalPrice);
             statement3.setString(2, loginId);
-            int rows3 = statement3.executeUpdate();
-            if (rows3 < 0) {
-                System.out.println("잔액이 부족합니다.");
-                System.out.println("캐시 잔액 : " + (int)getUserCash() + "원");
-                purchaseBook();
-               return;
-            }
-
+            statement3.executeUpdate();
 
             // 구매한 책에 대한 영수증
             System.out.println("\n===============================[영수증]===============================");
@@ -857,7 +961,6 @@ public class BookStore extends DBConnector {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-
                     statement2.setInt(1, quantity);
                     statement2.setString(2, bookName);
                     statement2.executeUpdate();
@@ -865,13 +968,6 @@ public class BookStore extends DBConnector {
                     throw new Exception("도서를 찾을 수 없습니다.");
                 }
             }
-
-            int userCash = (int)getUserCash();
-            if (userCash < totalPrice) {
-                System.out.println("잔액이 부족합니다. 다시 수량을 입력해주세요.");
-                validInput = false;
-            }
-
         } catch (Exception e) {
             e.printStackTrace();
             try {
@@ -886,7 +982,7 @@ public class BookStore extends DBConnector {
                 } catch (SQLException e2) {}
             }
             System.out.println("캐시 잔액 : " + (int)getUserCash() + "원");
-            showMenu();
+            start();
         }
     }
     // ------------------------------------------ 도서 구매 ------------------------------------- //
@@ -895,26 +991,28 @@ public class BookStore extends DBConnector {
     public void rechargeCash() {
         System.out.println("================================[캐시 충전]================================");
         System.out.println("보유 캐시: " + (int)getUserCash() + "원");
+        System.out.println("천재은행 : 123-4567-13597 으로 입금해주세요");
         System.out.print("충전할 금액을 입력하세요: ");
         double cash = Double.parseDouble(scanner.nextLine());
 
         if (updateUserCash(getUserCash() + cash)) {
+            System.out.printf("%1.0f 원 입금이 확인되었습니다\n", cash);
             System.out.println("캐시를 충전하였습니다.");
             System.out.println("보유 캐시: " + (int)getUserCash() + "원");
         } else {
             System.out.println("캐시 충전에 실패했습니다.");
         }
         System.out.println("=========================================================================");
-        showMenu();
+        start();
     }
     // ------------------------------------------ 캐시 충전------------------------------------- //
 
     // ------------------------------------------ 보유 캐시------------------------------------- //
     private double getUserCash() {
         try {
-        	String query = "SELECT cash FROM member WHERE id=?";
-        	PreparedStatement statement=connection.prepareStatement(query);
-        	statement.setString(1, loginId);
+            String query = "SELECT cash FROM member WHERE id=?";
+            PreparedStatement statement=connection.prepareStatement(query);
+            statement.setString(1, loginId);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 double cash = resultSet.getDouble("cash");
@@ -932,9 +1030,9 @@ public class BookStore extends DBConnector {
     private boolean updateUserCash(double cash) {
         try {
             String query = "UPDATE member"
-            		+ " SET cash = ?"
-            		+ " WHERE id = ?";
-        	PreparedStatement statement = connection.prepareStatement(query);
+                    + " SET cash = ?"
+                    + " WHERE id = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
             statement.setDouble(1, cash);
             statement.setString(2, loginId);
             int updatedRows = statement.executeUpdate();
@@ -952,9 +1050,9 @@ public class BookStore extends DBConnector {
         while (true) {
             System.out.println("\n=============================[관리자 메뉴]=============================");
             System.out.println();
-            System.out.println("             │  1. 재고 관리   │        │  2. 재고 확인   │");
+            System.out.println("            │  1. 재고 관리     │       │  2. 이달의 도서 관리  │");
             System.out.println();
-            System.out.println("            │  3. 게시판 관리   │       │  0. 관리자 종료  │  ");
+            System.out.println("            │  3. 게시판 관리   │        │  0. 관리자 종료      │  ");
             System.out.println();
             System.out.println("=====================================================================");
             System.out.print("메뉴 선택: ");
@@ -968,7 +1066,7 @@ public class BookStore extends DBConnector {
                     break;
                 case 2:
                     //재고 확인
-                    displayBooks();
+                    monthBook();
                     try {
                         Thread.sleep(2000);
                     }catch (Exception e){
@@ -981,6 +1079,7 @@ public class BookStore extends DBConnector {
                     break;
                 case 0:
                     System.out.println("관리자 모드를 종료합니다.");
+                    loginId=null;
                     start();
                     break;
                 default:
@@ -992,12 +1091,10 @@ public class BookStore extends DBConnector {
 
     // --------------------------------------- 게시판 관리자 모드 ------------------------------------ //
     public void boardAdmin(){
-
         System.out.println();
         System.out.println("============================[관리자 모드]===============================");
         System.out.printf("%-6s%-12s%-12s%-40s\n", "no", "제목","작성자", "날짜" );
         System.out.println("======================================================================");
-
         //boards 테이블에서 게시물 정보를 가져와서 출력하기
         try {
             String sql = "" +
@@ -1018,7 +1115,6 @@ public class BookStore extends DBConnector {
                         board.getBtitle(),
                         board.getBwriter(),
                         board.getBdate());
-
             }
             rs.close();
             pstmt.close();
@@ -1043,7 +1139,6 @@ public class BookStore extends DBConnector {
         System.out.print("메뉴 선택: ");
         int choice = scanner.nextInt();
         scanner.nextLine(); // 버퍼 비우기
-
         switch (choice) {
             case 1:
                 //새 책 추가
@@ -1073,11 +1168,9 @@ public class BookStore extends DBConnector {
         String bookName = scanner.nextLine();
         System.out.print("추가할 수량을 입력하세요: ");
         int quantity = scanner.nextInt();
-
         scanner.nextLine(); // 버퍼 비우기
         System.out.println("===================================================================");
         System.out.println();
-
         try {
             String query = ""
                     + "UPDATE book"
@@ -1116,7 +1209,6 @@ public class BookStore extends DBConnector {
             exit();
         }
         System.out.println("'"+deleteBook+"' 책이 삭제되었습니다.");
-
         manageStock();
     }
     // -------------------------------------- 관리자 도서 재고 삭제 -------------------------------- //
@@ -1147,10 +1239,8 @@ public class BookStore extends DBConnector {
 
     // ---------------------------------------관리자 게시글 삭제 ----------------------------------- //
     public void deleteBoard(){
-
         System.out.print("삭제할 게시물 번호를 입력 :");
         String deleteBoard = scanner.nextLine();
-
         try {
             String sql = "DELETE FROM boards WHERE bno=?" ;
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -1162,7 +1252,6 @@ public class BookStore extends DBConnector {
             exit();
         }
         System.out.println(deleteBoard+"번 게시글이 삭제되었습니다.");
-
         if (loginId.equals("admin")){
             boardAdmin();
         }else {
@@ -1188,7 +1277,6 @@ public class BookStore extends DBConnector {
         System.out.print("재고: ");
         book.setQuantity(Integer.parseInt(scanner.nextLine()));
         System.out.println("========================================================================");
-
         // 게시판 보조메뉴 출력
         System.out.println("========================================================================");
         System.out.println("               │  1. 추가하기   │        │  0. 취소   │");
@@ -1220,124 +1308,8 @@ public class BookStore extends DBConnector {
     }
     // -------------------------------------- 관리자 새 책 추가------------------------------------- //
 
-    // ------------------------------------------ 회원 가입 ------------------------------------ //
-    private void register() {
-    	Member member = new Member();
-        while (true){
-            System.out.println("==============================[회원 가입]==============================");
-            System.out.print("사용할 아이디를 입력하세요: ");
-            member.id = scanner.nextLine();
-            if (member.id.equals("admin")){
-                System.out.println("'admin' 이라는 아이디는 사용할 수 없습니다.");
-            }else {
-                break;
-            }
-
-        }
-
-        System.out.print("사용할 비밀번호를 입력하세요: ");
-        member.password = scanner.nextLine();
-
-        if (isIdAvailable(member.id)) {
-            try {
-            	String query = "" +
-            			"INSERT INTO member (id, password, cash)"+
-            			" VALUES (?, ?, ?)";
-            	PreparedStatement statement = connection.prepareStatement(query);
-                statement.setString(1, member.getId());
-                statement.setString(2, member.getPassword());
-                statement.setInt(3, 0); // 초기 보유 현금은 0으로 설정
-                statement.executeUpdate();
-                statement.close();
-                System.out.println("회원가입에 성공했습니다.");
-           }catch (SQLException e) {
-               e.printStackTrace();
-               System.out.println("회원가입에 실패했습니다.");
-           }
-        }else {
-            System.out.println("이미 사용 중인 아이디입니다. 다른 아이디를 선택해주세요.");
-        }
-        System.out.println("=====================================================================");
-        System.out.println();
-        start();
-    }
-    // ------------------------------------------ 회원 가입 ------------------------------------ //
-
-    // ------------------------------------------ 가입 체크 ------------------------------------ //
-    private boolean isIdAvailable(String id) {
-        try {
-        	String query = "" +
-        			"SELECT * FROM member"+
-        			" WHERE id = ?";
-        	PreparedStatement statement = connection.prepareStatement(query);
-        	statement.setString(1, id);
-        	ResultSet resultSet = statement.executeQuery();
-            boolean isAvailable = !resultSet.next(); // 이미 존재하는 경우 false 반환
-            resultSet.close();
-            return isAvailable;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-    // ------------------------------------------ 가입 체크 -------------------------------------- //
-
-    // ------------------------------------------ 로그인 체크 ------------------------------------- //
-    private void adminMode() {
-    	loginAttempt = 0; // 로그인 시도 횟수
-        boolean loggedIn = false;
-
-        while(!loggedIn && loginAttempt < 3) {
-        	Admin admin = new Admin();
-            System.out.println("============================[관리자 로그인]============================");
-            System.out.println();
-        	System.out.print("관리자 아이디를 입력하세요: ");
-        	admin.setAdId(scanner.nextLine());
-        	System.out.print("관리자 비밀번호를 입력하세요.: ");
-        	admin.setAdPassword(scanner.nextLine());
-            System.out.println();
-            System.out.println("=====================================================================");
-            System.out.println();
-
-        	try {
-				String query = ""
-						+ "SELECT password FROM admin"
-						+ " WHERE id= ?";
-				PreparedStatement statement=connection.prepareStatement(query);
-				statement.setString(1, admin.getAdId());
-				ResultSet resultSet=statement.executeQuery();
-				if(resultSet.next()) {
-					String dbPassword = resultSet.getString("password");
-                    if (dbPassword.equals(admin.getAdPassword())) {
-                        loggedIn = true; // 로그인 성공
-                        loginId = admin.getAdId();
-                        System.out.println("관리자 모드로 전환되었습니다.");
-                        adminMenu();
-                    } else {
-                        System.out.println("비밀번호가 일치하지 않습니다.");
-                    }
-                } else {
-                    System.out.println("아이디가 존재하지 않습니다.");
-                }
-
-
-			} catch (SQLException e) {
-				e.printStackTrace();
-				System.out.println("관리자 시스템에 문제가 발생하여 관리자 모드를 종료합니다.");
-				start();
-			}
-            System.out.println("=====================================================================");
-            loginAttempt++; // 로그인 시도 횟수 증가
-        }
-
-    	if (!loggedIn) {
-            start(); // 3번 연속 실패시 start() 메서드 호출
-        }
-    }
-    // ------------------------------------------ 로그인 체크 ------------------------------------- //
-
-    // ------------------------------------------ 이달의 도서 메뉴 ------------------------------------- //
-	 public void monthBook() {
+    // ------------------------------------------ 이달의 도서 메뉴 ------------------------------------ //
+    public void monthBook() {
         try {
             String query = "" +
                     "SELECT *" +
@@ -1360,13 +1332,19 @@ public class BookStore extends DBConnector {
                 );
                 System.out.println("=========================================================================");
             }
-
             resultSet.close();
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("문제가 발생하였습니다. 관리자에게 문의해주세요.");
         }
-//        if (loginId.equals("admin")) {
+        if (loginId==null){
+            try {
+                Thread.sleep(1500); // 1.5초 지연
+            } catch (Exception e) {
+                e.printStackTrace();
+            }BestBooks();
+        }
+        if (loginId.equals("admin")) {
             System.out.println();
             System.out.println("=====================================================================");
             System.out.println("     │  1. 등록하기   │    │  2. 삭제하기   │    │  0. 돌아가기   │");
@@ -1381,15 +1359,23 @@ public class BookStore extends DBConnector {
                 case 2:
                     deleteMonthBook();
                     break;
+                case 0:
+                    adminMenu();
+                    break;
                 default:
                     System.out.println("잘못된 번호입니다.");
-//            }
+            }
+        }try {
+            Thread.sleep(1500); // 1.5초 지연
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        BestBooks();
     }
-    // ------------------------------------------ 이달의 도서 메뉴 ------------------------------------- //
+    // ------------------------------------------ 이달의 도서 메뉴 ------------------------------------ //
 
-    // ------------------------------------------ 이달의 도서 등록 ------------------------------------- //
-  private void createMonthBook() {
+    // ------------------------------------------ 이달의 도서 등록 ----------------------------------- //
+    private void createMonthBook() {
         MonthBook mBook = new MonthBook();
         System.out.print("이달의 도서로 등록할 책 : ");
         mBook.setMonth_book_name(scanner.nextLine());
@@ -1408,9 +1394,9 @@ public class BookStore extends DBConnector {
                 mBook.setMonth_grade(rs.getString("book.grade"));
             }
             try {
-               String sql = "" +
-                    "INSERT INTO monthbook (month_book_name, month_author, month_price, month_grade)" +
-                    "values (?, ?, ?, ?)";
+                String sql = "" +
+                        "INSERT INTO monthbook (month_book_name, month_author, month_price, month_grade)" +
+                        "values (?, ?, ?, ?)";
                 PreparedStatement pstmt = connection.prepareStatement(sql);
                 pstmt.setString(1, mBook.getMonth_book_name());
                 pstmt.setString(2, mBook.getMonth_author());
@@ -1419,8 +1405,8 @@ public class BookStore extends DBConnector {
                 pstmt.executeUpdate();
                 pstmt.close();
             } catch (Exception e) {
-            e.printStackTrace();
-            exit();
+                e.printStackTrace();
+                exit();
             }
             rs.close();
             statement.close();
@@ -1431,11 +1417,10 @@ public class BookStore extends DBConnector {
         }
         monthBook();
     }
-    // ------------------------------------------ 이달의 도서 등록 ------------------------------------- //
+    // ------------------------------------------ 이달의 도서 등록 ----------------------------------- //
 
-    // ------------------------------------------ 이달의 도서 삭제 ------------------------------------- //
-
-	private void deleteMonthBook() {
+    // ------------------------------------------ 이달의 도서 삭제 ----------------------------------- //
+    private void deleteMonthBook() {
         System.out.println("==============================[이달의 도서 삭제하기]==============================");
         System.out.print("이달의 도서에서 삭제할 책 : ");
         String deleteBook = scanner.nextLine();
@@ -1451,12 +1436,120 @@ public class BookStore extends DBConnector {
             exit();
         }
         System.out.println("이달의 도서에서 '"+deleteBook+"' 책이 삭제되었습니다.");
-
         monthBook();
     }
-    // ------------------------------------------ 이달의 도서 삭제 ------------------------------------- //
-	
-    // ------------------------------------------ 종료 ---------------------------------------------- //
+    // ------------------------------------------ 이달의 도서 삭제 ----------------------------------- //
+
+    // ------------------------------------------ 회원 가입 ------------------------------------ //
+    private void register() {
+        Member member = new Member();
+        while (true){
+            System.out.println("==============================[회원 가입]==============================");
+            System.out.print("사용할 아이디를 입력하세요: ");
+            member.id = scanner.nextLine();
+            if (member.id.equals("admin")){
+                System.out.println("'admin' 이라는 아이디는 사용할 수 없습니다.");
+            }else {
+                break;
+            }
+        }
+        System.out.print("사용할 비밀번호를 입력하세요: ");
+        member.password = scanner.nextLine();
+        if (isIdAvailable(member.id)) {
+            try {
+                String query = "" +
+                        "INSERT INTO member (id, password, cash)"+
+                        " VALUES (?, ?, ?)";
+                PreparedStatement statement = connection.prepareStatement(query);
+                statement.setString(1, member.getId());
+                statement.setString(2, member.getPassword());
+                statement.setInt(3, 0); // 초기 보유 현금은 0으로 설정
+                statement.executeUpdate();
+                statement.close();
+                System.out.println("회원가입에 성공했습니다.");
+            }catch (SQLException e) {
+                e.printStackTrace();
+                System.out.println("회원가입에 실패했습니다.");
+            }
+        }else {
+            System.out.println("이미 사용 중인 아이디입니다. 다른 아이디를 선택해주세요.");
+        }
+        System.out.println("=====================================================================");
+        System.out.println();
+        start();
+    }
+    // ------------------------------------------ 회원 가입 ------------------------------------ //
+
+    // ------------------------------------------ 가입 체크 ------------------------------------ //
+    private boolean isIdAvailable(String id) {
+        try {
+            String query = "" +
+                    "SELECT * FROM member"+
+                    " WHERE id = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            boolean isAvailable = !resultSet.next(); // 이미 존재하는 경우 false 반환
+            resultSet.close();
+            return isAvailable;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    // ------------------------------------------ 가입 체크 -------------------------------------- //
+
+    // ------------------------------------------ 로그인 체크 ------------------------------------- //
+    private void adminMode() {
+        loginAttempt = 0; // 로그인 시도 횟수
+        boolean loggedIn = false;
+
+        while(!loggedIn && loginAttempt < 3) {
+            Admin admin = new Admin();
+            System.out.println("============================[관리자 로그인]============================");
+            System.out.println();
+            System.out.print("관리자 아이디를 입력하세요: ");
+            admin.setAdId(scanner.nextLine());
+            System.out.print("관리자 비밀번호를 입력하세요.: ");
+            admin.setAdPassword(scanner.nextLine());
+            System.out.println();
+            System.out.println("=====================================================================");
+            System.out.println();
+            try {
+                String query = ""
+                        + "SELECT password FROM admin"
+                        + " WHERE id= ?";
+                PreparedStatement statement=connection.prepareStatement(query);
+                statement.setString(1, admin.getAdId());
+                ResultSet resultSet=statement.executeQuery();
+                if(resultSet.next()) {
+                    String dbPassword = resultSet.getString("password");
+                    if (dbPassword.equals(admin.getAdPassword())) {
+                        loggedIn = true; // 로그인 성공
+                        loginId = admin.getAdId();
+                        System.out.println("관리자 모드로 전환되었습니다.");
+                        adminMenu();
+                    } else {
+                        System.out.println("비밀번호가 일치하지 않습니다.");
+                    }
+                } else {
+                    System.out.println("아이디가 존재하지 않습니다.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                System.out.println("관리자 시스템에 문제가 발생하여 관리자 모드를 종료합니다.");
+                start();
+            }
+            System.out.println("=====================================================================");
+            loginAttempt++; // 로그인 시도 횟수 증가
+        }
+        if (!loggedIn) {
+            start(); // 3번 연속 실패시 start() 메서드 호출
+        }
+    }
+    // ------------------------------------------ 로그인 체크 ------------------------------------- //
+
+    // ------------------------------------------ 종료 ------------------------------------------- //
     public void exit() {
         if(connection != null) {
             try {
