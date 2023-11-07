@@ -13,6 +13,7 @@ public class BookStore extends DBConnector {
 
     // GLI 글씨색 설정
     static final String ANSI_RED = "\u001B[31m";
+    static final String ANSI_YELLO = "\u001B[33m";
     static final String ANSI_BLUE = "\u001B[34m";
     static final String ANSI_RESET = "\u001B[0m";
     private Scanner scanner;				//BookStore() 생산자에서 필드전역 선언으로 이동
@@ -1049,6 +1050,7 @@ public class BookStore extends DBConnector {
     private void adminMenu(){
         while (true) {
             System.out.println("\n=============================[관리자 메뉴]=============================");
+            System.out.println("                                                         ["+ANSI_YELLO + "관리자" + ANSI_RESET+"]");
             System.out.println();
             System.out.println("            │  1. 재고 관리     │       │  2. 이달의 도서 관리  │");
             System.out.println();
