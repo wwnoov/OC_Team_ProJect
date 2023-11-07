@@ -37,7 +37,13 @@ CREATE TABLE book (
     grade varchar(20),
     quantity DOUBLE
 );	
-
+create table monthbook(
+	month_book_id double primary key auto_increment,
+	month_book_name varchar(50),
+    month_author varchar(50),
+	month_price DECIMAL(10,2),
+    month_grade varchar(20)
+); 
 
 
 INSERT INTO book(book_name, author, price, grade, quantity)
