@@ -52,7 +52,7 @@
 </details>
 
 <details><summary>Block</summary>
-
+블럭
 </details>
 
 ## 👑구동화면👑
