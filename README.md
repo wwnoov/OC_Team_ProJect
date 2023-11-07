@@ -44,7 +44,7 @@
 <details><summary>시퀀스
 </summary></details>
 
-## 👑구동연상👑
+## 👑구동화면👑
 <details><summary>일반회원</summary>
     
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
