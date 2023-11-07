@@ -547,7 +547,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %s | 저자:%s | 가격: %d | 카테고리 :%s | 재고: %d | \n",
+                PrintStream printf = System.out.printf("도서 이름: %-10s\t | 저자:%-10s\t | 가격: %-7d\t | 카테고리 : %-5s\t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -582,7 +582,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %s | 저자:%s | 가격: %d | 카테고리 :%s | 재고: %d | \n",
+                PrintStream printf = System.out.printf("도서 이름: %-10s\t | 저자:%-10s\t | 가격: %-7d\t | 카테고리 : %-5s\t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -617,7 +617,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %s | 저자:%s | 가격: %d | 카테고리 :%s | 재고: %d | \n",
+                PrintStream printf = System.out.printf("도서 이름: %-10s\t | 저자:%-10s\t | 가격: %-7d\t | 카테고리 : %-5s\t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -652,7 +652,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %s | 저자:%s | 가격: %d | 카테고리 :%s | 재고: %d | \n",
+                PrintStream printf = System.out.printf("도서 이름: %-10s\t | 저자:%-10s\t | 가격: %-7d\t | 카테고리 : %-5s\t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -686,7 +686,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %s | 저자:%s | 가격: %d | 카테고리 :%s | 재고: %d | \n",
+                PrintStream printf = System.out.printf("도서 이름: %-10s\t | 저자:%-10s\t | 가격: %-7d\t | 카테고리 : %-5s\t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -720,7 +720,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %s | 저자:%s | 가격: %d | 카테고리 :%s | 재고: %d | \n",
+                PrintStream printf = System.out.printf("도서 이름: %-10s\t | 저자:%-10s\t | 가격: %-7d\t | 카테고리 : %-5s\t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -852,7 +852,7 @@ public class BookStore extends DBConnector {
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
                 System.out.println("======================================================================");
-                PrintStream print = System.out.printf("도서 이름: %s | 저자: %s | 가격: %d | 카테고리: %s | 재고: %d | \n",
+                PrintStream print = System.out.printf("도서 이름: %-10s\t | 저자:%-10s\t | 가격: %-7d\t | 카테고리 : %-5s\t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -1135,7 +1135,7 @@ public class BookStore extends DBConnector {
         System.out.println();
         System.out.println("          │  1. 새 책 추가하기   │       │  2. 책 삭제하기   │");
         System.out.println();
-        System.out.println("          │  3. 책 재고 채우기   │        │  0. 돌아가기   │  ");
+        System.out.println("          │  3. 책 재고 채우기   │       │  0. 돌아가기      │  ");
         System.out.println();
         System.out.println("=====================================================================");
         System.out.print("메뉴 선택: ");
@@ -1326,7 +1326,7 @@ public class BookStore extends DBConnector {
                 mBook.setMonth_author(resultSet.getString("month_author"));
                 mBook.setMonth_price(resultSet.getInt("month_price"));
                 mBook.setMonth_grade(resultSet.getString("month_grade"));
-                PrintStream printf = System.out.printf("도서 이름: %s | 저자:%s | 가격: %d | 카테고리 :%s | \n",
+                PrintStream printf = System.out.printf("도서 이름: %-10s\t | 저자:%-10s\t | 가격: %-7d\t | 카테고리 : %-5s\t \n",
                         mBook.getMonth_book_name(),
                         mBook.getMonth_author(),
                         mBook.getMonth_price(),
