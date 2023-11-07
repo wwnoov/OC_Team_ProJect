@@ -34,9 +34,9 @@ public class BookStore extends DBConnector {
             System.out.println("\n=============================== [메인 메뉴]================================");
             System.out.println("                                                         ["+ANSI_RED + "비회원 상태" + ANSI_RESET+"]");
             System.out.println();
-            System.out.println("   │  "+ANSI_RED+"1. 도서 구매"+ANSI_RESET+"     │    │  2. 추천 도서   │     │  "+ANSI_RED+"3. 캐시 충전"+ANSI_RESET+"   │");
+            System.out.println("   │\t "+ANSI_RED+"1. 도서 구매"+ANSI_RESET+"\t│\t│\t 2. 추천 도서 \t│\t│\t"+ANSI_RED+"3. 캐시 충전"+ANSI_RESET+"\t\t│");
             System.out.println();
-            System.out.println("   │  4. 후기 게시판   │    │   5. 로그인     │     │  "+ANSI_BLUE+"6. 회원 가입"+ANSI_RESET+"   │");
+            System.out.println("   │\t 4. 후기 게시판 \t│\t│\t 5. 로그인 \t\t│\t│\t"+ANSI_BLUE+"6. 회원 가입"+ANSI_RESET+"\t\t│");
             System.out.println();
             System.out.println("=========================================================================");
             System.out.println();
@@ -86,9 +86,9 @@ public class BookStore extends DBConnector {
             System.out.println("\n=============================== [메인 메뉴]================================");
             System.out.println("                                                         ["+ANSI_BLUE + loginId + ANSI_RESET+"]");
             System.out.println();
-            System.out.println("   │  1. 도서 구매    │     │  2. 추천 도서   │     │  3. 캐시 충전   │");
+            System.out.println("   │\t 1. 도서 구매\t│\t│\t 2. 추천 도서 \t│\t│\t 3. 캐시 충전\t│");
             System.out.println();
-            System.out.println("   │  4. 후기 게시판  │     │   "+ANSI_RED+"5. 로그아웃"+ANSI_RESET+"   │     │   0.  종료      │");
+            System.out.println("   │\t 4. 후기 게시판\t│\t│\t "+ANSI_RED+"5. 로그아웃\t"+ANSI_RESET+"\t│\t│\t 0.  종료\t\t│");
             System.out.println();
             System.out.println("                          보유 잔액: " + (int)getUserCash() + "원");
             System.out.println();
@@ -495,9 +495,9 @@ public class BookStore extends DBConnector {
     public void gradeBooks(){
         System.out.println("\n==============================[도서 종류]===============================");
         System.out.println();
-        System.out.println("   │  1. 초등학교   │     │  2. 중학교   │     │  3. 고등학교   │");
+        System.out.println("   │\t 1. 초등학교\t│\t│\t 2. 중학교 \t│\t│\t 3. 고등학교\t\t│");
         System.out.println();
-        System.out.println("   │  4. 교과서     │     │  5. 전 체   │     │  0. 돌아가기   │ ");
+        System.out.println("   │\t 4. 교과서\t│\t│\t 5. 전 체 \t│\t│\t 0. 돌아가기\t\t│");
         System.out.println();
         System.out.println("======================================================================");
         System.out.println();
@@ -740,8 +740,8 @@ public class BookStore extends DBConnector {
     public void BestBooks() {
         System.out.println("\n=========================[책 추천]=========================");
         System.out.println();
-        System.out.println("   │  1. 초등학교   │     │  2. 중학교   │     │  3. 고등학교   │");
-        System.out.println("   │  4. 교과서     │    │ 5. 이달의도서 │     │  0. 돌아가기   │  ");
+        System.out.println("   │\t 1. 초등학교 \t│\t│\t 2. 중학교\t\t│\t│\t 3. 고등학교 \t│");
+        System.out.println("   │\t 4. 교과서 \t\t│\t│\t 5. 이달의도서\t│\t│\t 0. 돌아가기 \t│");
         System.out.println("====================================================================");
         System.out.println();
         System.out.print("카테고리 선택: ");
@@ -1052,9 +1052,9 @@ public class BookStore extends DBConnector {
             System.out.println("\n=============================[관리자 메뉴]=============================");
             System.out.println("                                                         ["+ANSI_YELLO + "관리자" + ANSI_RESET+"]");
             System.out.println();
-            System.out.println("            │  1. 재고 관리     │       │  2. 이달의 도서 관리  │");
+            System.out.println("            │\t 1. 재고 관리 \t│\t│\t 2. 이달의 도서 관리 \t│");
             System.out.println();
-            System.out.println("            │  3. 게시판 관리   │        │  0. 관리자 종료      │  ");
+            System.out.println("            │\t 3. 게시판 관리 \t│\t│\t 0. 관리자 종료 \t\t│");
             System.out.println();
             System.out.println("=====================================================================");
             System.out.print("메뉴 선택: ");
@@ -1133,9 +1133,9 @@ public class BookStore extends DBConnector {
         displayBooks();
         System.out.println("\n==============================[재고 관리]=============================");
         System.out.println();
-        System.out.println("          │  1. 새 책 추가하기   │       │  2. 책 삭제하기   │");
+        System.out.println("          │\t 1. 새 책 추가하기 \t│\t│\t 2. 책 삭제하기 \t│");
         System.out.println();
-        System.out.println("          │  3. 책 재고 채우기   │       │  0. 돌아가기      │  ");
+        System.out.println("          │\t 3. 책 재고 채우기 \t│\t│\t 0. 돌아가기 \t│");
         System.out.println();
         System.out.println("=====================================================================");
         System.out.print("메뉴 선택: ");
