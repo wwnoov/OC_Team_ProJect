@@ -31,28 +31,28 @@
 ## 📌요구명세서📌
 
 >인용문   
-<details><summary>Usecase
-</summary>
+<details><summary>Usecase</summary>
   
 <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A4.png">
 
 </details>
-<details><summary>ERD
-</summary>
+<details><summary>ERD</summary>
 <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/ERD.png">
     
 </details>
-<details><summary>Class
-</summary>
+<details><summary>Class</summary>
     
 <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%ED%81%B4%EB%9E%98%EC%8A%A4%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8.png">
 
 </details>
-<details><summary>Sequence
+<details><summary>Sequence</summary>
     
-</summary>
-    
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%8B%9C%ED%80%80%EC%8A%A4%20%ED%9A%8C%EC%9B%90.png"럭
+<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%8B%9C%ED%80%80%EC%8A%A4%20%ED%9A%8C%EC%9B%90.png">
+
+</details>
+
+<details><summary>Block</summary>
+
 </details>
 
 ## 👑구동화면👑
