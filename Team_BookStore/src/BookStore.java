@@ -198,7 +198,7 @@ public class BookStore extends DBConnector {
             String sql = "" +
                     "SELECT bno, btitle, bcontent, bwriter, bdate " +
                     "FROM boards " +
-                    "ORDER BY bno DESC";
+                    "ORDER BY bno DESC LIMIT 10;";
             PreparedStatement pstmt = connection.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
@@ -569,7 +569,7 @@ public class BookStore extends DBConnector {
                     "SELECT book_id, book_name,author, price, grade, quantity " +
                     "FROM book "+
                     "WHERE grade='중등' "+
-                    "ORDER BY book_id ASC";
+                    "ORDER BY book_id limit 15";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -604,7 +604,7 @@ public class BookStore extends DBConnector {
                     "SELECT book_id, book_name,author, price, grade, quantity " +
                     "FROM book "+
                     "WHERE grade='고등' "+
-                    "ORDER BY book_id ASC";
+                    "ORDER BY book_id limit 15";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -639,7 +639,7 @@ public class BookStore extends DBConnector {
                     "SELECT book_id, book_name,author, price, grade, quantity " +
                     "FROM book "+
                     "WHERE grade='교과서' "+
-                    "ORDER BY book_id ASC";
+                    "ORDER BY book_id limit 15";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -673,7 +673,7 @@ public class BookStore extends DBConnector {
             String query = ""+
                     "SELECT book_id, book_name,author, price, grade, quantity " +
                     "FROM book "+
-                    "ORDER BY book_id ASC";
+                    "ORDER BY book_id limit 15";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -707,7 +707,7 @@ public class BookStore extends DBConnector {
             String query = ""+
                     "SELECT book_id, book_name,author, price, grade, quantity " +
                     "FROM book "+
-                    "ORDER BY book_id ASC";
+                    "ORDER BY book_id limit 15";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -779,7 +779,7 @@ public class BookStore extends DBConnector {
                     "SELECT book_name, author, price, grade, quantity " +
                     "FROM book " +
                     "WHERE grade = '초등' AND 0< quantity AND quantity< 30 " +
-                    "ORDER BY quantity DESC";
+                    "ORDER BY quantity DESC limit 5";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             displayRecommendedBooks(resultSet);
@@ -796,7 +796,7 @@ public class BookStore extends DBConnector {
                     "SELECT book_name, author, price, grade, quantity " +
                     "FROM book " +
                     "WHERE grade = '중등' AND 0< quantity AND quantity< 30 " +
-                    "ORDER BY quantity DESC";
+                    "ORDER BY quantity DESC limit 5";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             displayRecommendedBooks(resultSet);
@@ -813,7 +813,7 @@ public class BookStore extends DBConnector {
                     "SELECT book_name, author, price, grade, quantity " +
                     "FROM book " +
                     "WHERE grade = '고등' AND 0< quantity AND quantity< 30 " +
-                    "ORDER BY quantity DESC";
+                    "ORDER BY quantity DESC limit 5";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             displayRecommendedBooks(resultSet);
@@ -830,7 +830,7 @@ public class BookStore extends DBConnector {
                     "SELECT book_name, author, price, grade, quantity " +
                     "FROM book " +
                     "WHERE grade = '교과서' AND 0< quantity AND quantity< 30 " + // 교과서 중 30 미만의 수량을 가진 도서만 조회
-                    "ORDER BY quantity DESC";
+                    "ORDER BY quantity DESC limit 5";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             displayRecommendedBooks(resultSet);
