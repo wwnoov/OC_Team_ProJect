@@ -52,10 +52,7 @@
     
 </summary>
     
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%8B%9C%ED%80%80%EC%8A%A4%20%ED%9A%8C%EC%9B%90.png">
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%8B%9C%ED%80%80%EC%8A%A4%20%EB%B9%84%ED%9A%8C%EC%9B%90.png">
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%8B%9C%ED%80%80%EC%8A%A4%20%EA%B4%80%EB%A6%AC%EC%9E%90.png">
-
+<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%8B%9C%ED%80%80%EC%8A%A4%20%ED%9A%8C%EC%9B%90.png"럭
 </details>
 
 ## 👑구동화면👑
