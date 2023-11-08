@@ -1,0 +1,9 @@
+
+0
+java:S1220""Move this file to a named package.
+l	java:S116"RRename this field "book_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’‘„ιωÿÿÿÿ
+i	java:S116"TRename this field "book_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€γίς
+]
+java:S1659"BDeclare "price" and all following declarations on a separate line.(’‘„ιωÿÿÿÿ
+X
+java:S1659"BDeclare "grade" and all following declarations on a separate line.(€γίς

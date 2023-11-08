@@ -1,4 +1,29 @@
-drop table if exsits book;
+CREATE TABLE member (
+    id VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(50),
+    cash DECIMAL(10,2)
+);
+	
+ALTER table member
+ADD CONSTRAINT manager CHECK (cash>=0);    
+
+
+CREATE TABLE admin (
+    id VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO admin (id, password) VALUES ('admin', '12345');
+   
+
+create table boards (
+    bno             int             primary key auto_increment,
+    btitle          varchar(100)    not null,
+    bcontent        longtext        not null,
+    bwriter         varchar(50)     not null,
+    bdate           datetime        default now()
+    );
 
 CREATE TABLE book (
     book_id DOUBLE PRIMARY KEY auto_increment,
@@ -9,20 +34,28 @@ CREATE TABLE book (
     quantity DOUBLE
 );	
 
+create table monthbook(
+	month_book_id double primary key auto_increment,
+	month_book_name varchar(50),
+    month_author varchar(50),
+	month_price DECIMAL(10,2),
+    month_grade varchar(20)
+); 	
+
 ALTER table book
 ADD CONSTRAINT manager2 CHECK (quantity>=0);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('해법 초등국어','천재교육 편집부',15000,'초등',100);
+VALUES('해법 초등국어','천재교육 편집부',15000,'초등',10);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('해법 초등수학','천재교육 편집부',15000,'초등',100);
+VALUES('해법 초등수학','천재교육 편집부',15000,'초등',15);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('해법 초등영어','천재교육 편집부',15000,'초등',100);
+VALUES('해법 초등영어','천재교육 편집부',15000,'초등',50);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('해법 초등과학','천재교육 편집부',15000,'초등',100);
+VALUES('해법 초등과학','천재교육 편집부',15000,'초등',0);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('해법 초등사회','천재교육 편집부',15000,'초등',100);
@@ -40,10 +73,10 @@ INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('똑똑 초등내신','천재교육 편집부',17000,'초등',30);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('일등전략 중학국어','천재교육 편집부',16000,'중등',100);
+VALUES('일등전략 중학국어','천재교육 편집부',16000,'중등',30);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('일등전략 중등수학','천재교육 편집부',16000,'중등',100);
+VALUES('일등전략 중등수학','천재교육 편집부',16000,'중등',20);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('일등전략 중등영어','천재교육 편집부',16000,'중등',10);
@@ -66,18 +99,17 @@ VALUES('바로완성 중등한자','천재교육 편집부',20000,'중등',100);
 INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('바로완성 중등내신','천재교육 편집부',20000,'중등',50);
 
+INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('셀파 고등문학','천재교육 편집부',17000,'고등',10);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등문학','천재교육 편집부',17000,'고등',100);
+VALUES('셀파 고등수학','천재교육 편집부',17000,'고등',20);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등수학','천재교육 편집부',17000,'고등',100);
+VALUES('셀파 고등영어','천재교육 편집부',17000,'고등',0);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등영어','천재교육 편집부',17000,'고등',100);
-
-INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등과학','천재교육 편집부',17000,'고등',100);
+VALUES('셀파 고등과학','천재교육 편집부',17000,'고등',30);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('셀파 고등사회','천재교육 편집부',17000,'고등',100);
@@ -86,7 +118,7 @@ INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('셀파 고등영단어','천재교육 편집부',17000,'고등',1);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('셀파 고등독해','천재교육 편집부',15000,'고등',100);
+VALUES('셀파 고등독해','천재교육 편집부',15000,'고등',50);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('셀파 고등한자','천재교육 편집부',15000,'고등',100);
@@ -107,4 +139,23 @@ INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('수능전략 과학탐구영역','천재교육 편집부',18000,'고등',15);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
-VALUES('수능전략 사회탐구영역','천재교육 편집부',18000,'고등',20);
+VALUES('수능전략 사회탐구영역','천재교육 편집부',18000,'고등',15);
+
+INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
+VALUES('신입생 수학','천재교육 편집부',10000,'초등');
+
+INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
+VALUES('신입생 영어','천재교육 편집부',10000,'초등');
+
+INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
+VALUES('쉽게읽는 고전소설','천재교육 편집부',15000,'중등');
+
+INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
+VALUES('기출심화 중학수학','천재교육 편집부',15000,'중등');
+
+INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
+VALUES('해법문학 세트','천재교육 편집부',90000,'고등');
+
+INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
+VALUES('고단백 모의고사 영어','천재교육 편집부',11000,'고등');
+

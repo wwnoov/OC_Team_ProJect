@@ -1,0 +1,9 @@
+
+7
+java:S1220""Move this file to a named package.8³÷ð»º1
+w	java:S116"VRename this field "month_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¸¹ïûÿÿÿÿ8´÷ð»º1
+{	java:S116"ZRename this field "month_book_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ñ¿¶ýÿÿÿÿ8´÷ð»º1
+w	java:S116"VRename this field "month_grade" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ñ¿¶ýÿÿÿÿ8´÷ð»º1
+x	java:S116"WRename this field "month_author" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ñ¿¶ýÿÿÿÿ8´÷ð»º1
+j
+java:S1659"HDeclare "month_grade" and all following declarations on a separate line.(²ñ¿¶ýÿÿÿÿ8µ÷ð»º1
