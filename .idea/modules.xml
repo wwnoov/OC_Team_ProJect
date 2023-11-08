@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Team_BookStore/Team_BookStore.iml" filepath="$PROJECT_DIR$/Team_BookStore/Team_BookStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Team_ProJect.iml" filepath="$PROJECT_DIR$/.idea/Team_ProJect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mh/mh.iml" filepath="$PROJECT_DIR$/mh/mh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rak/rak.iml" filepath="$PROJECT_DIR$/rak/rak.iml" />
+    </modules>
+  </component>
+</project>
