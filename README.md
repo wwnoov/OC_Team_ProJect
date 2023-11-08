@@ -20,10 +20,10 @@
 
 
 2. [🙋‍♀️ 요구명세서]
+ - <a href="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png">    
+
    
-<a href="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png">
-   
-4. [🛠 기능 엿보기](#-기능-엿보기)
+3. [🛠 기능 엿보기](#-기능-엿보기)
     
     - [Text Stlye2](#text-style2)   
     - [List](#list)      
