@@ -157,3 +157,8 @@ VALUES('해법문학 세트','천재교육 편집부',90000,'고등');
 
 INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
 VALUES('고단백 모의고사 영어','천재교육 편집부',11000,'고등');
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> bdd42d8d5e0b5c639ce509004b7a431759fc4bbc
