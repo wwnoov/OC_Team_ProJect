@@ -52,7 +52,9 @@
 </details>
 
 <details><summary>Block</summary>
-블럭
+
+<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EB%B8%94%EB%A1%9D%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8.png">
+    
 </details>
 
 ## 👑구동화면👑
