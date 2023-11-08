@@ -20,8 +20,6 @@
 
 
 2. [🙋‍♀️ 요구명세서](https://github.com/wwnoov/Team_ProJect/blob/64d8feed22b23af296cf9557488b0d37521f8797/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png)
- 
-   - 내용    
 
    
 3. [🛠 기능 엿보기](#-기능-엿보기)
