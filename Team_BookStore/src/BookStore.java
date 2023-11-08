@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class BookStore extends DBConnector {
 
-    // GLI 글씨색 설정
+    // CLI 글씨색 설정
     static final String ANSI_RED = "\u001B[31m";
     static final String ANSI_YELLO = "\u001B[33m";
     static final String ANSI_BLUE = "\u001B[34m";
