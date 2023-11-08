@@ -1326,7 +1326,7 @@ public class BookStore extends DBConnector {
                     "FROM monthbook";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
-            System.out.println("===================================[이달의 도서]=====================================");
+            System.out.println("=============================================[이달의 도서]===============================================");
             while (resultSet.next()) {
                 MonthBook mBook = new MonthBook();
 
@@ -1340,7 +1340,7 @@ public class BookStore extends DBConnector {
                         mBook.getMonth_price(),
                         mBook.getMonth_grade()
                 );
-                System.out.println("===================================================================================");
+                System.out.println("=======================================================================================================");
             }
             resultSet.close();
         } catch (SQLException e) {
