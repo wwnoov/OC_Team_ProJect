@@ -17,9 +17,10 @@
 ## 🛠 목차   
 
 1. [❓ 프로젝트소개  ](#-BOOKSTORE가-뭐예요)
-2. [🙋‍♀️ 요구명세서](#-좀-더-구체적으로-가르쳐주세요)
-    - [Header](https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png)
-    - [Text Style1](#text-style1) 
+ <details><summary>
+2. [🙋‍♀️ 요구명세서](#-좀-더-구체적으로-가르쳐주세요)</summary>
+<a href="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png">
+</details>
 3. [🛠 기능 엿보기](#-기능-엿보기)
     
     - [Text Stlye2](#text-style2)   
