@@ -19,8 +19,7 @@
 1. [❓ 프로젝트소개  ](#-BOOKSTORE가-뭐예요)
 
 
-<details><summary>
-2. [🙋‍♀️ 요구명세서]</summary>
+<details>2. [🙋‍♀️ 요구명세서]
 <a href="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png">
 </details>
    
