@@ -84,7 +84,7 @@ public class BookStore extends DBConnector {
                     start();
             }
         }else {
-            System.out.println("\n=============================== [메인 메뉴]================================");
+            System.out.println("\n================================ [메인 메뉴]==================================");
             System.out.println("                                                         ["+ANSI_BLUE + loginId + ANSI_RESET+"]");
             System.out.println();
             System.out.println("   │\t 1. 도서 구매\t│\t│\t 2. 추천 도서 \t│\t│\t 3. 캐시 충전\t│");
@@ -93,7 +93,7 @@ public class BookStore extends DBConnector {
             System.out.println();
             System.out.println("                          보유 잔액: " + (int)getUserCash() + "원");
             System.out.println();
-            System.out.println("=========================================================================");
+            System.out.println("============================================================================");
             System.out.println();
             System.out.print("메뉴 선택: ");
             choice = scanner.nextInt();
@@ -494,7 +494,7 @@ public class BookStore extends DBConnector {
 
     // ------------------------------------------ 도서 종류 ---------------------------------------- //
     public void gradeBooks(){
-        System.out.println("\n==============================[도서 종류]===============================");
+        System.out.println("\n================================[도서 종류]================================");
         System.out.println();
         System.out.println("   │\t 1. 초등학교\t│\t│\t 2. 중학교 \t│\t│\t 3. 고등학교\t\t│");
         System.out.println();
@@ -938,7 +938,7 @@ public class BookStore extends DBConnector {
             statement3.executeUpdate();
 
             // 구매한 책에 대한 영수증
-            System.out.println("\n===============================[영수증]===============================");
+            System.out.println("\n=================================[영수증]================================");
             for (int i = 0; i < bookNames.size(); i++) {
                 String bookName = bookNames.get(i);
                 Integer quantity = quantities.get(i);
@@ -1059,7 +1059,7 @@ public class BookStore extends DBConnector {
     // ------------------------------------------ 관리자 메뉴 ----------------------------------- //
     private void adminMenu(){
         while (true) {
-            System.out.println("\n=============================[관리자 메뉴]=============================");
+            System.out.println("\n===============================[관리자 메뉴]==============================");
             System.out.println("                                                         ["+ANSI_YELLO + "관리자" + ANSI_RESET+"]");
             System.out.println();
             System.out.println("            │\t 1. 재고 관리 \t│\t│\t 2. 이달의 도서 관리 \t│");
@@ -1289,7 +1289,7 @@ public class BookStore extends DBConnector {
         System.out.print("재고: ");
         book.setQuantity(Integer.parseInt(scanner.nextLine()));
         System.out.println("=========================================================================");
-        // 게시판 보조메뉴 출력
+        // 관리자 새책  보조메뉴 출력
         System.out.println("=========================================================================");
         System.out.println("               │  1. 추가하기   │        │  0. 취소   │");
         System.out.println("=========================================================================");
@@ -1297,7 +1297,7 @@ public class BookStore extends DBConnector {
         System.out.print("메뉴선택: ");
         String menuNo = scanner.nextLine();
         if (menuNo.equals("1")) {
-            //boards 테이블에 게시물 정보 저장
+            //book 테이블에 게시물 정보 저장
             try {
                 String sql = "" +
                         "INSERT INTO book (book_name, author, price, grade, quantity) " +
@@ -1315,7 +1315,7 @@ public class BookStore extends DBConnector {
                 exit();
             }
         }
-        //게시물 목록 출력
+        //재고 관리 출력
         manageStock();
     }
     // -------------------------------------- 관리자 새 책 추가------------------------------------- //
