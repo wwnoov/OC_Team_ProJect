@@ -70,7 +70,7 @@
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
 
 </details>
-<br/>
+
 <details><summary>관리자</summary>
     
 ![관리자](https://github.com/wwnoov/Team_ProJect/assets/145524959/e6c1562f-5b48-454f-a033-6312a0112a1f) 
