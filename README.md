@@ -17,7 +17,7 @@
 ## 🛠 목차   
 
 1. [❓ 프로젝트소개  ](#-BOOKSTORE가-뭐예요)
-2. [🙋‍♀️ 요구명세서](#-좀-더-구체적으로-가르쳐주세요)
+2. [🙋‍♀️ 요구명세서](https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png?raw=true)
     - [Header](#header)   
     - [Text Style1](#text-style1)  
 3. [🛠 기능 엿보기](#-기능-엿보기)
@@ -30,7 +30,7 @@
   
 ## 📌요구명세서📌
 
->인용문   
+
 <details><summary>Usecase</summary>
   
 <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A4.png">
