@@ -209,7 +209,7 @@ public class BookStore extends DBConnector {
                 board.setBcontent(rs.getString("bcontent"));
                 board.setBwriter(rs.getString("bwriter"));
                 board.setBdate(rs.getDate("bdate"));
-                System.out.printf("%-6s \t %-12s \t %-12s \t %-40s \t \n",
+                System.out.printf("%-6s\t %-15s\t %-15s\t%-40s\t \n",
                         board.getBno(),
                         board.getBtitle(),
                         board.getBwriter(),
@@ -539,7 +539,7 @@ public class BookStore extends DBConnector {
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                System.out.println("================================================================================================================");
+                System.out.println("=====================================================================================================================");
                 Book book = new Book();
                 book.setBook_id(resultSet.getInt("book_id"));
                 book.setBook_name(resultSet.getString("book_name"));
@@ -547,7 +547,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-10s \t | 저자:%-10s \t | 가격: %-7d \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -574,7 +574,7 @@ public class BookStore extends DBConnector {
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                System.out.println("================================================================================================================");
+                System.out.println("=====================================================================================================================");
                 Book book = new Book();
                 book.setBook_id(resultSet.getInt("book_id"));
                 book.setBook_name(resultSet.getString("book_name"));
@@ -582,7 +582,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s \t | 저자:%-10s \t | 가격: %-7d \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -609,7 +609,7 @@ public class BookStore extends DBConnector {
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                System.out.println("================================================================================================================");
+                System.out.println("=====================================================================================================================");
                 Book book = new Book();
                 book.setBook_id(resultSet.getInt("book_id"));
                 book.setBook_name(resultSet.getString("book_name"));
@@ -617,7 +617,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s\t | 가격: %-7d\t | 카테고리 : %-5s\t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -644,7 +644,7 @@ public class BookStore extends DBConnector {
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                System.out.println("================================================================================================================");
+                System.out.println("=====================================================================================================================");
                 Book book = new Book();
                 book.setBook_id(resultSet.getInt("book_id"));
                 book.setBook_name(resultSet.getString("book_name"));
@@ -652,7 +652,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s \t | 저자:%-10s \t | 가격: %-7d \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -678,7 +678,7 @@ public class BookStore extends DBConnector {
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                System.out.println("================================================================================================================");
+                System.out.println("=====================================================================================================================");
                 Book book = new Book();
                 book.setBook_id(resultSet.getInt("book_id"));
                 book.setBook_name(resultSet.getString("book_name"));
@@ -686,7 +686,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s \t | 저자:%-10s \t | 가격: %-7d \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -712,7 +712,7 @@ public class BookStore extends DBConnector {
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                System.out.println("================================================================================================================");
+                System.out.println("=====================================================================================================================");
                 Book book = new Book();
                 book.setBook_id(resultSet.getInt("book_id"));
                 book.setBook_name(resultSet.getString("book_name"));
@@ -720,7 +720,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s \t | 저자: %-10s \t | 가격: %-7d \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -787,7 +787,7 @@ public class BookStore extends DBConnector {
         } catch (SQLException e) {
             handleException(e);
         }
-        System.out.println("===========================================================================================================");
+        System.out.println("================================================================================================================");
         BestBooks();
     }
     // ------------------------------------------ 추천 초등 도서 ----------------------------------- //
@@ -806,7 +806,7 @@ public class BookStore extends DBConnector {
         } catch (SQLException e) {
             handleException(e);
         }
-        System.out.println("===========================================================================================================");
+        System.out.println("================================================================================================================");
         BestBooks();
     }
     // ------------------------------------------ 추천 중등 도서 ----------------------------------- //
@@ -825,7 +825,7 @@ public class BookStore extends DBConnector {
         } catch (SQLException e) {
             handleException(e);
         }
-        System.out.println("===========================================================================================================");
+        System.out.println("================================================================================================================");
         BestBooks();
     }
     // ------------------------------------------ 추천 고등 도서 ----------------------------------- //
@@ -844,12 +844,12 @@ public class BookStore extends DBConnector {
         } catch (SQLException e) {
             handleException(e);
         }
-        System.out.println("===========================================================================================================");
+        System.out.println("=================================================================================================================");
         BestBooks();
     }
     // ------------------------------------------ 추천 교과서 ------------------------------------- //
 
-    // ------------------------------------------ 추천 교과서 ------------------------------------- //
+    // ------------------------------------------ 추천 도서 출력 ----------------------------------- //
     private void displayRecommendedBooks(ResultSet resultSet) {
         try {
             while (resultSet.next()) {
@@ -859,8 +859,8 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                System.out.println("===========================================================================================================");
-                PrintStream print = System.out.printf("도서 이름: %-10s \t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                System.out.println("================================================================================================================");
+                PrintStream print = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
                         book.getPrice(),
@@ -873,7 +873,7 @@ public class BookStore extends DBConnector {
             handleException(e);
         }
     }
-    // ------------------------------------------ 추천 교과서 ------------------------------------- //
+    // ------------------------------------------ 추천 도서 출력 ------------------------------------- //
 
     // ------------------------------------------ 도서 구매 ------------------------------------- //
     public void purchaseBook() {
@@ -1120,7 +1120,7 @@ public class BookStore extends DBConnector {
                 board.setBcontent(rs.getString("bcontent"));
                 board.setBwriter(rs.getString("bwriter"));
                 board.setBdate(rs.getDate("bdate"));
-                System.out.printf("%-6s \t %-12s \t \t %-12s \t %-40s \t \n",
+                System.out.printf("%-6s\t %-15s\t %-15s\t%-40s\t \n",
                         board.getBno(),
                         board.getBtitle(),
                         board.getBwriter(),
