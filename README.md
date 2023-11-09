@@ -24,12 +24,12 @@
 온라인 서점 마켓 기능을 구현한 콘솔 프로그래밍
 ```
 
-## 🙋‍♀️ Team_Member 🙋‍♀️
+## Team_Member 
 #### [🎵 박석은 👉 GitHub](https://github.com/seokeunpark)
 #### [🌱 남원우 👉 GitHub](https://github.com/wwnoov)
 #### [🧟 이무현 👉 GitHub](https://github.com/LMH9999)
 #### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
-
+🙋‍♀️
   
 ## 📌 요구명세서 📌
 
