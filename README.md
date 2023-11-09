@@ -4,18 +4,18 @@
 ```
 ## 🛠 목차   
 
-1. [❓ 프로젝트소개  ](#-bookstore-프로젝트)
-2. [🙋‍♀️ 맴버소개](#team_member)
+1. [❓ 프로젝트소개  ](#-bookstore-프로젝트-)
+2. [🙋‍♀️ 맴버소개](#-team_member-)
 3. [📌 요구명세서](#요구명세서)    
-    - [Text Stlye2](#text-style2)   
-    - [List](#list)      
-    - [Link](#link)   
-    - [Code Block](#code-block)   
-    - [Table](#table)
-4. [👑 구동화면](#구동화면)
+    - [UseCase](#text-style2)       
+    - [Class](#link)   
+    - [Sequence](#code-block)   
+    - [Block](#table)
+    - [ERD](#list)  
+4. [👑 구동화면](#-구동화면-)
 
-5. [❓기능설명](#기능설명)
-6. [⚙️사용기술](#사용기술)
+5. [❓기능설명](#-기능설명-)
+6. [⚙️사용기술](#-사용기술-)
    
       
 ## 📖 BOOKSTORE 프로젝트 📖
@@ -42,10 +42,7 @@
 <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A4.png">
 
 </details>
-<details><summary>ERD</summary>
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/ERD.png">
-    
-</details>
+
 <details><summary>Class</summary>
     
 <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%ED%81%B4%EB%9E%98%EC%8A%A4%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8.png">
@@ -60,6 +57,11 @@
 <details><summary>Block</summary>
     
 <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png">
+    
+</details>
+
+<details><summary>ERD</summary>
+<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/ERD.png">
     
 </details>
 
@@ -81,7 +83,7 @@
 
 </details>
 
-## ❓기능설명❓
+## ❓ 기능설명 ❓
 
 <details><summary>1. 회원관리
 </summary>
