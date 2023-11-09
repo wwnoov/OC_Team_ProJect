@@ -18,20 +18,20 @@
 6. [⚙️사용기술](#%EF%B8%8F사용기술%EF%B8%8F)
    
       
-## 📖 BOOKSTORE 프로젝트📖
+## 📖 BOOKSTORE 프로젝트 📖
 ```bash프로젝트 소개
 천재교과서,알라딘,교보문고,yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 온라인 서점 마켓 기능을 구현한 콘솔 프로그래밍
 ```
 
-## 🙋‍♀️Team_Member🙋‍♀️
+## 🙋‍♀️ Team_Member 🙋‍♀️
 #### [🎵 박석은 👉 GitHub](https://github.com/seokeunpark)
 #### [🌱 남원우 👉 GitHub](https://github.com/wwnoov)
 #### [🧟 이무현 👉 GitHub](https://github.com/LMH9999)
 #### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
 
   
-## 📌요구명세서📌
+## 📌 요구명세서 📌
 
 <details><summary>요구명세서</summary>
 <img src="https://raw.githubusercontent.com/wwnoov/Team_ProJect/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png">
@@ -63,7 +63,7 @@
     
 </details>
 
-## 👑구동화면👑
+## 👑 구동화면 👑
 
 <details><summary>비로그인회원</summary>
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
@@ -115,7 +115,7 @@
    
 
 
-### ⚙️사용기술⚙️
+### ⚙️ 사용기술 ⚙️
 <div>
 <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Conda-Forge&logoColor=white" />
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
