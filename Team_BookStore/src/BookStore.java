@@ -191,9 +191,9 @@ public class BookStore extends DBConnector {
     public void boardlist(){
         //타이틀 및 컬럼명 출력
         System.out.println();
-        System.out.println("============================[후기 게시판]===============================");
+        System.out.println("==============================[후기 게시판]================================");
         System.out.printf("%-6s \t %-12s \t\t %-12s \t %-40s \t \n", "no", "제목","작성자", "날짜" );
-        System.out.println("======================================================================");
+        System.out.println("=========================================================================");
 
         //boads 테이블에서 게시물 정보를 가져와서 출력하기
         try {
@@ -231,13 +231,13 @@ public class BookStore extends DBConnector {
     // ------------------------------------------- 게시물 메뉴 ------------------------------------- //
     public void boardMenu() {
         if (loginId==null){
-            System.out.println("=====================================================================");
+            System.out.println("=========================================================================");
             System.out.println("     │  "+ANSI_RED+"1. 작성하기"+ANSI_RESET+"   │     │  2. 읽 기   │     │  0. 돌아가기   │");
-            System.out.println("=====================================================================");
+            System.out.println("=========================================================================");
         }else {
-            System.out.println("=====================================================================");
+            System.out.println("=========================================================================");
             System.out.println("     │  1. 작성하기   │     │  2. 읽 기   │     │  0. 돌아가기   │");
-            System.out.println("=====================================================================");
+            System.out.println("=========================================================================");
         }
 
         System.out.println();
@@ -274,13 +274,13 @@ public class BookStore extends DBConnector {
         board.setBtitle(scanner.nextLine());
         System.out.print("내용: ");
         board.setBcontent(scanner.nextLine());
-        System.out.println("========================================================================");
+        System.out.println("=========================================================================");
         board.setBwriter(loginId);
 
         // 게시판 보조메뉴 출력
-        System.out.println("========================================================================");
+        System.out.println("=========================================================================");
         System.out.println("               │  1. 저장하기   │        │  0. 취소   │");
-        System.out.println("========================================================================");
+        System.out.println("=========================================================================");
         System.out.println();
         System.out.print("메뉴선택: ");
         String menuNo = scanner.nextLine();
@@ -310,11 +310,11 @@ public class BookStore extends DBConnector {
     // ------------------------------------------- 게시물 읽기 ------------------------------------- //
     public void read() {
         //입력 받기
-        System.out.println("==============================[게시물 읽기]==============================");
+        System.out.println("===============================[게시물 읽기]===============================");
         System.out.print("글 번호 : ");
         int bno = Integer.parseInt(scanner.nextLine());
         System.out.println();
-        System.out.println("========================================================================");
+        System.out.println("=========================================================================");
         //boards 테이블에서 해당 게시물을 가져와 출력
         try {
             String sql = "" +
@@ -338,9 +338,9 @@ public class BookStore extends DBConnector {
                     System.out.println("쓴이: " + board.getBwriter());
                     System.out.println("날짜: " + board.getBdate());
                     if (loginId==null){
-                        System.out.println("========================================================================");
+                        System.out.println("=========================================================================");
                         System.out.println("     │  "+ANSI_RED+"1. 수정하기"+ANSI_RESET+"   │     │  "+ANSI_RED+"2. 삭제하기"+ANSI_RESET+"   │     │  0. 돌아가기   │");
-                        System.out.println("========================================================================");
+                        System.out.println("=========================================================================");
                         System.out.println();
                         System.out.print("메뉴선택: ");
                         String menuNo = scanner.nextLine();
@@ -363,9 +363,9 @@ public class BookStore extends DBConnector {
                             boardlist();
                         }
                     } else if (loginId.equals("admin")){
-                        System.out.println("========================================================================");
+                        System.out.println("=========================================================================");
                         System.out.println("               │  1. 삭제하기   │        │  0. 취소   │");
-                        System.out.println("========================================================================");
+                        System.out.println("=========================================================================");
                         System.out.println();
                         System.out.print("메뉴선택: ");
                         String menuNo = scanner.nextLine();
@@ -377,9 +377,9 @@ public class BookStore extends DBConnector {
                         break;
                     } else {
 
-                        System.out.println("========================================================================");
+                        System.out.println("=========================================================================");
                         System.out.println("     │  1. 수정하기   │     │  2. 삭제하기   │     │  0. 돌아가기   │");
-                        System.out.println("========================================================================");
+                        System.out.println("=========================================================================");
 
                         System.out.println();
                         System.out.print("메뉴선택: ");
@@ -500,7 +500,7 @@ public class BookStore extends DBConnector {
         System.out.println();
         System.out.println("   │\t 4. 교과서\t│\t│\t 5. 전 체 \t│\t│\t 0. 돌아가기\t\t│");
         System.out.println();
-        System.out.println("======================================================================");
+        System.out.println("=========================================================================");
         System.out.println();
         System.out.print("종류 선택: ");
         String bookNums = scanner.nextLine();
@@ -743,6 +743,7 @@ public class BookStore extends DBConnector {
         System.out.println();
         System.out.println("   │\t 1. 초등학교 \t│\t│\t 2. 중학교\t\t│\t│\t 3. 고등학교 \t│");
         System.out.println("   │\t 4. 교과서 \t\t│\t│\t 5. 이달의도서\t│\t│\t 0. 돌아가기 \t│");
+        System.out.println();
         System.out.println("=========================================================================");
         System.out.println();
         System.out.print("카테고리 선택: ");
@@ -788,7 +789,7 @@ public class BookStore extends DBConnector {
         } catch (SQLException e) {
             handleException(e);
         }
-        System.out.println("================================================================================================================");
+        System.out.println("=====================================================================================================================");
         BestBooks();
     }
     // ------------------------------------------ 추천 초등 도서 ----------------------------------- //
@@ -807,7 +808,7 @@ public class BookStore extends DBConnector {
         } catch (SQLException e) {
             handleException(e);
         }
-        System.out.println("================================================================================================================");
+        System.out.println("=====================================================================================================================");
         BestBooks();
     }
     // ------------------------------------------ 추천 중등 도서 ----------------------------------- //
@@ -826,7 +827,7 @@ public class BookStore extends DBConnector {
         } catch (SQLException e) {
             handleException(e);
         }
-        System.out.println("================================================================================================================");
+        System.out.println("=====================================================================================================================");
         BestBooks();
     }
     // ------------------------------------------ 추천 고등 도서 ----------------------------------- //
@@ -845,7 +846,7 @@ public class BookStore extends DBConnector {
         } catch (SQLException e) {
             handleException(e);
         }
-        System.out.println("=================================================================================================================");
+        System.out.println("=====================================================================================================================");
         BestBooks();
     }
     // ------------------------------------------ 추천 교과서 ------------------------------------- //
@@ -860,7 +861,7 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                System.out.println("================================================================================================================");
+                System.out.println("======================================================================================================================");
                 PrintStream print = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
@@ -882,7 +883,7 @@ public class BookStore extends DBConnector {
         List<String> bookNames = new ArrayList<>();
         List<Integer> quantities = new ArrayList<>();
         gradeBooks();
-        System.out.println("================================================================================================================");
+        System.out.println("======================================================================================================================");
 
         try {
             connection.setAutoCommit(false);
@@ -963,7 +964,7 @@ public class BookStore extends DBConnector {
                     System.out.println("구매 수량: " + quantity);
                     System.out.println("총 가격: " + (price * quantity)+"원");
                     System.out.println("구매 시간: " + currentTime);
-                    System.out.println("=====================================================================");
+                    System.out.println("=========================================================================");
 
                     try {
                         Thread.sleep(2000);
@@ -1065,7 +1066,7 @@ public class BookStore extends DBConnector {
             System.out.println();
             System.out.println("            │\t 3. 게시판 관리 \t│\t│\t 0. 관리자 종료 \t\t│");
             System.out.println();
-            System.out.println("=====================================================================");
+            System.out.println("=========================================================================");
             System.out.print("메뉴 선택: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // 버퍼 비우기
@@ -1103,9 +1104,9 @@ public class BookStore extends DBConnector {
     // --------------------------------------- 게시판 관리자 모드 ------------------------------------ //
     public void boardAdmin(){
         System.out.println();
-        System.out.println("============================[관리자 모드]===============================");
+        System.out.println("=============================[관리자 모드]=================================");
         System.out.printf("%-6s \t %-12s \t \t \t %-12s \t %-40s \t \n", "no", "제목","작성자", "날짜" );
-        System.out.println("======================================================================");
+        System.out.println("=========================================================================");
         //boards 테이블에서 게시물 정보를 가져와서 출력하기
         try {
             String sql = "" +
@@ -1140,13 +1141,13 @@ public class BookStore extends DBConnector {
     // ------------------------------------------ 재고 관리 모드 ------------------------------------ //
     private void manageStock(){
         displayBooks();
-        System.out.println("\n==============================[재고 관리]=============================");
+        System.out.println("\n===============================[재고 관리]===============================");
         System.out.println();
         System.out.println("          │\t 1. 새 책 추가하기 \t│\t│\t 2. 책 삭제하기 \t│");
         System.out.println();
         System.out.println("          │\t 3. 책 재고 채우기 \t│\t│\t 0. 돌아가기 \t│");
         System.out.println();
-        System.out.println("=====================================================================");
+        System.out.println("=========================================================================");
         System.out.print("메뉴 선택: ");
         int choice = scanner.nextInt();
         scanner.nextLine(); // 버퍼 비우기
@@ -1205,10 +1206,10 @@ public class BookStore extends DBConnector {
 
     // -------------------------------------- 관리자 도서 재고 삭제 -------------------------------- //
     public void deleteBook(){
-        System.out.println("==============================[책 삭제하기]==============================");
+        System.out.println("===============================[책 삭제하기]===============================");
         System.out.print("삭제할 책 이름 입력 :");
         String deleteBook = scanner.nextLine();
-        System.out.println("=======================================================================");
+        System.out.println("=========================================================================");
         try {
             String sql = "DELETE FROM book WHERE book_name=?" ;
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -1228,9 +1229,9 @@ public class BookStore extends DBConnector {
     public void boardAdminMenu(){
         System.out.println();
         loginId = "admin";
-        System.out.println("======================================================================");
+        System.out.println("=========================================================================");
         System.out.println("     │  1. 읽기   │     │  2. 삭제하기   │     │  0. 돌아가기   │");
-        System.out.println("======================================================================");
+        System.out.println("=========================================================================");
         System.out.println();
         System.out.print("메뉴선택: ");
         int menuNo = Integer.parseInt(scanner.nextLine());
@@ -1287,11 +1288,11 @@ public class BookStore extends DBConnector {
         book.setGrade(scanner.nextLine());
         System.out.print("재고: ");
         book.setQuantity(Integer.parseInt(scanner.nextLine()));
-        System.out.println("========================================================================");
+        System.out.println("=========================================================================");
         // 게시판 보조메뉴 출력
-        System.out.println("========================================================================");
+        System.out.println("=========================================================================");
         System.out.println("               │  1. 추가하기   │        │  0. 취소   │");
-        System.out.println("========================================================================");
+        System.out.println("=========================================================================");
         System.out.println();
         System.out.print("메뉴선택: ");
         String menuNo = scanner.nextLine();
@@ -1357,9 +1358,9 @@ public class BookStore extends DBConnector {
         }
         if (loginId.equals("admin")) {
             System.out.println();
-            System.out.println("=====================================================================");
+            System.out.println("=========================================================================");
             System.out.println("     │  1. 등록하기   │    │  2. 삭제하기   │    │  0. 돌아가기   │");
-            System.out.println("=====================================================================\n");
+            System.out.println("=========================================================================\n");
             System.out.print("메뉴 선택: ");
             int choice2 = scanner.nextInt();
             scanner.nextLine();
@@ -1435,7 +1436,7 @@ public class BookStore extends DBConnector {
         System.out.println("==============================[이달의 도서 삭제하기]==============================");
         System.out.print("이달의 도서에서 삭제할 책 : ");
         String deleteBook = scanner.nextLine();
-        System.out.println("=======================================================================");
+        System.out.println("=========================================================================");
         try {
             String sql = "DELETE FROM monthbook WHERE month_book_name=?" ;
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -1455,7 +1456,7 @@ public class BookStore extends DBConnector {
     private void register() {
         Member member = new Member();
         while (true){
-            System.out.println("==============================[회원 가입]==============================");
+            System.out.println("================================[회원 가입]================================");
             System.out.print("사용할 아이디를 입력하세요: ");
             member.id = scanner.nextLine();
             if (member.id.equals("admin")){
@@ -1485,7 +1486,7 @@ public class BookStore extends DBConnector {
         }else {
             System.out.println("이미 사용 중인 아이디입니다. 다른 아이디를 선택해주세요.");
         }
-        System.out.println("=====================================================================");
+        System.out.println("=========================================================================");
         System.out.println();
         start();
     }
@@ -1517,14 +1518,14 @@ public class BookStore extends DBConnector {
 
         while(!loggedIn && loginAttempt < 3) {
             Admin admin = new Admin();
-            System.out.println("============================[관리자 로그인]============================");
+            System.out.println("=============================[관리자 로그인]==============================");
             System.out.println();
             System.out.print("관리자 아이디를 입력하세요: ");
             admin.setAdId(scanner.nextLine());
             System.out.print("관리자 비밀번호를 입력하세요.: ");
             admin.setAdPassword(scanner.nextLine());
             System.out.println();
-            System.out.println("=====================================================================");
+            System.out.println("=========================================================================");
             System.out.println();
             try {
                 String query = ""
@@ -1551,7 +1552,7 @@ public class BookStore extends DBConnector {
                 System.out.println("관리자 시스템에 문제가 발생하여 관리자 모드를 종료합니다.");
                 start();
             }
-            System.out.println("=====================================================================");
+            System.out.println("=========================================================================");
             loginAttempt++; // 로그인 시도 횟수 증가
         }
         if (!loggedIn) {
