@@ -36,9 +36,10 @@ public class BookStore extends DBConnector {
             System.out.println();
             System.out.println("   │\t "+ANSI_RED+"1. 도서 구매"+ANSI_RESET+"\t│\t│\t 2. 추천 도서 \t│\t│\t"+ANSI_RED+"3. 캐시 충전"+ANSI_RESET+"\t\t│");
             System.out.println();
-            System.out.println("   │\t 4. 후기 게시판 \t│\t│\t 5. 로그인 \t\t│\t│\t"+ANSI_BLUE+"6. 회원 가입"+ANSI_RESET+"\t\t│");
+            System.out.println("   │\t 4. 후기 게시판 \t│\t│\t 5. 로그인 \t\t│\t│\t6. 회원 가입\t\t│");
             System.out.println();
             System.out.println("=========================================================================");
+            System.out.println(ANSI_RED+"빨간색 메뉴는 로그인한 회원만 이용 가능합니다."+ANSI_RESET);
             System.out.println();
             System.out.print("메뉴 선택: ");
             choice = scanner.nextInt();
@@ -132,12 +133,12 @@ public class BookStore extends DBConnector {
 
         while (!loggedIn && loginAttempt < 3) {
             Member member = new Member(); // 멤버 객체 생성 후 로그인 정보 저장
-            System.out.println("===============================[로그인]================================");
+            System.out.println("==================================[로그인]===================================");
             System.out.print("아이디: ");
             member.setId(scanner.nextLine());
             System.out.print("비밀번호: ");
             member.setPassword(scanner.nextLine());
-            System.out.println("======================================================================");
+            System.out.println("============================================================================");
             System.out.println();
             try {
                 // 아이디 비밀번호를 DB에서 조회
