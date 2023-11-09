@@ -147,6 +147,9 @@ INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('수능전략 과학탐구영역','천재교육 편집부',18000,'고등',15);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
+VALUES('수능전략 사회탐구영역','천재교육 편집부',18000,'고등',15);
+
+INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('초등 국어','천재교과서 편집부',10000,'교과서',15);
 
 INSERT INTO book(book_name, author, price, grade, quantity)
@@ -193,22 +196,22 @@ INSERT INTO book(book_name, author, price, grade, quantity)
 VALUES('고등 과학','천재교과서 편집부',10000,'교과서',15);
 
 INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
-VALUES('신입생 수학','천재교육 편집부',10000,'초등');
+VALUES('똑똑 초등내신','천재교육 편집부',17000,'초등');
 
 INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
-VALUES('신입생 영어','천재교육 편집부',10000,'초등');
+VALUES('똑똑 초등영단어','천재교육 편집부',19000,'초등');
 
 INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
-VALUES('쉽게읽는 고전소설','천재교육 편집부',15000,'중등');
+VALUES('바로완성 중등영단어','천재교육 편집부',18000,'중등');
 
 INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
-VALUES('기출심화 중학수학','천재교육 편집부',15000,'중등');
+VALUES('바로완성 중등내신','천재교육 편집부',20000,'중등');
 
 INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
-VALUES('해법문학 세트','천재교육 편집부',90000,'고등');
+VALUES('셀파 고등내신','천재교육 편집부',15000,'고등');
 
 INSERT INTO monthbook(month_book_name, month_author, month_price, month_grade)
-VALUES('고단백 모의고사 영어','천재교육 편집부',11000,'고등');
+VALUES('수능전략 영어영역','천재교육 편집부',18000,'고등');
 
 
 
