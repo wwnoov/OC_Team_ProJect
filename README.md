@@ -8,14 +8,18 @@
 2. [🙋‍♀️ 요구명세서](#요구명세서)
     - [Header](#header)   
     - [Text Style1](#text-style1)  
-3. [🛠 기능 엿보기](#-기능-엿보기)
+3. [🛠 맴버소개](#-기능-엿보기)
     
     - [Text Stlye2](#text-style2)   
     - [List](#list)      
     - [Link](#link)   
     - [Code Block](#code-block)   
     - [Table](#table)
-  
+4. [🛠 구동화면](#-기능-엿보기)
+
+5. [기능설명]()
+6. [사용기술]()
+   
       
 ## 📖 BOOKSTORE 프로젝트📖
 ```bash프로젝트 소개
@@ -63,7 +67,12 @@
 </details>
 
 ## 👑구동화면👑
-<details><summary>일반회원</summary>
+
+<details><summary>비로그인회원</summary>
+![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
+</details>
+    
+<details><summary>로그인회원</summary>
     
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
 
