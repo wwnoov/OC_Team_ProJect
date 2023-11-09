@@ -5,17 +5,17 @@
 ## 🛠 목차   
 
 1. [❓ 프로젝트소개  ](#-bookstore-프로젝트)
-2. [🙋‍♀️ 요구명세서](#요구명세서)
+2. [🙋‍♀️ 맴버소개](#)
     - [Header](#header)   
     - [Text Style1](#text-style1)  
-3. [🛠 맴버소개](#-기능-엿보기)
+3. [📌 요구명세서](#요구명세서)
     
     - [Text Stlye2](#text-style2)   
     - [List](#list)      
     - [Link](#link)   
     - [Code Block](#code-block)   
     - [Table](#table)
-4. [🛠 구동화면](#-기능-엿보기)
+4. [👑 구동화면](#구동화면)
 
 5. [기능설명]()
 6. [사용기술]()
