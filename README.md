@@ -4,7 +4,7 @@
 ```
 ## 🛠 목차   
 
-1. [❓ 프로젝트소개  ](#-bookstore-프로젝트-)
+1. [📖 프로젝트소개  ](#-bookstore-프로젝트-)
 2. [🙋‍♀️ 맴버소개](#%EF%B8%8F-team_member-%EF%B8%8F)
 3. [📌 요구명세서](#-요구명세서-)    
 4. [👑 구동화면](#-구동화면-)
@@ -17,6 +17,9 @@
 천재교과서,알라딘,교보문고,yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 온라인 서점 마켓 기능을 구현한 콘솔 프로그래밍
 ```
+## 💡기획의도💡
+'천재교육'은 대한민국 교육분야의 대표적인 출판 회사로써 많은 학생들과 학부모들의 관심을 받고 있음<br>
+이에 따라, 천재교육과 함께 하고자 하는 마음을 담아 'Book Store'를 주제로 선정하여 프로젝트를 진행하게 되었음<br>
 
 ## 🙋‍♀️ Team_Member 🙋‍♀️
 #### [🎵 박석은 👉 GitHub](https://github.com/seokeunpark)
@@ -28,34 +31,48 @@
 ## 📌 요구명세서 📌
 
 <details><summary>요구명세서</summary>
-<img src="https://raw.githubusercontent.com/wwnoov/Team_ProJect/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png">
+<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/3b508bc4-b048-4e12-822c-4d3daa21ba7d">
 </details>
 
 <details><summary>Usecase</summary>
   
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A4.png">
+<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/826a8ff1-9e4d-4e47-90d1-31959d5cfafc">
 
 </details>
 
 <details><summary>Class</summary>
     
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%ED%81%B4%EB%9E%98%EC%8A%A4%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8.png">
+<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/5350cac5-b8af-48d6-b732-17e886037df0">
 
 </details>
-<details><summary>Sequence</summary>
+<details><summary>Sequence(비회원)</summary>
     
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%8B%9C%ED%80%80%EC%8A%A4%20%ED%9A%8C%EC%9B%90.png">
+<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/b479afc3-e8f9-4ee9-be58-9f7ae4927553">
+
+</details>
+
+</details>
+<details><summary>Sequence(회원)</summary>
+    
+<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/76d38c0d-66aa-45b3-846b-07972275234c">
+
+</details>
+
+</details>
+<details><summary>Sequence(관리자)</summary>
+    
+<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/a9dc285b-1a93-4886-9d32-edbba7e26783">
 
 </details>
 
 <details><summary>Block</summary>
     
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png">
+<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/26862a15-f0d3-4763-b8a4-fb26e16cd364">
     
 </details>
 
 <details><summary>ERD</summary>
-<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/3%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/ERD.png">
+<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/824d1422-3be9-4b6e-90f2-78357c942dbe">
     
 </details>
 
