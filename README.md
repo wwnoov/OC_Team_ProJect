@@ -111,32 +111,32 @@
 <details><summary>1. 회원관리
 </summary>
    
-[회원 가입시 중복 아이디 체크](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1472C9-L1493C17) <br/>
-[관리자 아이디 가입 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1464C13-L1467C23)<br/>
-[로그인시 비밀번호 오류 3회 시 로그인 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L132C5-L188C17)<br/>
+[- 회원 가입시 중복 아이디 체크](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1472C9-L1493C17) <br/>
+[- 관리자 아이디 가입 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1464C13-L1467C23)<br/>
+[- 로그인시 비밀번호 오류 3회 시 로그인 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L132C5-L188C17)<br/>
 </details>
 
 <details><summary>2. 도서관리
 </summary>
-도서 조회·구매·구매 <br/>
-도서 구매 시 재고 감소<br/>
-추천 도서 <br/>
+- 도서 조회·구매·구매 <br/>
+- 도서 구매 시 재고 감소<br/>
+- 추천 도서 <br/>
 </details>
 
 <details><summary>3. 후기 게시판
 </summary>
-후기 게시글 등록
-후기 게시글 수정
-후기 게시글 삭제</details>
+- 후기 게시글 등록<br>
+- 후기 게시글 수정<br>
+- 후기 게시글 삭제</details>
 
 <details><summary>4. 캐시 충전
 </summary>
-캐시충전
+- 캐시충전
 </details>
 
 <details><summary>5. 관리자 모드
 </summary>
-관리자모드
+- 관리자모드
 </details>
    
 
