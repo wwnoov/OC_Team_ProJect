@@ -40,7 +40,7 @@
 
 <details><summary>Usecase</summary>
   
-<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/826a8ff1-9e4d-4e47-90d1-31959d5cfafc">
+<img src="https://github.com/wwnoov/Team_ProJect/assets/145525099/2071762d-0850-40c1-b715-3af16f36b7be">
 
 </details>
 
