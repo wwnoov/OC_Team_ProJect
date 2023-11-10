@@ -141,7 +141,7 @@
    
 
 
-### 🔨 사용기술 🔨
+## 🔨 사용기술 🔨
 <div>
 <img src="https://img.shields.io/badge/JAVA-C01818?style=flat-square&logo=coffeescript&logoColor=white" />
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
