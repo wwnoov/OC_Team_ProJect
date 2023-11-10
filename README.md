@@ -34,6 +34,8 @@
 <img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/3b508bc4-b048-4e12-822c-4d3daa21ba7d">
 </details>
 
+## 🔍 다이어그램 🔍
+
 <details><summary>Usecase</summary>
   
 <img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/826a8ff1-9e4d-4e47-90d1-31959d5cfafc">
