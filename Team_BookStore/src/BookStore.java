@@ -128,10 +128,10 @@ public class BookStore extends DBConnector {
 
     // ------------------------------------------- 로그인 ---------------------------------------- //
     public void login() {
-        loginAttempt = 0; // 로그인 시도 횟수
-        boolean loggedIn = false; // 로그인 여부
+        loginAttempt = 0; // 로그인 횟수 0으로 초기화
+        boolean loggedIn = false; // 로그인 여부 확인
 
-        while (!loggedIn && loginAttempt < 3) {
+        while (!loggedIn && loginAttempt < 3) { // 로그인 시도 횟수를 3회까지 제한
             Member member = new Member(); // 멤버 객체 생성 후 로그인 정보 저장
             System.out.println("==================================[로그인]===================================");
             System.out.print("아이디: ");
