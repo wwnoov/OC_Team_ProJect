@@ -91,6 +91,7 @@
 ## 📹 구동화면 📹
 
 <details><summary>비로그인회원</summary>
+   
 ![일반회원](https://user-images.githubusercontent.com/145524959/280589563-33cc394a-bcfe-41e9-b6ab-49863de391c8.gif)
 </details>
     
