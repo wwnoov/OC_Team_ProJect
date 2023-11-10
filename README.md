@@ -7,11 +7,11 @@
 1. [📖 프로젝트소개](#-bookstore-프로젝트-)
 2. [💡 기획의도](#기획의도)
 3. [🙋‍♀️ Team_Member](#%EF%B8%8F-team_member-%EF%B8%8F)
-4. [📌 요구명세서](#-요구명세서-)
+4. [📂 요구명세서](#-요구명세서-)
 5. [📊 다이어그램](#-다이어그-)
-6. [👑 구동화면](#구동화면)
-7. [❓기능설명](#기능설명)
-8. [⚙️사용기술](#%EF%B8%8F-사용기술-%EF%B8%8F)
+6. [📹 구동화면](#구동화면)
+7. [📝기능설명](#기능설명)
+8. [🔨사용기술](#%EF%B8%8F-사용기술-%EF%B8%8F)
    
       
 ## 📖 BOOK_STORE 프로젝트 📖
@@ -30,7 +30,7 @@
 #### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
 
   
-## 📌 요구명세서 📌
+## 📂 요구명세서 📂
 
 <details><summary>요구명세서</summary>
 <img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/3b508bc4-b048-4e12-822c-4d3daa21ba7d">
@@ -80,7 +80,7 @@
     
 </details>
 
-## 👑 구동화면 👑
+## 📹 구동화면 📹
 
 <details><summary>비로그인회원</summary>
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
@@ -98,7 +98,7 @@
 
 </details>
 
-## ❓ 기능설명 ❓
+## 📝 기능설명 📝
 
 <details><summary>1. 회원관리
 </summary>
@@ -132,7 +132,7 @@
    
 
 
-### ⚙️ 사용기술 ⚙️
+### 🔨 사용기술 🔨
 <div>
 <img src="https://img.shields.io/badge/JAVA-C01818?style=flat-square&logo=coffeescript&logoColor=white" />
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
