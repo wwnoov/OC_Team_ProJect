@@ -1467,7 +1467,7 @@ public class BookStore extends DBConnector {
         }
         System.out.print("사용할 비밀번호를 입력하세요: ");
         member.password = scanner.nextLine();
-        if (isIdAvailable(member.id)) {
+        if (isIdAvailable(member.id)) { // 회원가입시 사용가능한 아이디 체크
             try {
                 String query = "" +
                         "INSERT INTO member (id, password, cash)"+
