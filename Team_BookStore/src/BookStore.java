@@ -168,7 +168,7 @@ public class BookStore extends DBConnector {
                 start();
             } finally {
                 if(loginId != null) {
-                    System.out.println("              어서오세요, "+loginId+"님. 무엇을 도와드릴까요?");		//loginId 값 부여 확인용
+                    System.out.println("              어서오세요, "+loginId+"님. 무엇을 도와드릴까요?"); // 로그인 성공시 출력 메시지
                 }
             }
 
