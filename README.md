@@ -4,15 +4,15 @@
 ```
 ## 📚 목차 📚
 
-1. [📖 프로젝트소개](#-bookstore-프로젝트-)
-2. [💡 기획의도](#기획의도)
+1. [📖 프로젝트 소개](#-bookstore-프로젝트-)
+2. [💡 기획 의도](#기획의도)
 3. [🙋‍♀️ Team_Member](#%EF%B8%8F-team_member-%EF%B8%8F)
-4. [📋 개발일지](#-개발일지-)
-5. [📂 요구명세서](#-요구명세서-)
+4. [📋 개발 일지](#-개발일지-)
+5. [📂 요구 명세서](#-요구명세서-)
 6. [📊 다이어그램](#-다이어그-)
-7. [📹 구동화면](#구동화면)
-8. [📝기능설명](#기능설명)
-9. [🔨사용기술](#%EF%B8%8F-사용기술-%EF%B8%8F)
+7. [📹 구동 화면](#구동화면)
+8. [📝기능 설명](#기능설명)
+9. [🔨사용 기술](#%EF%B8%8F-사용기술-%EF%B8%8F)
    
       
 ## 📖 BOOK_STORE 프로젝트 📖
@@ -20,7 +20,7 @@
 천재교과서 쇼핑몰,알라딘,교보문고,yes24와 같은 온라인 서점 마켓을 벤치마킹하여
 온라인 서점 마켓 기능을 구현한 콘솔 프로그래밍
 ```
-## 💡기획의도💡
+## 💡기획 의도💡
 ```
 '천재교육'은 대한민국 교육분야의 대표적인 출판 회사로써 많은 학생들과 학부모들의 관심을 받고 있음
 이에 따라, 천재교육과 함께 하고자 하는 마음을 담아 'BOOK STORE'를 주제로 선정하여 프로젝트를 진행하게 되었음
@@ -32,13 +32,13 @@
 #### [🧟 이무현 👉 GitHub](https://github.com/LMH9999)
 #### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
 
-## 📋개발일지📋
+## 📋개발 일지📋
 <details><summary>개발일지</summary>
    
 ![개발일지](https://github.com/wwnoov/Team_ProJect/assets/145524959/02abd97a-26c8-4e52-ba7a-9e85c5d4b296)
 </details>
 
-## 📂 요구명세서 📂
+## 📂 요구 명세서 📂
 
 <details><summary>요구명세서</summary>
 <img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/3b508bc4-b048-4e12-822c-4d3daa21ba7d">
@@ -88,14 +88,14 @@
     
 </details>
 
-## 📹 구동화면 📹
+## 📹 구동 화면 📹
 
-<details><summary>비로그인회원</summary>
+<details><summary>비로그인 회원</summary>
    
 ![일반회원](https://user-images.githubusercontent.com/145524959/280589563-33cc394a-bcfe-41e9-b6ab-49863de391c8.gif)
 </details>
     
-<details><summary>로그인회원</summary>
+<details><summary>로그인 회원</summary>
     
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
 
@@ -107,9 +107,9 @@
 
 </details>
 
-## 📝 기능설명 📝
+## 📝 기능 설명 📝
 
-<details><summary>1. 회원관리
+<details><summary>1. 회원 관리
 </summary>
    
 [- 회원 가입시 중복 아이디 체크](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1472C9-L1493C17) <br/>
@@ -117,7 +117,7 @@
 [- 로그인 시 비밀번호 오류 3회 시 로그인 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L132C5-L188C17)<br/>
 </details>
 
-<details><summary>2. 도서관리
+<details><summary>2. 도서 관리
 </summary>
 - 도서 조회 · 구매 · 구매 <br/>
 - 도서 구매 시 재고 감소<br/>
@@ -137,12 +137,12 @@
 
 <details><summary>5. 관리자 모드
 </summary>
-- 관리자모드
+- 관리자 모드
 </details>
    
 
 
-## 🔨 사용기술 🔨
+## 🔨 사용 기술 🔨
 <div>
 <img src="https://img.shields.io/badge/JAVA-C01818?style=flat-square&logo=coffeescript&logoColor=white" />
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
