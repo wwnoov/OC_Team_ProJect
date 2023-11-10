@@ -2,6 +2,7 @@ import java.io.PrintStream;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,6 +17,7 @@ public class BookStore extends DBConnector {
     static final String ANSI_YELLO = "\u001B[33m";
     static final String ANSI_BLUE = "\u001B[34m";
     static final String ANSI_RESET = "\u001B[0m";
+    DecimalFormat formatter = new DecimalFormat("###,###");
     private Scanner scanner;				//BookStore() 생산자에서 필드전역 선언으로 이동
     private int loginAttempt; // 로그인 횟수 추적
     private String loginId = null; //로그인 값을 저장하는 문자열
@@ -91,7 +93,7 @@ public class BookStore extends DBConnector {
             System.out.println();
             System.out.println("   │\t 4. 후기 게시판\t│\t│\t "+ANSI_RED+"5. 로그아웃\t"+ANSI_RESET+"\t│\t│\t 0.  종료\t\t│");
             System.out.println();
-            System.out.println("                          보유 잔액: " + (int)getUserCash() + "원");
+            System.out.println("                          보유 잔액: " + formatter.format((int)getUserCash()) + "원");
             System.out.println();
             System.out.println("============================================================================");
             System.out.println();
@@ -168,7 +170,7 @@ public class BookStore extends DBConnector {
                 start();
             } finally {
                 if(loginId != null) {
-                    System.out.println("              어서오세요, "+loginId+"님. 무엇을 도와드릴까요?"); // 로그인 성공시 출력 메시지
+                    System.out.println("              어서오세요, "+loginId+"님. 무엇을 도와드릴까요?");		//loginId 값 부여 확인용
                 }
             }
 
@@ -548,10 +550,10 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7s  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
-                        book.getPrice(),
+                        formatter.format(book.getPrice()),
                         book.getGrade(),
                         book.getQuantity()
                 );
@@ -583,10 +585,10 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7s  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
-                        book.getPrice(),
+                        formatter.format(book.getPrice()),
                         book.getGrade(),
                         book.getQuantity()
                 );
@@ -618,10 +620,10 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7s  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
-                        book.getPrice(),
+                        formatter.format(book.getPrice()),
                         book.getGrade(),
                         book.getQuantity()
                 );
@@ -653,10 +655,10 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7s  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
-                        book.getPrice(),
+                        formatter.format(book.getPrice()),
                         book.getGrade(),
                         book.getQuantity()
                 );
@@ -687,10 +689,10 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7s  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
-                        book.getPrice(),
+                        formatter.format(book.getPrice()),
                         book.getGrade(),
                         book.getQuantity()
                 );
@@ -721,10 +723,10 @@ public class BookStore extends DBConnector {
                 book.setPrice(resultSet.getInt("price"));
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7s  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
-                        book.getPrice(),
+                        formatter.format(book.getPrice()),
                         book.getGrade(),
                         book.getQuantity()
                 );
@@ -862,10 +864,10 @@ public class BookStore extends DBConnector {
                 book.setGrade(resultSet.getString("grade"));
                 book.setQuantity(resultSet.getInt("quantity"));
                 System.out.println("======================================================================================================================");
-                PrintStream print = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7d  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
+                PrintStream print = System.out.printf("도서 이름: %-15s\t | 저자:%-10s \t | 가격: %-7s  \t | 카테고리 : %-5s \t | 재고: %-5d \n",
                         book.getBook_name(),
                         book.getAuthor(),
-                        book.getPrice(),
+                        formatter.format(book.getPrice()),
                         book.getGrade(),
                         book.getQuantity()
                 );
@@ -962,7 +964,7 @@ public class BookStore extends DBConnector {
 
                     System.out.println("구매 도서 이름: " + bookName);
                     System.out.println("구매 수량: " + quantity);
-                    System.out.println("총 가격: " + (price * quantity)+"원");
+                    System.out.println("총 가격: " + formatter.format((price * quantity))+"원");
                     System.out.println("구매 시간: " + currentTime);
                     System.out.println("=========================================================================");
 
@@ -1001,15 +1003,15 @@ public class BookStore extends DBConnector {
     // ------------------------------------------ 캐시 충전------------------------------------- //
     public void rechargeCash() {
         System.out.println("================================[캐시 충전]================================");
-        System.out.println("보유 캐시: " + (int)getUserCash() + "원");
+        System.out.println("보유 캐시: " + formatter.format((int)getUserCash()) + "원");
         System.out.println("천재은행 : 123-4567-13597 으로 입금해주세요");
         System.out.print("충전할 금액을 입력하세요: ");
         double cash = Double.parseDouble(scanner.nextLine());
 
         if (updateUserCash(getUserCash() + cash)) {
-            System.out.printf("%1.0f 원 입금이 확인되었습니다\n", cash);
+            System.out.println(formatter.format(cash) + "원 입금이 확인되었습니다");
             System.out.println("캐시를 충전하였습니다.");
-            System.out.println("보유 캐시: " + (int)getUserCash() + "원");
+            System.out.println("보유 캐시: " + formatter.format((int)getUserCash()) + "원");
         } else {
             System.out.println("캐시 충전에 실패했습니다.");
         }
@@ -1336,10 +1338,10 @@ public class BookStore extends DBConnector {
                 mBook.setMonth_author(resultSet.getString("month_author"));
                 mBook.setMonth_price(resultSet.getInt("month_price"));
                 mBook.setMonth_grade(resultSet.getString("month_grade"));
-                PrintStream printf = System.out.printf("도서 이름: %-15s \t | 저자:%-15s \t | 가격: %-7d \t | 카테고리 : %-5s \t \n",
+                PrintStream printf = System.out.printf("도서 이름: %-15s \t | 저자:%-15s \t | 가격: %-7s \t | 카테고리 : %-5s \t \n",
                         mBook.getMonth_book_name(),
                         mBook.getMonth_author(),
-                        mBook.getMonth_price(),
+                        formatter.format(mBook.getMonth_price()),
                         mBook.getMonth_grade()
                 );
                 System.out.println("=======================================================================================================");
