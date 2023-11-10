@@ -32,9 +32,10 @@
 #### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
 
 ## 💡개발일지💡
-
+<details><summary>개발일지</summary>
+   
 ![개발일지](https://github.com/wwnoov/Team_ProJect/assets/145524959/02abd97a-26c8-4e52-ba7a-9e85c5d4b296)
-
+</details>
 
 ## 📂 요구명세서 📂
 
