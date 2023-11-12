@@ -5,7 +5,7 @@
 ## 📚 목차 📚
 
 1. [📖 프로젝트 소개](#-bookstore-프로젝트-)
-2. [💡 기획 의도](#기획의도)
+2. [💡 기획 의도](https://github.com/wwnoov/Team_ProJect#%EA%B8%B0%ED%9A%8D-%EC%9D%98%EB%8F%84)
 3. [🙋‍♀️ Team_Member](#%EF%B8%8F-team_member-%EF%B8%8F)
 4. [📋 개발 일지](https://github.com/wwnoov/Team_ProJect/blob/main/README.md#%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80)
 5. [📂 요구 명세서](#%EF%B8%8F-diagram-%EF%B8%8F)
