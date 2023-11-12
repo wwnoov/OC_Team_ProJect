@@ -12,7 +12,7 @@
 6. [📊 Diagram](https://github.com/wwnoov/Team_ProJect#-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8-)
 7. [📹 구동 화면](https://github.com/wwnoov/Team_ProJect#-%EA%B5%AC%EB%8F%99-%ED%99%94%EB%A9%B4-)
 8. [📝기능_설명](https://github.com/wwnoov/Team_ProJect/blob/main/README.md#-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8-)
-9. [🔨사용 기술](#%EF%B8%8F-사용기술-%EF%B8%8F)
+9. [🔨사용 기술](https://github.com/wwnoov/Team_ProJect#-%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0-)
    
       
 ## 📖 BOOK_STORE 프로젝트 📖
