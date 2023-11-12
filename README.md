@@ -119,14 +119,15 @@
 
 <details><summary>도서 관리
 </summary>
-- 도서 조회 · 구매 · 구매 <br/>
+- 도서 조회 · 구매 <br/>
 - 도서 구매 시 재고 감소<br/>
 - 추천 도서 <br/>
 </details>
 
 <details><summary>후기 게시판
 </summary>
-- 후기 게시글 등록<br>
+   
+[- 후기 게시글 등록](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L271C5-L309C6) <br>
 - 후기 게시글 수정<br>
 - 후기 게시글 삭제</details>
 
