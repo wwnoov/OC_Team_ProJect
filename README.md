@@ -128,8 +128,8 @@
 </summary>
    
 [- 후기 게시글 등록](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L271C5-L309C6) <br>
-- 후기 게시글 수정<br>
-- 후기 게시글 삭제</details>
+[- 후기 게시글 수정](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L437C5-L471C21) <br>
+[- 후기 게시글 삭제](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L476C5-L494C6) </details>
 
 <details><summary>캐시 충전
 </summary>
