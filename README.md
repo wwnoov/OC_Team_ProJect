@@ -41,7 +41,7 @@
 ## 📂 요구 명세서 📂
 
 <details><summary>요구 명세서</summary>
-<img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/3b508bc4-b048-4e12-822c-4d3daa21ba7d">
+   <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/4%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A42.png">
 </details>
 
 ## 📊 다이어그램 📊
