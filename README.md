@@ -101,7 +101,7 @@
     
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
 
-</detai서 <br/>
+</details> <br/>
 </details>
 
 <details><summary>캐시충전
