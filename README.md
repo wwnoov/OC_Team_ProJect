@@ -101,29 +101,13 @@
     
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
 
+</detai서 <br/>
 </details>
 
-<details><summary>관리자</summary>
-    
-![관리자](https://github.com/wwnoov/Team_ProJect/assets/145524959/e6c1562f-5b48-454f-a033-6312a0112a1f) 
-
-</details>
-
-## 📝 기능_설명 📝
-
-<details><summary>회원 관리
+<details><summary>캐시충전
 </summary>
-   
-[- 회원 가입시 중복 아이디 체크](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1472C9-L1493C17) <br/>
-[- 관리자 아이디 가입 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1464C13-L1467C23)<br/>
-[- 로그인 시 비밀번호 오류 3회 시 로그인 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L132C5-L188C17)<br/>
-</details>
-
-<details><summary>도서 관리
-</summary>
-- 도서 조회 · 구매 <br/>
-- 도서 구매 시 재고 감소<br/>
-- 추천 도서 <br/>
+- 캐시충전 <br/>
+- 영수증 <br/>
 </details>
 
 <details><summary>후기 게시판
@@ -133,14 +117,13 @@
 [- 후기 게시글 수정](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L437C5-L471C21) <br>
 [- 후기 게시글 삭제](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L476C5-L494C6) </details>
 
-<details><summary>캐시 충전
-</summary>
-- 캐시 충전
-</details>
-
 <details><summary>관리자 모드
 </summary>
-- 관리자 모드
+- 관리자 로그인 <br/>
+- 관리자 새책 추가 <br/>
+- 관리자 게시판관리 <br/>
+- 관리자 이달의 도서 <br/>
+   
 </details>
    
 
