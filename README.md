@@ -27,8 +27,9 @@
 ```
 
 ## 🙋‍♀️ Team_Member 🙋‍♀️
-#### [🎵 박석은 👉 GitHub](https://github.com/seokeunpark)
+
 #### [🌱 남원우 👉 GitHub](https://github.com/wwnoov)
+#### [🎵 박석은 👉 GitHub](https://github.com/seokeunpark)
 #### [🧟 이무현 👉 GitHub](https://github.com/LMH9999)
 #### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
 
