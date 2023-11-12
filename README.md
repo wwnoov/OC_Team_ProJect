@@ -42,14 +42,15 @@
 ## 📂 요구 명세서 📂
 
 <details><summary>요구 명세서</summary>
-   <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/4%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A42.png">
+
+  <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9A%94%EA%B5%AC%EB%AA%85%EC%84%B8%EC%84%9C.png">
 </details>
 
 ## 📊 다이어그램 📊
 
 <details><summary>Usecase</summary>
   
-<img src="https://github.com/wwnoov/Team_ProJect/assets/145525099/2071762d-0850-40c1-b715-3af16f36b7be">
+   <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/4%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A42.png">
 
 </details>
 
