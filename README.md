@@ -9,7 +9,7 @@
 3. [🙋‍♀️ Team_Member](#%EF%B8%8F-team_member-%EF%B8%8F)
 4. [📋 개발 일지](https://github.com/wwnoov/Team_ProJect/blob/main/README.md#%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80)
 5. [📂 요구 명세서](#%EF%B8%8F-diagram-%EF%B8%8F)
-6. [📊 Diagram](#-다이어그-)
+6. [📊 Diagram](https://github.com/wwnoov/Team_ProJect#-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9](https://github.com/wwnoov/Team_ProJect#-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8-)E%A8-))
 7. [📹 구동 화면](#구동화면)
 8. [📝기능_설명](https://github.com/wwnoov/Team_ProJect/blob/main/README.md#-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8-)
 9. [🔨사용 기술](#%EF%B8%8F-사용기술-%EF%B8%8F)
