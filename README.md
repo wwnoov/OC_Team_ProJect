@@ -49,13 +49,11 @@
 ## 📊 다이어그램 📊
 
 <details><summary>Usecase</summary>
-  
-   <img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/4%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A42.png">
-
+<img src="https://github.com/wwnoov/Team_ProJect/blob/main/%ED%9A%8C%EC%9D%98%EB%A1%9D/4%EC%B0%A8%ED%9A%8C%EC%9D%98%EB%A1%9D/%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A42.png">
 </details>
 
 <details><summary>Class</summary>
-    
+  
 <img src="https://github.com/seokeunpark/Team_ProJect/assets/145525099/5350cac5-b8af-48d6-b732-17e886037df0">
 
 </details>
@@ -119,17 +117,17 @@
 <img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/27c7aff1-5231-485a-b1f3-1d8065977024" width="350px" height="150px">
 
 <br/>
- 
- [- 관리자 아이디 가입 불가]
 
-<a href="https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1464C13-L1467C23">
-<img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/243eba1e-7776-4a65-ae96-3d82f29b6fae" width="350px" height="150px"/>
-</a>
+[- 관리자 아이디 가입 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1464C13-L1467C23")
+<br/>
+<img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/243eba1e-7776-4a65-ae96-3d82f29b6fae" width="350px" height="150px">
+
 <br/>
 
 [- 로그인 시 비밀번호 오류 3회 시 로그인 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L132C5-L188C17)
 <br/>
 <img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/dbd6b9aa-e51c-4101-8db7-8b0347b20dda" width="350px" height="150px">
+
 <br/>
 </details>
 
