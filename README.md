@@ -88,7 +88,7 @@
     
 </details>
 
-## 📹 구동 화면 📹
+## 📃 구동 화면 📃
 
 <details><summary>비로그인 회원</summary>
    
