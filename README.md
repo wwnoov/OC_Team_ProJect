@@ -148,7 +148,7 @@
 
 <details><summary>회원 관리
 </summary>
-   
+<br/>
 [- 회원 가입시 중복 아이디 체크](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1472C9-L1493C17)
 <br/>
 <img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/27c7aff1-5231-485a-b1f3-1d8065977024" width="350px" height="150px">
@@ -170,7 +170,7 @@
 
 <details><summary>도서 관리
 </summary>
-   
+<br/>   
 [- 도서 조회 · 구매](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L890C6-L902C80)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/53355531-c6bb-421d-9920-b0203d21da7e"  width="500px" height="250px">
@@ -184,7 +184,7 @@
 
 <details><summary>캐시충전
 </summary>
-
+<br/>
 [- 캐시충전](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L1005C1-L1018C105)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/1d4d4890-f7df-4d4d-9fcb-e23e6863634f" width="500px" height="250px">
@@ -200,7 +200,7 @@
 
 <details><summary>후기 게시판
 </summary>
-   
+ <br/>  
 [- 후기 게시글 등록](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L271C5-L309C6) 
 <br/>
 
@@ -226,7 +226,7 @@
 
 <details><summary>관리자 모드
 </summary>
-
+<br/>
 [- 관리자 로그인](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L77C1-L79C27)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/a444c3f1-f3e0-41b1-9a79-86606a4a5780"  width="500" height="250">
