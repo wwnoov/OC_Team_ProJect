@@ -247,7 +247,7 @@
 
 <details><summary>비로그인 회원</summary>
    
-![일반회원](https://user-images.githubusercontent.com/145524959/280589563-33cc394a-bcfe-41e9-b6ab-49863de391c8.gif)
+![noLogin](https://github.com/LMH9999/LMH_Web_SPrj/assets/145963633/a0e07992-74fe-4f0d-88e1-3953d54f60c6)
 </details>
     
 <details><summary>로그인 회원</summary>
