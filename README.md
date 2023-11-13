@@ -243,7 +243,7 @@
 
 </details>
 
-## 📃 시연 캡쳐 📃
+## 📹 시연 영상 📹
 
 <details><summary>비로그인 회원</summary>
    
@@ -261,11 +261,6 @@
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
 
 </details>
-
-
-## 📹 시연 영상 📹
-   ㅁㄴㅇㄹㄴㅁ
-
 
 
 ## 🔨 사용 기술 🔨
