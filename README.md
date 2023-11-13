@@ -5,14 +5,14 @@
 ## 📚 목차 📚
 
 1. [📖 프로젝트 소개](#-book_store-프로젝트-)
-2. [💡 기획 의도](https://github.com/wwnoov/Team_ProJect#%EA%B8%B0%ED%9A%8D-%EC%9D%98%EB%8F%84)
-3. [🙋‍♀️ Team_Member](#%EF%B8%8F-team_member-%EF%B8%8F)
-4. [📋 개발 일지](https://github.com/wwnoov/Team_ProJect#%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80)
+2. [💡 기획 의도](#기획-의도)
+3. [🙋‍♀️ Team_Member](#EF%B8%8F-team_member-%EF%B8%8F)
+4. [📋 개발 일지](#개발-일지)
 5. [📂 요구 명세서](#%EF%B8%8F-diagram-%EF%B8%8F)
-6. [📊 Diagram](https://github.com/wwnoov/Team_ProJect#-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8-)
-7. [📹 구동 화면](https://github.com/wwnoov/Team_ProJect#-%EA%B5%AC%EB%8F%99-%ED%99%94%EB%A9%B4-)
-8. [📝기능_설명](https://github.com/wwnoov/Team_ProJect/blob/main/README.md#-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8-)
-9. [🔨사용 기술](https://github.com/wwnoov/Team_ProJect#-%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0-)
+6. [📊 Diagram](#-다이어그램-)
+7. [📹 구동 화면](#-구동-화면-)
+8. [📝기능_설명](#-기능_설명-)
+9. [🔨사용 기술](#-사용-기술-)
    
       
 ## 📖 BOOK_STORE 프로젝트 📖
