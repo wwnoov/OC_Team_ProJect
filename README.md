@@ -147,9 +147,28 @@
 <details><summary>후기 게시판
 </summary>
    
-[- 후기 게시글 등록](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L271C5-L309C6) <br>
-[- 후기 게시글 수정](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L437C5-L471C21) <br>
-[- 후기 게시글 삭제](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L476C5-L494C6) </details>
+[- 후기 게시글 등록](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L271C5-L309C6) 
+<br/>
+
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/902f811a-c90e-4c57-a7d7-7d815b0fa7ce" width="500" height="250">
+
+<br/>
+
+[- 후기 게시글 상세 읽기](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L476C5-L494C6)
+
+<br/>
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/55cac440-02b5-4c99-9059-be8eabe8e39e" width="500" height="250">
+
+<br/>
+
+[- 후기 게시글 수정/삭제](https://github.com/wwnoov/Team_ProJect/blob/4746ae41dc91a54c0eb54f17055d513a52899c29/Team_BookStore/src/BookStore.java#L437C5-L471C21)
+
+<br/>
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/e1828fb5-733a-4fde-81b9-60fe138a68dc" width="500" height="250">
+<br/>
+
+</details>
+
 
 <details><summary>관리자 모드
 </summary>
