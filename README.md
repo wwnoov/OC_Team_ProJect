@@ -143,7 +143,7 @@
     
 </details>
 
-## 📝 기능_설명 📝
+## 📝 기능 설명 📝
 <details><summary>회원 관리
 </summary>
    
