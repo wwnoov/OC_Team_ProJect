@@ -113,19 +113,30 @@
 
 <details><summary>도서 관리
 </summary>
-- 도서 조회 · 구매 <br/>
-- 도서 구매 시 재고 감소<br/>
-- 추천 도서 <br/>
+   
+[- 도서 조회 · 구매]
+<br/>
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/53355531-c6bb-421d-9920-b0203d21da7e"  width="500px" height="250px">
+<br/>
+   
+[- 추천 도서]
+<br/>
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/664a2a1e-600c-46e4-beb7-1700576e4c5f" width="500px" height="250px" >
+<br/>
 </details>
 
 <details><summary>캐시충전
 </summary>
 
-[- 캐시충전](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/1d4d4890-f7df-4d4d-9fcb-e23e6863634f)
+[- 캐시충전]
+<br/>
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/1d4d4890-f7df-4d4d-9fcb-e23e6863634f" width="500px" height="250px">
 
 <br/>
  
-[- 영수증](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/40588a18-1593-4c24-990b-6cf305527a4d)
+[- 영수증]
+<br/>
+ <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/40588a18-1593-4c24-990b-6cf305527a4d" width="500px" height="250px">
 
 <br/>
 </details>
@@ -160,24 +171,20 @@
 </summary>
 
 [- 관리자 로그인]
-
+<br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/a444c3f1-f3e0-41b1-9a79-86606a4a5780"  width="500" height="250">
-
 <br/>
 [- 관리자 새책 추가]
-
+<br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/74d5bf7c-5989-43af-8909-daade09489c6"  width="500" height="250">
 <br/>
-
 [- 관리자 게시판관리]
-
+<br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/060c613e-1425-4f6f-a580-ee0a3f3fd6b3"  width="500" height="250">
 <br/>
-
 [- 관리자 이달의 도서] 
-
 <br/>
-<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/cfa076e8-3c9a-45ac-bc8e-27ef11c71b2d"  width="500" height="250">
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/cfa076e8-3c9a-45ac-bc8e-27ef11c71b2d"  width="500" height="150">
 
 </details>
 
