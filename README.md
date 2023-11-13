@@ -120,8 +120,14 @@
 
 <details><summary>캐시충전
 </summary>
-- 캐시충전 <br/>
-- 영수증 <br/>
+
+[- 캐시충전](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/1d4d4890-f7df-4d4d-9fcb-e23e6863634f)
+
+<br/>
+ 
+[- 영수증](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/40588a18-1593-4c24-990b-6cf305527a4d)
+
+<br/>
 </details>
 
 <details><summary>후기 게시판
@@ -152,10 +158,28 @@
 
 <details><summary>관리자 모드
 </summary>
-- 관리자 로그인 <br/>
-- 관리자 새책 추가 <br/>
-- 관리자 게시판관리 <br/>
-- 관리자 이달의 도서 <br/>
+   
+[- 관리자 로그인]
+
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/a444c3f1-f3e0-41b1-9a79-86606a4a5780">
+
+<br/>
+[- 관리자 새책 추가]
+
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/74d5bf7c-5989-43af-8909-daade09489c6">
+<br/>
+
+[- 관리자 게시판관리]
+
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/060c613e-1425-4f6f-a580-ee0a3f3fd6b3">
+<br/>
+
+
+[- 관리자 이달의 도서] 
+
+<br/>
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/cfa076e8-3c9a-45ac-bc8e-27ef11c71b2d">
+
 </details>
 
 ## 📃 시연 캡쳐 📃
