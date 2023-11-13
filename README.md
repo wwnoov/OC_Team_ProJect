@@ -110,7 +110,21 @@
 </details>
 
 
-## ❓기능설명❓
+## 📝 기능_설명 📝
+<details><summary>회원 관리
+</summary>
+   
+[- 회원 가입시 중복 아이디 체크](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1472C9-L1493C17) <br/>
+[- 관리자 아이디 가입 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1464C13-L1467C23)<br/>
+[- 로그인 시 비밀번호 오류 3회 시 로그인 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L132C5-L188C17)<br/>
+</details>
+
+<details><summary>도서 관리
+</summary>
+- 도서 조회 · 구매 <br/>
+- 도서 구매 시 재고 감소<br/>
+- 추천 도서 <br/>
+</details>
 
 <details><summary>캐시충전
 </summary>
@@ -131,10 +145,8 @@
 - 관리자 새책 추가 <br/>
 - 관리자 게시판관리 <br/>
 - 관리자 이달의 도서 <br/>
-   
 </details>
    
-
 
 ## 🔨 사용 기술 🔨
 <div>
