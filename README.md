@@ -169,12 +169,12 @@
 <details><summary>도서 관리
 </summary>
    
-[- 도서 조회 · 구매]
+[- 도서 조회 · 구매](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L890C6-L902C80)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/53355531-c6bb-421d-9920-b0203d21da7e"  width="500px" height="250px">
 <br/>
    
-[- 추천 도서]
+[- 추천 도서](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L839C1-L844C54)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/664a2a1e-600c-46e4-beb7-1700576e4c5f" width="500px" height="250px" >
 <br/>
@@ -183,13 +183,13 @@
 <details><summary>캐시충전
 </summary>
 
-[- 캐시충전]
+[- 캐시충전](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L1005C1-L1018C105)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/1d4d4890-f7df-4d4d-9fcb-e23e6863634f" width="500px" height="250px">
 
 <br/>
  
-[- 영수증]
+[- 영수증](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L943C11-L969C117)
 <br/>
  <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/40588a18-1593-4c24-990b-6cf305527a4d" width="500px" height="250px">
 
@@ -225,19 +225,19 @@
 <details><summary>관리자 모드
 </summary>
 
-[- 관리자 로그인]
+[- 관리자 로그인](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L77C1-L79C27)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/a444c3f1-f3e0-41b1-9a79-86606a4a5780"  width="500" height="250">
 <br/>
-[- 관리자 새책 추가]
+[- 관리자 새책 추가](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L1301C8-L1314C31)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/74d5bf7c-5989-43af-8909-daade09489c6"  width="500" height="250">
 <br/>
-[- 관리자 게시판관리]
+[- 관리자 게시판관리](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L1255C1-L1273C25)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/060c613e-1425-4f6f-a580-ee0a3f3fd6b3"  width="500" height="250">
 <br/>
-[- 관리자 이달의 도서] 
+[- 관리자 이달의 도서](https://github.com/wwnoov/OC_Team_ProJect/blob/7ffbba90c934778d3ab17302b49e3e27f6dcb58d/Team_BookStore/src/BookStore.java#L1333C9-L1345C47)
 <br/>
 <img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/cfa076e8-3c9a-45ac-bc8e-27ef11c71b2d"  width="500" height="150">
 
