@@ -4,41 +4,16 @@
 ```
 ## 📚 목차 📚
 
-1. [📖 프로젝트 소개](#-book_store-프로젝트-)
-2. [💡 기획 의도](#기획-의도)
-3. [🙋‍♀️ Team_Member](#%EF%B8%8F-team_member-%EF%B8%8F)
-4. [📋 개발 일지](#개발-일지)
-5. [📂 PPT](#-ppt-)
+1. [📂 PPT](#-ppt-)
+2. [📖 프로젝트 소개](#-book_store-프로젝트-)
+3. [💡 기획 의도](#기획-의도)
+4. [🙋‍♀️ Team_Member](#%EF%B8%8F-team_member-%EF%B8%8F)
+5. [📋 개발 일지](#개발-일지)
 6. [📈  요구 명세서](#-요구-명세서-)
 7. [📊 Diagram](#-다이어그램-)
 8. [📝 기능 설명](#-기능-설명-)
 9. [📹 시연 영상](#-시연-영상-)
-10. [🔨사용 기술](#-사용-기술-)
-   
-      
-## 📖 BOOK_STORE 프로젝트 📖
-```bash프로젝트 소개
-천재교과서 쇼핑몰,알라딘,교보문고,yes24와 같은 온라인 서점 마켓을 벤치마킹하여
-온라인 서점 마켓 기능을 구현한 콘솔 프로그래밍
-```
-## 💡기획 의도💡
-```
-'천재교육'은 대한민국 교육분야의 대표적인 출판 회사로써 많은 학생들과 학부모들의 관심을 받고 있음
-이에 따라, 천재교육과 함께 하고자 하는 마음을 담아 'BOOK STORE'를 주제로 선정하여 프로젝트를 진행하게 되었음
-```
-
-## 🙋‍♀️ Team_Member 🙋‍♀️
-
-#### [🌱 남원우 👉 GitHub](https://github.com/wwnoov)
-#### [🎵 박석은 👉 GitHub](https://github.com/seokeunpark)
-#### [🧟 이무현 👉 GitHub](https://github.com/LMH9999)
-#### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
-
-## 📋개발 일지📋
-<details><summary>개발 일지</summary>
-   
-![개발일지](https://github.com/wwnoov/Team_ProJect/assets/145524959/02abd97a-26c8-4e52-ba7a-9e85c5d4b296)
-</details>
+10.[🔨사용 기술](#-사용-기술-)
 
 
 ## 📂 PPT 📂
@@ -92,6 +67,32 @@
 ![45](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/0901b180-25e2-45b7-95c5-3644e0ad1834)
 
 </details>
+      
+## 📖 BOOK_STORE 프로젝트 📖
+```bash프로젝트 소개
+천재교과서 쇼핑몰,알라딘,교보문고,yes24와 같은 온라인 서점 마켓을 벤치마킹하여
+온라인 서점 마켓 기능을 구현한 콘솔 프로그래밍
+```
+## 💡기획 의도💡
+```
+'천재교육'은 대한민국 교육분야의 대표적인 출판 회사로써 많은 학생들과 학부모들의 관심을 받고 있음
+이에 따라, 천재교육과 함께 하고자 하는 마음을 담아 'BOOK STORE'를 주제로 선정하여 프로젝트를 진행하게 되었음
+```
+
+## 🙋‍♀️ Team_Member 🙋‍♀️
+
+#### [🌱 남원우 👉 GitHub](https://github.com/wwnoov)
+#### [🎵 박석은 👉 GitHub](https://github.com/seokeunpark)
+#### [🧟 이무현 👉 GitHub](https://github.com/LMH9999)
+#### [☕ 최경락 👉 GitHub](https://github.com/raknrak)
+
+## 📋개발 일지📋
+<details><summary>개발 일지</summary>
+   
+![개발일지](https://github.com/wwnoov/Team_ProJect/assets/145524959/02abd97a-26c8-4e52-ba7a-9e85c5d4b296)
+</details>
+
+
 
 
 ## 📈 요구 명세서 📈
