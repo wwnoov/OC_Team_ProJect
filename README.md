@@ -258,7 +258,8 @@
 
 <details><summary>관리자</summary>
     
-![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
+![admin](https://github.com/LMH9999/LMH_Web_SPrj/assets/145963633/650347ac-ad51-498d-aaeb-49be9c2a4dab)
+
 
 </details>
 
