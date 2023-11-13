@@ -88,26 +88,6 @@
     
 </details>
 
-## 📃 구동 화면 📃
-
-<details><summary>비로그인 회원</summary>
-   
-![일반회원](https://user-images.githubusercontent.com/145524959/280589563-33cc394a-bcfe-41e9-b6ab-49863de391c8.gif)
-</details>
-    
-<details><summary>로그인 회원</summary>
-    
-![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
-
-</details>
-
-<details><summary>관리자</summary>
-    
-![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
-
-</details>
-
-
 ## 📝 기능_설명 📝
 <details><summary>회원 관리
 </summary>
@@ -177,6 +157,26 @@
 - 관리자 게시판관리 <br/>
 - 관리자 이달의 도서 <br/>
 </details>
+
+## 📃 시연 캡쳐 📃
+
+<details><summary>비로그인 회원</summary>
+   
+![일반회원](https://user-images.githubusercontent.com/145524959/280589563-33cc394a-bcfe-41e9-b6ab-49863de391c8.gif)
+</details>
+    
+<details><summary>로그인 회원</summary>
+    
+![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
+
+</details>
+
+<details><summary>관리자</summary>
+    
+![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
+
+</details>
+
 
 ## 📹 시연 영상 📹
    ㅁㄴㅇㄹㄴㅁ
