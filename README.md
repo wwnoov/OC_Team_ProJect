@@ -158,27 +158,26 @@
 
 <details><summary>관리자 모드
 </summary>
-   
+
 [- 관리자 로그인]
 
-<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/a444c3f1-f3e0-41b1-9a79-86606a4a5780">
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/a444c3f1-f3e0-41b1-9a79-86606a4a5780"  width="500" height="250">
 
 <br/>
 [- 관리자 새책 추가]
 
-<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/74d5bf7c-5989-43af-8909-daade09489c6">
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/74d5bf7c-5989-43af-8909-daade09489c6"  width="500" height="250">
 <br/>
 
 [- 관리자 게시판관리]
 
-<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/060c613e-1425-4f6f-a580-ee0a3f3fd6b3">
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/060c613e-1425-4f6f-a580-ee0a3f3fd6b3"  width="500" height="250">
 <br/>
-
 
 [- 관리자 이달의 도서] 
 
 <br/>
-<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/cfa076e8-3c9a-45ac-bc8e-27ef11c71b2d">
+<img src="https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/cfa076e8-3c9a-45ac-bc8e-27ef11c71b2d"  width="500" height="250">
 
 </details>
 
