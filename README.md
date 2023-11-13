@@ -211,6 +211,61 @@
 ## 📹 시연 영상 📹
    ㅁㄴㅇㄹㄴㅁ
 
+
+
+   
+## 📂 PPT 📂
+
+<details><summary>PPT</summary>
+
+![1](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/b79205c3-050c-4411-931c-86b7704b1b23)
+![2](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/fe65175d-c4ba-468e-b41a-1ee70fb1e451)
+![3](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/b0f02ace-18a7-453b-b4df-5d17b98e4082)
+![4](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/4a60bed5-f17e-4b9c-b32a-7b32201f169e)
+![5](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/466e391b-6a3f-400b-a80e-04638f4c5631)
+![6](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/fe63ef09-782d-4f7e-95ba-985fa0206315)
+![7](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/f1b3a582-f2fd-47fe-bca4-f22b20ae2fe8)
+![8](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/d71a120e-93f7-461f-9f28-332a39881ce5)
+![9](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/96651db8-8df0-40fe-b500-7b828c99e18c)
+![10](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/55e954d0-0c27-4420-92e1-236a12cf674a)
+![11](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/8d64b512-dd1f-446a-9c08-8c7aa9061138)
+![12](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/f1affdd0-7143-4b53-9815-e283cda2a82a)
+![13](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/d6877053-3290-4ea2-ab3d-d16c01b88bdd)
+![14](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/ffdf8495-2ac4-4152-b6d5-5f537349d208)
+![15](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/6eafcea1-763a-440c-8077-61cc0ad91849)
+![16](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/fef2a1ce-64bc-47c1-a902-1899e70c9852)
+![17](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/9e20ee8f-f10b-45b9-a1a0-06ae7041132f)
+![18](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/1cc8b092-a2ec-4390-9b1c-488b2c539545)
+![19](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/5c1e6592-545e-43f5-83f4-a9e9d1e43e64)
+![20](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/981f72ca-f08a-4a70-997b-407de8d047eb)
+![21](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/2996dc0d-ce90-445b-bad5-d301cac6882b)
+![22](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/47c3f26c-a140-459c-a95d-edde3c9aac50)
+![23](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/4f46de91-85bf-4587-a72f-932547724468)
+![24](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/3a7f1b24-4b95-4606-aca3-87358c7149cb)
+![25](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/9a74daaa-5d66-40d2-8d41-9deefe055904)
+![26](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/0470af84-7f9a-469a-ad32-5d9d10896db1)
+![27](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/525edf0f-d1f9-4091-a6a4-18b25264df66)
+![28](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/c02392c1-a3e0-4dcf-8eeb-fbe99314fc6b)
+![29](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/d1149137-4580-4ee0-bdb8-6ae9cd15ff77)
+![30](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/2d0db509-27f1-4df8-abaa-1ab34d6d9adb)
+![31](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/92227787-218c-49bc-859f-44de2857eeef)
+![32](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/cebce2d6-ec17-439a-aafc-9d18f07b2021)
+![33](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/00ff2335-05ae-4a2f-b55a-210da8e56e79)
+![34](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/e539f648-f8a6-4824-b04e-fcddf1530d80)
+![35](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/fdfd1e53-318e-4bdd-b6ec-1e8034f565f7)
+![36](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/71b92b5b-fefb-4295-b315-701bd4094ef7)
+![37](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/9850c4c2-298f-4057-ae1f-eac27eb7cd1e)
+![38](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/a61223f5-7d57-4504-a291-ffa36d42c55b)
+![39](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/9fcd48a4-887e-4ea0-a038-e9870ac85689)
+![40](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/0c35ff33-fafb-4a5f-85a4-ad0b8016fc9c)
+![41](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/fe7bca0b-7e40-4568-aaa2-129ff2b90a29)
+![42](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/f3767a55-63ec-4f7a-a5f9-4ab421800b68)
+![43](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/18d33c09-feed-41ef-84bf-b7763b6f311f)
+![44](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/2893bab6-3ceb-4a87-9b34-7bb3c6044592)
+![45](https://github.com/wwnoov/OC_Team_ProJect/assets/145524959/0901b180-25e2-45b7-95c5-3644e0ad1834)
+
+</details>
+
 ## 🔨 사용 기술 🔨
 <div>
 <img src="https://img.shields.io/badge/JAVA-C01818?style=flat-square&logo=coffeescript&logoColor=white" />
