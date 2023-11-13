@@ -252,7 +252,7 @@
     
 <details><summary>로그인 회원</summary>
     
-![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
+![login](https://github.com/LMH9999/LMH_Web_SPrj/assets/145963633/037020d3-455c-4aef-b103-1e677699d6e3)
 
 </details>
 
