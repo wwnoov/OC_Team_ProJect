@@ -115,19 +115,21 @@
 </summary>
    
 [- 회원 가입시 중복 아이디 체크](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1472C9-L1493C17)
+<br/>
+<img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/27c7aff1-5231-485a-b1f3-1d8065977024" width="400px" height="200px">
 
-<img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/27c7aff1-5231-485a-b1f3-1d8065977024">
-
- <br/>
+<br/>
  
 [- 관리자 아이디 가입 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1464C13-L1467C23)
-<img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/243eba1e-7776-4a65-ae96-3d82f29b6fae">
+<br/>
+
+[<img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/243eba1e-7776-4a65-ae96-3d82f29b6fae" width="400px" height="200px">](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L1464C13-L1467C23)
 
 <br/>
 
 [- 로그인 시 비밀번호 오류 3회 시 로그인 불가](https://github.com/wwnoov/Team_ProJect/blob/3d71db7397e3876ed22a09574323a7d3f5cff59e/Team_BookStore/src/BookStore.java#L132C5-L188C17)
-<img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/dbd6b9aa-e51c-4101-8db7-8b0347b20dda">
-
+<br/>
+<img src="https://github.com/wwnoov/Team_ProJect/assets/145524959/dbd6b9aa-e51c-4101-8db7-8b0347b20dda" width="400px" height="200px">
 <br/>
 </details>
 
