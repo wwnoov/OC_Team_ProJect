@@ -101,13 +101,13 @@
     
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
 
-</details> <br/>
+</details>
 
 <details><summary>관리자</summary>
     
 ![일반회원](https://github.com/wwnoov/Team_ProJect/assets/145524959/33cc394a-bcfe-41e9-b6ab-49863de391c8)
 
-</details> <br/>
+</details>
 
 
 ## ❓기능설명❓
